@@ -6,6 +6,7 @@ const translations = {
     "nav.calendar": "Calendario",
     "nav.reviews": "Opiniones",
     "nav.map": "Ubicación",
+    "nav.precheckin": "Pre-Check-in",
     "nav.book": "Reservar / Contactar",
     
     "ap1.heroTag": "Apartamento con una terraza impresionante y vistas despejadas al Peñón de Ifach.",
@@ -43,6 +44,10 @@ const translations = {
     "reviews.transparency": "Evaluaciones importadas directamente de los portales de Airbnb y Google Maps.",
     "map.subtitle": "Situado en segunda línea de playa de Calpe con todos los servicios y ocio a mano.",
     
+    "precheckin.title": "Prepara tu llegada — Pre-Check-in",
+    "precheckin.desc": "Para cumplir con la normativa local y agilizar tu entrada al apartamento el día de llegada, te invitamos a completar el pre-check-in obligatorio de forma rápida y segura antes de tu viaje.",
+    "precheckin.btn": "📝 Iniciar Pre-Check-in Online",
+    
     "booking.title": "Contactar y Reservar",
     "booking.directDesc": "Reserva directamente con nosotros sin intermediarios ni cargos de gestión. Escríbenos directamente o solicítanos información de tarifas.",
     "btn.whatsapp": "Contactar por WhatsApp",
@@ -57,6 +62,7 @@ const translations = {
     "nav.calendar": "Calendar",
     "nav.reviews": "Reviews",
     "nav.map": "Location",
+    "nav.precheckin": "Pre-Check-in",
     "nav.book": "Book / Contact",
     
     "ap1.heroTag": "Apartment with a stunning terrace and great views of the Peñón de Ifach.",
@@ -94,6 +100,10 @@ const translations = {
     "reviews.transparency": "Reviews imported directly from Airbnb and Google Maps.",
     "map.subtitle": "Located on the second line of Calpe beach with all services and leisure at hand.",
     
+    "precheckin.title": "Prepare Your Arrival — Pre-Check-in",
+    "precheckin.desc": "To comply with local regulations and speed up your entry on arrival day, please complete the mandatory pre-check-in quickly and securely before your trip.",
+    "precheckin.btn": "📝 Start Online Pre-Check-in",
+    
     "booking.title": "Contact & Book",
     "booking.directDesc": "Book directly with us without intermediaries or booking fees. Write to us directly or ask for rate info.",
     "btn.whatsapp": "Contact via WhatsApp",
@@ -108,6 +118,7 @@ const translations = {
     "nav.calendar": "Kalender",
     "nav.reviews": "Bewertungen",
     "nav.map": "Lage",
+    "nav.precheckin": "Pre-Check-in",
     "nav.book": "Buchen / Kontakt",
     
     "ap1.heroTag": "Wohnung mit einer beeindruckenden Terrasse und herrlichem Blick auf den Peñón de Ifach.",
@@ -145,6 +156,10 @@ const translations = {
     "reviews.transparency": "Bewertungen direkt von Airbnb und Google Maps importiert.",
     "map.subtitle": "In zweiter Strandlinie von Calpe gelegen, alle Dienstleistungen in direkter Nähe.",
     
+    "precheckin.title": "Bereiten Sie Ihre Ankunft vor — Pre-Check-in",
+    "precheckin.desc": "Um die obligatorischen Vorschriften zu erfüllen und den Check-in am Ankunftstag zu beschleunigen, bitten wir Sie, das Pre-Check-in vor Ihrer Reise schnell und sicher online auszufüllen.",
+    "precheckin.btn": "📝 Online Pre-Check-in starten",
+    
     "booking.title": "Kontakt & Buchen",
     "booking.directDesc": "Buchen Sie direkt bei uns ohne Vermittler oder Gebühren. Schreiben Sie uns direkt oder fragen Sie nach Preisen.",
     "btn.whatsapp": "Kontakt per WhatsApp",
@@ -159,6 +174,7 @@ const translations = {
     "nav.calendar": "Calendrier",
     "nav.reviews": "Avis",
     "nav.map": "Emplacement",
+    "nav.precheckin": "Pre-Check-in",
     "nav.book": "Réserver / Contact",
     
     "ap1.heroTag": "Appartement avec une magnifique terrasse et une vue superbe sur le Peñón de Ifach.",
@@ -192,6 +208,10 @@ const translations = {
     
     "reviews.transparency": "Avis importés directement d'Airbnb et de Google Maps.",
     "map.subtitle": "Situé en deuxième ligne de la plage de Calpe, tous commerces à proximité.",
+    
+    "precheckin.title": "Préparez votre arrivée — Pre-Check-in",
+    "precheckin.desc": "Afin de respecter la réglementation locale et d'accélérer votre entrée le jour de l'arrivée, nous vous invitons à remplir le pre-check-in obligatoire en ligne avant votre voyage.",
+    "precheckin.btn": "📝 Commencer le Pre-Check-in en ligne",
     
     "booking.title": "Contacter & Réserver",
     "booking.directDesc": "Réservez directement avec nous sans intermédiaire ni frais de gestion. Contactez-nous directement ou demandez les tarifs.",
