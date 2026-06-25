@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mucahome2 - Apartamento con Ocio y Piscina en Calpe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="ap-page">
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html">MUCA<span>HOME</span></a>
+      <span class="logo-sub">/ mucahome2</span>
+    </div>
+    
+    <nav class="nav-menu">
+      <a href="#descripcion" data-i18n="nav.desc">Descripción</a>
+      <a href="#galeria" data-i18n="nav.gallery">Galería</a>
+      <a href="#calendario" data-i18n="nav.calendar">Calendario</a>
+      <a href="#opiniones" data-i18n="nav.reviews">Opiniones</a>
+      <a href="#reservar" class="btn-nav" data-i18n="nav.book">Reservar / Contactar</a>
+    </nav>
+
+    <div class="language-selector">
+      <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
+      <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+      <button class="lang-btn" onclick="changeLanguage('de')">DE</button>
+      <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+    </div>
+  </header>
+
+  <!-- Hero Apartment -->
+  <section class="hero ap-hero">
+    <div class="hero-bg" style="background-image: linear-gradient(rgba(11, 19, 43, 0.3), rgba(11, 19, 43, 0.7)), url('assets/mucahome2_cover.png');"></div>
+    <div class="hero-content">
+      <h1>mucahome2</h1>
+      <p data-i18n="ap2.heroTag">Apartamento completamente renovado con piscina comunitaria, pista de tenis y ping-pong.</p>
+      <a href="#reservar" class="btn-primary" data-i18n="nav.book">Consultar Disponibilidad</a>
+    </div>
+  </section>
+
+  <!-- Sección: Descripción -->
+  <section id="descripcion" class="ap-section container">
+    <div class="section-layout">
+      <div class="left-col">
+        <h2 data-i18n="nav.desc">Descripción del Apartamento</h2>
+        <p class="ap-full-desc" data-i18n="ap2.fullDesc">Apartamento moderno y completamente reformado situado en una zona excelente de Calpe. Cuenta con acceso a una fantástica piscina comunitaria, pista de tenis y zona de ping-pong. A un paso de una gran variedad de restaurantes, tiendas y de las espectaculares playas de arena dorada.</p>
+        
+        <div class="ap-specs">
+          <div class="spec-item">👥 <span data-i18n="spec.capacity">Capacidad: 2-4 personas</span></div>
+          <div class="spec-item">🛏️ <span data-i18n="spec.rooms2">1 Dormitorio Doble + Gran Sofá Cama</span></div>
+          <div class="spec-item">🌊 <span data-i18n="spec.distance2">A solo 200 metros de la playa</span></div>
+          <div class="spec-item">❄️ <span data-i18n="spec.ac">Aire acondicionado frío/calor</span></div>
+        </div>
+      </div>
+      <div class="right-col">
+        <h3 data-i18n="modal.amenities">Servicios Incluidos</h3>
+        <ul class="amenities-grid-list">
+          <li>📺 Smart TV</li>
+          <li>⚡ Fibra óptica + WiFi alta velocidad</li>
+          <li>🏊 Piscina comunitaria fantástica</li>
+          <li>🎾 Pista de tenis comunitaria</li>
+          <li>🏓 Mesa de ping-pong</li>
+          <li>🏖️ Sillas, sombrilla y toallas de playa</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Galería / Álbum de Fotos -->
+  <section id="galeria" class="ap-section alt-bg">
+    <div class="container">
+      <h2 class="text-center" data-i18n="nav.gallery">Álbum de Fotos</h2>
+      <p class="text-center subtitle-p" data-i18n="gallery.subtitle2">Descubre las instalaciones deportivas y de ocio del apartamento.</p>
+      
+      <!-- Slider / Galería Dinámica -->
+      <div class="gallery-slider">
+        <div class="slider-main" id="sliderMain" style="background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="slider-thumbs" id="sliderThumbs">
+          <!-- Miniaturas cargadas con JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Calendario de Airbnb -->
+  <section id="calendario" class="ap-section container">
+    <div class="section-layout">
+      <div class="left-col">
+        <h2 data-i18n="nav.calendar">Disponibilidad del Alojamiento</h2>
+        <p data-i18n="calendar.bodyText">Consulta las fechas libres en tiempo real. La información de ocupación se sincroniza directamente con Airbnb para tu comodidad de forma totalmente transparente.</p>
+      </div>
+      <div class="right-col">
+        <div class="calendar-container">
+          <div class="gcal-wrapper">
+            <iframe src="https://calendar.google.com/calendar/embed?src=o1s6c9q2re2ntkdsh4qskjsng09dkn3u%40import.calendar.google.com&ctz=Europe%2FMadrid&showTitle=0&showPrint=0&showTabs=0&showTz=0&showCalendars=0&wkst=2" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Opiniones / Reseñas -->
+  <section id="opiniones" class="ap-section alt-bg">
+    <div class="container">
+      <h2 class="text-center" data-i18n="nav.reviews">Opiniones de nuestros Huéspedes</h2>
+      <div class="reviews-grid-list" id="reviewsGrid">
+        <!-- Rellenado dinámicamente -->
+      </div>
+      <p class="transparency-note text-center">⭐ <span data-i18n="reviews.transparency">Evaluaciones importadas directamente de los portales de Airbnb.</span></p>
+    </div>
+  </section>
+
+  <!-- Sección: Reserva / Contacto / WhatsApp -->
+  <section id="reservar" class="ap-section booking-section">
+    <div class="hero-bg" style="background-image: linear-gradient(rgba(13, 59, 102, 0.9), rgba(11, 19, 43, 0.95));"></div>
+    <div class="container booking-content">
+      <h2 data-i18n="booking.title">Contactar y Reservar</h2>
+      <p data-i18n="booking.directDesc">Reserva directamente con nosotros sin intermediarios ni cargos de gestión. Escríbenos directamente o solicítanos información de tarifas.</p>
+      
+      <div class="booking-options">
+        <a href="https://wa.me/34608122535?text=Hola,%20estoy%20interesado%20en%20reservar%20el%20apartamento%20mucahome2" target="_blank" class="btn-whatsapp">
+          💬 <span data-i18n="btn.whatsapp">Contactar por WhatsApp</span>
+        </a>
+        <span class="booking-or" data-i18n="booking.or">o rellena nuestro formulario de consulta</span>
+      </div>
+
+      <form class="booking-form" onsubmit="handleBooking(event)">
+        <div class="form-row">
+          <input type="text" id="bookingName" required placeholder="Tu Nombre">
+          <input type="email" id="bookingEmail" required placeholder="Correo Electrónico">
+        </div>
+        <textarea id="bookingMessage" rows="4" required placeholder="Indica fechas estimadas y número de huéspedes..."></textarea>
+        <button type="submit" class="btn-primary" data-i18n="booking.send">Enviar Solicitud</button>
+      </form>
+
+      <div class="airbnb-link-box">
+        <span data-i18n="airbnb.transparency">Por motivos de seguridad y transparencia, también puedes consultar nuestra ficha oficial en</span>
+        <a href="https://www.airbnb.es/rooms/13629203" target="_blank">Airbnb mucahome2</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <p>&copy; 2026 MUCAHOME. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Inicialización específica del apartamento 2
+    currentApId = 'mucahome2';
+    
+    // Lista de fotos del apartamento 2 (ubicadas en la carpeta assets/mucahome2/)
+    const albumPhotos = [
+      "assets/mucahome2/1.jpg",
+      "assets/mucahome2/2.jpg",
+      "assets/mucahome2/3.jpg",
+      "assets/mucahome2/4.jpg",
+      "assets/mucahome2/5.jpg",
+      "assets/mucahome2/6.jpg",
+      "assets/mucahome2/7.jpg",
+      "assets/mucahome2/8.jpg",
+      "assets/mucahome2/9.jpg"
+    ];
+
+    let activePhotoIdx = 0;
+    let autoPlayTimer = null;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const thumbsBox = document.getElementById('sliderThumbs');
+      const sliderMain = document.getElementById('sliderMain');
+
+      // Cargar la primera imagen como portada inicial
+      sliderMain.style.backgroundImage = `url('${albumPhotos[0]}')`;
+
+      albumPhotos.forEach((src, idx) => {
+        const thumb = document.createElement('div');
+        thumb.className = `thumb-item ${idx === 0 ? 'active' : ''}`;
+        thumb.style.backgroundImage = `url('${src}')`;
+        thumb.onclick = () => {
+          changePhoto(idx);
+          resetAutoPlay();
+        };
+        thumbsBox.appendChild(thumb);
+      });
+
+      function changePhoto(idx) {
+        activePhotoIdx = idx;
+        document.querySelectorAll('.thumb-item').forEach((t, i) => {
+          t.classList.remove('active');
+          if (i === idx) t.classList.add('active');
+        });
+        sliderMain.style.backgroundImage = `url('${albumPhotos[idx]}')`;
+      }
+
+      function startAutoPlay() {
+        autoPlayTimer = setInterval(() => {
+          let nextIdx = (activePhotoIdx + 1) % albumPhotos.length;
+          changePhoto(nextIdx);
+        }, 4000); // Cambiar cada 4 segundos
+      }
+
+      function resetAutoPlay() {
+        clearInterval(autoPlayTimer);
+        startAutoPlay();
+      }
+
+      startAutoPlay();
+    });
+  </script>
+</body>
+</html>

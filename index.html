@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mucahome - Apartamentos Turísticos en Calpe</title>
+  <meta name="description" content="Portal oficial de los apartamentos turísticos mucahome1 y mucahome2 en Calpe. Reserva directa con nosotros sin comisiones adicionales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html">MUCA<span>HOME</span></a>
+    </div>
+    <div class="language-selector">
+      <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
+      <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+      <button class="lang-btn" onclick="changeLanguage('de')">DE</button>
+      <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+    </div>
+  </header>
+
+  <!-- Hero Portal -->
+  <section class="hero portal-hero">
+    <div class="hero-bg" style="background-image: linear-gradient(rgba(11, 19, 43, 0.4), rgba(11, 19, 43, 0.75)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="hero-content">
+      <h1 data-i18n="portal.title">Bienvenidos a Mucahome</h1>
+      <p data-i18n="portal.subtitle">Encuentra tu rincón perfecto junto al mar de Calpe. Reserva directa y personalizada.</p>
+    </div>
+  </section>
+
+  <!-- Selección de Apartamentos -->
+  <section class="portal-grid-section">
+    <div class="portal-grid">
+      <!-- Tarjeta mucahome1 -->
+      <a href="mucahome1.html" class="portal-card">
+        <div class="portal-card-img" style="background-image: url('assets/mucahome1_cover.png');">
+          <div class="portal-card-badge">mucahome1</div>
+        </div>
+        <div class="portal-card-info">
+          <h3>mucahome1</h3>
+          <p data-i18n="ap1.shortDesc">Excelente apartamento con una terraza impresionante y vistas estupendas al Peñón de Ifach. Ubicación céntrica cerca de la playa y comercios.</p>
+          <span class="portal-card-btn" data-i18n="portal.view">Explorar Apartamento &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Tarjeta mucahome2 -->
+      <a href="mucahome2.html" class="portal-card">
+        <div class="portal-card-img" style="background-image: url('assets/mucahome2_cover.png');">
+          <div class="portal-card-badge">mucahome2</div>
+        </div>
+        <div class="portal-card-info">
+          <h3>mucahome2</h3>
+          <p data-i18n="ap2.shortDesc">Estancia inmejorable, completamente renovado y equipado al detalle. Con piscina comunitaria, pista de tenis y mesa de ping-pong.</p>
+          <span class="portal-card-btn" data-i18n="portal.view">Explorar Apartamento &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <p>&copy; 2026 MUCAHOME. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+  </footer>
+
+  <script>
+    // Lógica rápida de idioma para la página de inicio
+    const translations = {
+      es: {
+        "portal.title": "Bienvenidos a Mucahome",
+        "portal.subtitle": "Encuentra tu rincón de descanso en Calpe. Alquiler directo sin intermediarios.",
+        "ap1.shortDesc": "Excelente apartamento con una terraza impresionante y vistas estupendas al Peñón de Ifach. Ubicación céntrica cerca de la playa y comercios.",
+        "ap2.shortDesc": "Estancia inmejorable, completamente renovado y equipado al detalle. Con piscina comunitaria, pista de tenis y mesa de ping-pong.",
+        "portal.view": "Explorar Apartamento →",
+        "footer.rights": "Todos los derechos reservados."
+      },
+      en: {
+        "portal.title": "Welcome to Mucahome",
+        "portal.subtitle": "Find your perfect holiday spot in Calpe. Direct booking without middleman fees.",
+        "ap1.shortDesc": "Excellent apartment with a stunning terrace and great views of the Peñón de Ifach. Central location close to beach and shops.",
+        "ap2.shortDesc": "Unbeatable stay, fully renovated and equipped in detail. Includes shared swimming pool, tennis court and ping-pong table.",
+        "portal.view": "Explore Apartment →",
+        "footer.rights": "All rights reserved."
+      },
+      de: {
+        "portal.title": "Willkommen bei Mucahome",
+        "portal.subtitle": "Finden Sie Ihren perfekten Urlaubsort in Calpe. Direktbuchung ohne Zwischengebühren.",
+        "ap1.shortDesc": "Hervorragende Wohnung mit einer beeindruckenden Terrasse und herrlichem Blick auf den Peñón de Ifach. Zentrale Lage in Strandnähe.",
+        "ap2.shortDesc": "Unschlagbarer Aufenthalt, komplett renoviert. Mit Gemeinschaftspool, Tennisplatz und Tischtennisplatte.",
+        "portal.view": "Apartment ansehen →",
+        "footer.rights": "Alle Rechte vorbehalten."
+      },
+      fr: {
+        "portal.title": "Bienvenue chez Mucahome",
+        "portal.subtitle": "Trouvez le lieu idéal pour vos vacances à Calpe. Réservation directe sans frais d'intermédiaire.",
+        "ap1.shortDesc": "Excellent appartement avec une magnifique terrasse et une vue superbe sur le Peñón de Ifach. Emplacement central à proximité de la plage.",
+        "ap2.shortDesc": "Séjour imbattable, entièrement rénové. Dispose d'une piscine commune, d'un court de tennis et d'une table de ping-pong.",
+        "portal.view": "Découvrir l'appartement →",
+        "footer.rights": "Tous droits réservés."
+      }
+    };
+
+    function changeLanguage(lang) {
+      localStorage.setItem('mucahome_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.innerText.toLowerCase() === lang) btn.classList.add('active');
+      });
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          element.innerHTML = translations[lang][key];
+        }
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('mucahome_lang') || 'es';
+      changeLanguage(savedLang);
+    });
+  </script>
+</body>
+</html>

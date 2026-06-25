@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mucahome1 - Apartamento con Terraza en Calpe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="ap-page">
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html">MUCA<span>HOME</span></a>
+      <span class="logo-sub">/ mucahome1</span>
+    </div>
+    
+    <nav class="nav-menu">
+      <a href="#descripcion" data-i18n="nav.desc">Descripción</a>
+      <a href="#galeria" data-i18n="nav.gallery">Galería</a>
+      <a href="#calendario" data-i18n="nav.calendar">Calendario</a>
+      <a href="#opiniones" data-i18n="nav.reviews">Opiniones</a>
+      <a href="#entorno" data-i18n="nav.map">Entorno</a>
+      <a href="#reservar" class="btn-nav" data-i18n="nav.book">Reservar / Contactar</a>
+    </nav>
+
+    <div class="language-selector">
+      <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
+      <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+      <button class="lang-btn" onclick="changeLanguage('de')">DE</button>
+      <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+    </div>
+  </header>
+
+  <!-- Hero Apartment -->
+  <section class="hero ap-hero">
+    <div class="hero-bg" style="background-image: linear-gradient(rgba(11, 19, 43, 0.3), rgba(11, 19, 43, 0.7)), url('assets/mucahome1_cover.png');"></div>
+    <div class="hero-content">
+      <h1>mucahome1</h1>
+      <p data-i18n="ap1.heroTag">Apartamento con una terraza impresionante y vistas despejadas al Peñón de Ifach.</p>
+      <a href="#reservar" class="btn-primary" data-i18n="nav.book">Consultar Disponibilidad</a>
+    </div>
+  </section>
+
+  <!-- Sección: Descripción -->
+  <section id="descripcion" class="ap-section container">
+    <div class="section-layout">
+      <div class="left-col">
+        <h2 data-i18n="nav.desc">Descripción del Apartamento</h2>
+        <p class="ap-full-desc" data-i18n="ap1.fullDesc">Disfruta de Calpe en este espectacular apartamento ideal para parejas o familias pequeñas. La joya de la casa es su amplia terraza de gran tamaño, perfecta para cenar al aire libre con estupendas vistas al majestuoso Peñón de Ifach. Equipado completamente, incluyendo toallas y sillas de playa.</p>
+        
+        <div class="ap-specs">
+          <div class="spec-item">👥 <span data-i18n="spec.capacity">Capacidad: 2-4 personas</span></div>
+          <div class="spec-item">🛏️ <span data-i18n="spec.rooms">1 Dormitorio Doble + Sofá Cama</span></div>
+          <div class="spec-item">❄️ <span data-i18n="spec.ac">Aire acondicionado frío/calor</span></div>
+          <div class="spec-item">🌊 <span data-i18n="spec.distance">A solo 150 metros de la playa</span></div>
+        </div>
+      </div>
+      <div class="right-col">
+        <h3 data-i18n="modal.amenities">Servicios Incluidos</h3>
+        <ul class="amenities-grid-list">
+          <li>📺 Smart TV</li>
+          <li>⚡ Fibra óptica + WiFi alta velocidad</li>
+          <li>🌅 Gran terraza con vistas despejadas</li>
+          <li>🏖️ Sillas, sombrilla y toallas de playa</li>
+          <li>🍳 Cocina totalmente equipada</li>
+          <li>🍳 Totalmente equipado</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Galería / Álbum de Fotos -->
+  <section id="galeria" class="ap-section alt-bg">
+    <div class="container">
+      <h2 class="text-center" data-i18n="nav.gallery">Álbum de Fotos</h2>
+      <p class="text-center subtitle-p" data-i18n="gallery.subtitle">Un recorrido visual por las instalaciones y estancias del apartamento.</p>
+      
+      <!-- Slider / Galería Dinámica -->
+      <div class="gallery-slider">
+        <div class="slider-main" id="sliderMain" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="slider-thumbs" id="sliderThumbs">
+          <!-- Las miniaturas se cargan con JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Calendario de Airbnb -->
+  <section id="calendario" class="ap-section container">
+    <div class="section-layout">
+      <div class="left-col">
+        <h2 data-i18n="nav.calendar">Disponibilidad del Alojamiento</h2>
+        <p data-i18n="calendar.bodyText">Consulta las fechas libres en tiempo real. La información de ocupación se sincroniza directamente con Airbnb para tu comodidad de forma totalmente transparente.</p>
+      </div>
+      <div class="right-col">
+        <div class="calendar-container">
+          <div class="gcal-wrapper">
+            <iframe src="https://calendar.google.com/calendar/embed?src=vmjaaptbsr7q87cclsn32vc0e1th401e%40import.calendar.google.com&ctz=Europe%2FMadrid&showTitle=0&showPrint=0&showTabs=0&showTz=0&showCalendars=0&wkst=2" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Opiniones / Reseñas -->
+  <section id="opiniones" class="ap-section alt-bg">
+    <div class="container">
+      <h2 class="text-center" data-i18n="nav.reviews">Opiniones de nuestros Huéspedes</h2>
+      <div class="reviews-grid-list" id="reviewsGrid">
+        <!-- Rellenado dinámicamente -->
+      </div>
+      <p class="transparency-note text-center">⭐ <span data-i18n="reviews.transparency">Evaluaciones importadas directamente de los portales de Airbnb y Google Maps.</span></p>
+    </div>
+  </section>
+
+  <!-- Sección: Entorno y Mapa con Pin y Ficha Abierta -->
+  <section id="entorno" class="ap-section container">
+    <h2 class="text-center" data-i18n="nav.map">Ubicación y Entorno</h2>
+    <p class="text-center subtitle-p" data-i18n="map.subtitle">Situado en segunda línea de playa de Calpe con todos los servicios y ocio a mano.</p>
+    
+    <div class="map-iframe-container">
+      <!-- Mapa Oficial Embebido de Google de mucahome1 -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3119.724773823439!2d0.0466208!3d38.6436164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129dffe82e08b033%3A0x2477355ca4aebdab!2smucahome1!5e0!3m2!1ses!2ses!4v1719240000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Sección: Reserva / Contacto / WhatsApp -->
+  <section id="reservar" class="ap-section booking-section">
+    <div class="hero-bg" style="background-image: linear-gradient(rgba(13, 59, 102, 0.9), rgba(11, 19, 43, 0.95));"></div>
+    <div class="container booking-content">
+      <h2 data-i18n="booking.title">Contactar y Reservar</h2>
+      <p data-i18n="booking.directDesc">Reserva directamente con nosotros sin intermediarios ni cargos de gestión. Escríbenos directamente o solicítanos información de tarifas.</p>
+      
+      <div class="booking-options">
+        <a href="https://wa.me/34608122535?text=Hola,%20estoy%20interesado%20en%20reservar%20el%20apartamento%20mucahome1" target="_blank" class="btn-whatsapp">
+          💬 <span data-i18n="btn.whatsapp">Contactar por WhatsApp</span>
+        </a>
+        <span class="booking-or" data-i18n="booking.or">o rellena nuestro formulario de consulta</span>
+      </div>
+
+      <form class="booking-form" onsubmit="handleBooking(event)">
+        <div class="form-row">
+          <input type="text" id="bookingName" required placeholder="Tu Nombre">
+          <input type="email" id="bookingEmail" required placeholder="Correo Electrónico">
+        </div>
+        <textarea id="bookingMessage" rows="4" required placeholder="Indica fechas estimadas y número de huéspedes..."></textarea>
+        <button type="submit" class="btn-primary" data-i18n="booking.send">Enviar Solicitud</button>
+      </form>
+
+      <div class="airbnb-link-box">
+        <span data-i18n="airbnb.transparency">Por motivos de seguridad y transparencia, también puedes consultar nuestra ficha oficial en</span>
+        <a href="https://www.airbnb.es/rooms/6578939" target="_blank">Airbnb mucahome1</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <p>&copy; 2026 MUCAHOME. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Inicialización específica del apartamento 1
+    currentApId = 'mucahome1';
+    
+    // Lista de fotos del apartamento 1 (ubicadas en la carpeta assets/mucahome1/)
+    const albumPhotos = [
+      "assets/mucahome1/1.jpg",
+      "assets/mucahome1/2.jpg",
+      "assets/mucahome1/3.jpg",
+      "assets/mucahome1/4.jpg",
+      "assets/mucahome1/5.jpg",
+      "assets/mucahome1/6.jpg",
+      "assets/mucahome1/7.jpg",
+      "assets/mucahome1/8.jpg",
+      "assets/mucahome1/9.jpg"
+    ];
+
+    let activePhotoIdx = 0;
+    let autoPlayTimer = null;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const thumbsBox = document.getElementById('sliderThumbs');
+      const sliderMain = document.getElementById('sliderMain');
+
+      // Cargar la primera imagen como portada inicial
+      sliderMain.style.backgroundImage = `url('${albumPhotos[0]}')`;
+
+      albumPhotos.forEach((src, idx) => {
+        const thumb = document.createElement('div');
+        thumb.className = `thumb-item ${idx === 0 ? 'active' : ''}`;
+        thumb.style.backgroundImage = `url('${src}')`;
+        thumb.onclick = () => {
+          changePhoto(idx);
+          resetAutoPlay();
+        };
+        thumbsBox.appendChild(thumb);
+      });
+
+      function changePhoto(idx) {
+        activePhotoIdx = idx;
+        document.querySelectorAll('.thumb-item').forEach((t, i) => {
+          t.classList.remove('active');
+          if (i === idx) t.classList.add('active');
+        });
+        sliderMain.style.backgroundImage = `url('${albumPhotos[idx]}')`;
+      }
+
+      function startAutoPlay() {
+        autoPlayTimer = setInterval(() => {
+          let nextIdx = (activePhotoIdx + 1) % albumPhotos.length;
+          changePhoto(nextIdx);
+        }, 4000); // Cambiar cada 4 segundos
+      }
+
+      function resetAutoPlay() {
+        clearInterval(autoPlayTimer);
+        startAutoPlay();
+      }
+
+      startAutoPlay();
+    });
+  </script>
+</body>
+</html>
