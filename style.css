@@ -113,6 +113,18 @@ body {
   transform: translateY(-2px);
 }
 
+.btn-precheckin {
+  background-color: transparent !important;
+  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-color);
+  padding: 6px 18px !important;
+}
+
+.btn-precheckin:hover {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
 /* Language Selector */
 .language-selector {
   display: flex;
