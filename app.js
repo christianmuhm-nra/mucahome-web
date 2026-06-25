@@ -23,6 +23,16 @@ const translations = {
     "spec.ac": "Aire acondicionado frío/calor",
     
     "modal.amenities": "Servicios Incluidos",
+    "amenity.tv": "📺 Smart TV",
+    "amenity.wifi": "⚡ Fibra óptica + WiFi alta velocidad",
+    "amenity.terrace": "🌅 Gran terraza con vistas despejadas",
+    "amenity.beachGear": "🏖️ Sillas, sombrilla y toallas de playa",
+    "amenity.kitchen": "🍳 Cocina totalmente equipada",
+    "amenity.fullyEquipped": "🍳 Totalmente equipado",
+    "amenity.pool": "🏊 Piscina comunitaria fantástica",
+    "amenity.tennis": "🎾 Pista de tenis comunitaria",
+    "amenity.pingpong": "🏓 Mesa de ping-pong",
+    
     "gallery.subtitle": "Un recorrido visual por las instalaciones y estancias del apartamento.",
     "gallery.subtitle2": "Descubre las instalaciones deportivas y de ocio del apartamento.",
     
@@ -64,6 +74,16 @@ const translations = {
     "spec.ac": "Air conditioning heating/cooling",
     
     "modal.amenities": "Amenities Included",
+    "amenity.tv": "📺 Smart TV",
+    "amenity.wifi": "⚡ Fiber optic + high-speed WiFi",
+    "amenity.terrace": "🌅 Large terrace with open views",
+    "amenity.beachGear": "🏖️ Beach chairs, umbrella and towels",
+    "amenity.kitchen": "🍳 Fully equipped kitchen",
+    "amenity.fullyEquipped": "🍳 Fully equipped",
+    "amenity.pool": "🏊 Fantastic shared swimming pool",
+    "amenity.tennis": "🎾 Shared tennis court",
+    "amenity.pingpong": "🏓 Ping-pong table",
+    
     "gallery.subtitle": "A visual tour of the facilities and rooms of the apartment.",
     "gallery.subtitle2": "Discover the sports and leisure facilities of the apartment.",
     
@@ -105,6 +125,16 @@ const translations = {
     "spec.ac": "Klimaanlage (kalt/warm)",
     
     "modal.amenities": "Ausstattung Inklusive",
+    "amenity.tv": "📺 Smart-TV",
+    "amenity.wifi": "⚡ Glasfaser + Highspeed-WLAN",
+    "amenity.terrace": "🌅 Große Terrasse mit freiem Blick",
+    "amenity.beachGear": "🏖️ Strandstühle, Sonnenschirm und Handtücher",
+    "amenity.kitchen": "🍳 Voll ausgestattete Küche",
+    "amenity.fullyEquipped": "🍳 Voll ausgestattet",
+    "amenity.pool": "🏊 Fantastischer Gemeinschaftspool",
+    "amenity.tennis": "🎾 Gemeinschafts-Tennisplatz",
+    "amenity.pingpong": "🏓 Tischtennisplatte",
+    
     "gallery.subtitle": "Ein Rundgang durch die Räumlichkeiten des Apartments.",
     "gallery.subtitle2": "Entdecken Sie die Sport- und Freizeiteinrichtungen der Anlage.",
     
@@ -146,8 +176,15 @@ const translations = {
     "spec.ac": "Climatisation réversible (chaud/froid)",
     
     "modal.amenities": "Équipements Inclus",
-    "gallery.subtitle": "Une visite virtuelle des installations et des pièces de l'appartement.",
-    "gallery.subtitle2": "Découvrez les installations de loisirs de la résidence.",
+    "amenity.tv": "📺 Smart TV",
+    "amenity.wifi": "⚡ Fibre optique + WiFi haut débit",
+    "amenity.terrace": "🌅 Grande terrasse avec vue dégagée",
+    "amenity.beachGear": "🏖️ Chaises, parasol et serviettes de plage",
+    "amenity.kitchen": "🍳 Cuisine entièrement équipée",
+    "amenity.fullyEquipped": "🍳 Entièrement équipé",
+    "amenity.pool": "🏊 Superbe piscine commune",
+    "amenity.tennis": "🎾 Court de tennis commun",
+    "amenity.pingpong": "🏓 Table de ping-pong",
     
     "calendar.bodyText": "Vérifiez les dates disponibles en temps réel. La disponibilité est synchronisée directement avec Airbnb de manière transparente.",
     "calendar.free": "Disponible",
