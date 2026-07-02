@@ -671,14 +671,15 @@ body {
 }
 
 .main-footer a {
-  color: var(--secondary-color);
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
+  text-transform: uppercase;
   transition: var(--transition);
 }
 
 .main-footer a:hover {
-  color: var(--accent-color);
+  color: #ffffff;
   text-decoration: underline;
 }
 
