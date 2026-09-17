@@ -9,9 +9,9 @@ const translations = {
     "nav.precheckin": "Pre-Check-in",
     "nav.book": "Reservar / Contactar",
     
-    "ap1.heroTag": "Apartamento con una terraza impresionante y vistas despejadas al Peñón de Ifach.",
+    "ap1.heroTag": "Apartamento en Calpe con espectacular terraza y vistas al Peñón de Ifach a 150 m de la playa",
     "ap1.fullDesc": "Disfruta de Calpe en este espectacular apartamento ideal para parejas o familias pequeñas. La joya de la casa es su amplia terraza de gran tamaño, perfecta para cenar al aire libre con estupendas vistas al majestuoso Peñón de Ifach. Equipado completamente, incluyendo toallas y sillas de playa.",
-    "ap2.heroTag": "Apartamento completamente renovado con piscina comunitaria, pista de tenis y ping-pong.",
+    "ap2.heroTag": "Precioso apartamento en Calpe con piscina a 200 m de la playa",
     "ap2.fullDesc": "Apartamento completamente equipado para unas merecidas vacaciones. Moderno y completamente reformado situado en una zona excelente de Calpe. Cuenta con acceso a una fantástica piscina comunitaria, pista de tenis y zona de ping-pong. A un paso de una gran variedad de restaurantes, tiendas y de las espectaculares playas de arena dorada.",
     
     "spec.capacity": "Capacidad: 2-4 personas",
@@ -79,9 +79,9 @@ const translations = {
     "nav.precheckin": "Pre-Check-in",
     "nav.book": "Book / Contact",
     
-    "ap1.heroTag": "Apartment with a stunning terrace and great views of the Peñón de Ifach.",
+    "ap1.heroTag": "Apartment in Calpe with spectacular terrace and views of the Peñón de Ifach, 150 m from the beach",
     "ap1.fullDesc": "Enjoy Calpe in this spectacular apartment ideal for couples or small families. The highlight is its large terrace, perfect for outdoor dining with wonderful views of the majestic Peñón de Ifach. Fully equipped, including beach towels and chairs.",
-    "ap2.heroTag": "Apartment completely renovated with shared swimming pool, tennis and ping-pong.",
+    "ap2.heroTag": "Beautiful apartment in Calpe with swimming pool, 200 m from the beach",
     "ap2.fullDesc": "Fully equipped apartment for a well-deserved vacation. Modern and completely renovated apartment situated in an excellent area of Calpe. Access to a fantastic shared pool, tennis court, and ping-pong area. Within walking distance to a wide variety of restaurants, shops, and spectacular golden sand beaches.",
     
     "spec.capacity": "Capacity: 2-4 guests",
@@ -149,9 +149,9 @@ const translations = {
     "nav.precheckin": "Pre-Check-in",
     "nav.book": "Buchen / Kontakt",
     
-    "ap1.heroTag": "Wohnung mit einer beeindruckenden Terrasse und herrlichem Blick auf den Peñón de Ifach.",
+    "ap1.heroTag": "Apartment in Calpe mit spektakulärer Terrasse und Blick auf den Peñón de Ifach, 150 m vom Strand entfernt",
     "ap1.fullDesc": "Genießen Sie Calpe in diesem spektakulären Apartment, ideal für Paare oder kleine Familien. Das Prunkstück des Hauses ist seine große Terrasse, perfekt für Mahlzeiten im Freien mit herrlichem Blick auf den majestätischen Peñón de Ifach. Komplett ausgestattet, inklusive Strandhandtüchern und Liegestühlen.",
-    "ap2.heroTag": "Apartment komplett renoviert mit Gemeinschaftspool, Tennisplatz und Tischtennis.",
+    "ap2.heroTag": "Schönes Apartment in Calpe mit Pool, 200 m vom Strand entfernt",
     "ap2.fullDesc": "Voll ausgestattetes Apartment für einen wohlverdienten Urlaub. Modernes und komplett renoviertes Apartment in einer hervorragenden Gegend von Calpe. Zugang zu einem fantastischen Gemeinschaftspool, Tennisplatz und Tischtennisbereich. Nur einen Schritt entfernt von einer Vielzahl von Restaurants, Geschäften und Stränden.",
     
     "spec.capacity": "Belegung: 2-4 Personen",
@@ -219,9 +219,9 @@ const translations = {
     "nav.precheckin": "Pre-Check-in",
     "nav.book": "Réserver / Contact",
     
-    "ap1.heroTag": "Appartement avec une magnifique terrasse et une vue superbe sur le Peñón de Ifach.",
+    "ap1.heroTag": "Appartement à Calpe avec terrasse spectaculaire et vue sur le Peñón de Ifach, à 150 m de la plage",
     "ap1.fullDesc": "Profitez de Calpe dans ce spectaculaire appartement idéal pour couples ou petites familles. Le joyau de la maison es sa grande terrasse, idéale pour dîner en plein air avec une vue magnifique sur le majestueux Peñón de Ifach. Entièrement équipé, y compris les serviettes et les chaises de plage.",
-    "ap2.heroTag": "Appartement entièrement rénové avec piscine commune, court de tennis et ping-pong.",
+    "ap2.heroTag": "Bel appartement à Calpe avec piscine à 200 m de la plage",
     "ap2.fullDesc": "Appartement entièrement équipé pour des vacances bien méritées. Moderne et entièrement rénové situé dans une excellente zone de Calpe. Accès à une fantastique piscine commune, court de tennis, et aire de ping-pong. À quelques pas d'une grande variedad de restaurants, boutiques et plages de sable doré.",
     
     "spec.capacity": "Capacité: 2-4 personnes",
