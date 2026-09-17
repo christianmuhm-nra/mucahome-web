@@ -779,33 +779,35 @@ body {
 /* Sección Canales, Redes y Portales */
 .channels-section {
   background-color: var(--light-bg);
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(13, 59, 102, 0.08);
+  padding-top: 60px;
+  padding-bottom: 70px;
 }
 
 .channels-header {
   max-width: 750px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 45px auto;
 }
 
 .channels-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 1000px;
+  gap: 35px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 @media (max-width: 800px) {
   .channels-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 28px;
   }
 }
 
 .channel-group h3 {
   font-size: 1.25rem;
   color: var(--primary-color);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -815,60 +817,79 @@ body {
 .channel-buttons {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
 .channel-card-link {
   display: flex;
   align-items: center;
   gap: 16px;
-  background: white;
-  padding: 16px 22px;
+  background: #ffffff;
+  padding: 16px 20px;
   border-radius: 16px;
-  text-decoration: none;
-  color: var(--primary-color);
-  box-shadow: var(--card-shadow);
-  border: 1.5px solid transparent;
-  transition: var(--transition);
+  text-decoration: none !important;
+  color: var(--primary-color) !important;
+  box-shadow: 0 4px 16px rgba(13, 59, 102, 0.05);
+  border: 1.5px solid rgba(13, 59, 102, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .channel-card-link:hover {
   transform: translateY(-3px);
   border-color: var(--accent-color);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 24px rgba(13, 59, 102, 0.11);
+  text-decoration: none !important;
 }
 
 .channel-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
-  color: white;
-  font-size: 1.3rem;
+  color: #ffffff;
   flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.channel-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+  display: block;
 }
 
 .channel-icon.airbnb {
-  background-color: #FF5A5F;
+  background: linear-gradient(135deg, #FF5A5F, #FF385C);
 }
 
 .channel-icon.booking {
-  background-color: #003580;
-  font-family: Arial, sans-serif;
-  font-size: 1.1rem;
+  background: linear-gradient(135deg, #003580, #00224f);
+}
+
+.booking-mark {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: -1px;
+  line-height: 1;
 }
 
 .channel-icon.vrbo {
-  background-color: #1c355e;
-  font-family: Arial, sans-serif;
-  font-size: 1.05rem;
+  background: linear-gradient(135deg, #1c355e, #10213d);
+}
+
+.vrbo-mark {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.5px;
+  line-height: 1;
 }
 
 .channel-icon.facebook {
-  background-color: #1877F2;
+  background: linear-gradient(135deg, #1877F2, #0d65d9);
 }
 
 .channel-info {
@@ -877,22 +898,25 @@ body {
 }
 
 .channel-name {
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--primary-color);
+  text-decoration: none !important;
 }
 
 .channel-sub {
   font-size: 0.85rem;
-  color: #777;
+  color: #6b7280;
   margin-top: 2px;
+  text-decoration: none !important;
 }
 
 .channel-arrow {
   margin-left: auto;
-  font-size: 1.2rem;
-  color: #aaa;
-  transition: var(--transition);
+  font-size: 1.25rem;
+  color: #b0b8c1;
+  transition: transform 0.25s ease, color 0.25s ease;
+  text-decoration: none !important;
 }
 
 .channel-card-link:hover .channel-arrow {
@@ -902,59 +926,64 @@ body {
 
 /* Tarjeta Venta Cruzada (El otro apartamento) */
 .cross-sell-wrapper {
-  max-width: 1000px;
-  margin: 60px auto 0 auto;
+  max-width: 960px;
+  margin: 50px auto 0 auto;
 }
 
 .cross-sell-card {
-  background: white;
-  border-radius: 24px;
+  background: #ffffff;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: var(--card-shadow);
+  box-shadow: 0 8px 30px rgba(13, 59, 102, 0.08);
   display: grid;
   grid-template-columns: 360px 1fr;
-  align-items: center;
+  align-items: stretch;
   border: 1px solid rgba(13, 59, 102, 0.08);
-  transition: var(--transition);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cross-sell-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(13, 59, 102, 0.13);
 }
 
 .cross-sell-img {
-  height: 100%;
-  min-height: 240px;
+  min-height: 250px;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cross-sell-content {
-  padding: 40px;
+  padding: 35px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .cross-sell-tag {
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 800;
   text-transform: uppercase;
   color: var(--accent-color);
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   margin-bottom: 8px;
 }
 
 .cross-sell-content h3 {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   color: var(--primary-color);
   margin-bottom: 12px;
+  font-weight: 800;
 }
 
 .cross-sell-content p {
-  color: #555;
-  font-size: 1.05rem;
-  margin-bottom: 24px;
-  line-height: 1.6;
+  color: #555555;
+  font-size: 1.02rem;
+  margin-bottom: 22px;
+  line-height: 1.55;
 }
 
 @media (max-width: 850px) {
@@ -963,9 +992,10 @@ body {
   }
   .cross-sell-img {
     height: 220px;
+    min-height: 220px;
   }
   .cross-sell-content {
-    padding: 30px 20px;
+    padding: 25px 20px;
   }
 }
 
