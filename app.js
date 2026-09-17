@@ -37,7 +37,7 @@ const translations = {
     "gallery.subtitle": "Un recorrido visual por las instalaciones y estancias del apartamento.",
     "gallery.subtitle2": "Descubre las instalaciones deportivas y de ocio del apartamento.",
     
-    "calendar.bodyText": "Consulta las fechas libres en tiempo real. La información de ocupación se sincroniza directamente con Airbnb para tu comodidad de forma totalmente transparente.",
+    "calendar.bodyText": "Consulta la disponibilidad en el calendario o comprueba si tus fechas deseadas están libres. Contáctanos directamente para asegurar tu estancia al mejor precio y sin intermediarios.",
     "calendar.free": "Disponible",
     "calendar.occupied": "Ocupado",
     
@@ -93,7 +93,7 @@ const translations = {
     "gallery.subtitle": "A visual tour of the facilities and rooms of the apartment.",
     "gallery.subtitle2": "Discover the sports and leisure facilities of the apartment.",
     
-    "calendar.bodyText": "Check the free dates in real time. Occupancy information is synced directly with Airbnb for your convenience in a transparent way.",
+    "calendar.bodyText": "Check availability in the calendar or see if your desired dates are free. Contact us directly to secure your stay at the best price with no intermediaries.",
     "calendar.free": "Available",
     "calendar.occupied": "Occupied",
     
@@ -149,7 +149,7 @@ const translations = {
     "gallery.subtitle": "Ein Rundgang durch die Räumlichkeiten des Apartments.",
     "gallery.subtitle2": "Entdecken Sie die Sport- und Freizeiteinrichtungen der Anlage.",
     
-    "calendar.bodyText": "Prüfen Sie freie Termine in Echtzeit. Die Belegungsdaten werden direkt mit Airbnb synchronisiert.",
+    "calendar.bodyText": "Prüfen Sie die Verfügbarkeit im Kalender oder schauen Sie, ob Ihre Wunschdaten frei sind. Kontaktieren Sie uns direkt, um Ihren Aufenthalt zum besten Preis und ohne Zwischenhändler zu sichern.",
     "calendar.free": "Frei",
     "calendar.occupied": "Belegt",
     
@@ -202,7 +202,7 @@ const translations = {
     "amenity.tennis": "🎾 Court de tennis commun",
     "amenity.pingpong": "🏓 Table de ping-pong",
     
-    "calendar.bodyText": "Vérifiez les dates disponibles en temps réel. La disponibilité est synchronisée directement avec Airbnb de manière transparente.",
+    "calendar.bodyText": "Consultez la disponibilité sur le calendrier ou vérifiez si vos dates souhaitées sont libres. Contactez-nous directement pour garantir votre séjour au meilleur prix et sans intermédiaire.",
     "calendar.free": "Disponible",
     "calendar.occupied": "Occupé",
     

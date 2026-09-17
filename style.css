@@ -449,6 +449,10 @@ body {
   margin: 0 auto;
 }
 
+.calendar-cta-btn {
+  margin-top: 25px;
+}
+
 .gcal-wrapper {
   position: relative;
   overflow: hidden;
