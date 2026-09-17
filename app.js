@@ -53,7 +53,21 @@ const translations = {
     "btn.whatsapp": "Contactar por WhatsApp",
     "booking.or": "o rellena nuestro formulario de consulta",
     "booking.send": "Enviar Solicitud",
-    "airbnb.transparency": "Por motivos de seguridad y transparencia, también puedes consultar nuestra ficha oficial en",
+    "channels.title": "Encuéntranos también en",
+    "channels.subtitle": "Consulta nuestros perfiles, valoraciones y publicaciones en otras plataformas y redes sociales.",
+    "channels.portalsTitle": "Reservas y valoraciones",
+    "channels.socialTitle": "Síguenos en redes",
+    "channels.otherApTag": "¿Buscas otra opción en Calpe?",
+    "channels.ap1Hook": "¿Prefieres una gran terraza?",
+    "channels.ap1Desc": "Descubre mucahome1: espectacular terraza privada con vistas despejadas al Peñón de Ifach y a solo 150 metros del mar.",
+    "channels.ap1Btn": "Explorar mucahome1 →",
+    "channels.ap2Hook": "¿Prefieres tener piscina?",
+    "channels.ap2Desc": "Descubre mucahome2: fantástica piscina comunitaria, pista de tenis, zona de ping-pong y recién renovado en Calpe.",
+    "channels.ap2Btn": "Explorar mucahome2 →",
+    "channels.portalSubAirbnb": "Perfil oficial y evaluaciones",
+    "channels.portalSubBooking": "Ficha oficial y opiniones",
+    "channels.portalSubVrbo": "Alojamiento verificado",
+    "channels.socialSubFacebook": "Página oficial de Facebook",
     "footer.rights": "Todos los derechos reservados."
   },
   en: {
@@ -109,7 +123,21 @@ const translations = {
     "btn.whatsapp": "Contact via WhatsApp",
     "booking.or": "or fill out our inquiry form",
     "booking.send": "Send Request",
-    "airbnb.transparency": "For safety and transparency reasons, you can also view our official page on",
+    "channels.title": "Also find us on",
+    "channels.subtitle": "Check our profiles, reviews, and posts on other platforms and social networks.",
+    "channels.portalsTitle": "Bookings & reviews",
+    "channels.socialTitle": "Follow us on social media",
+    "channels.otherApTag": "Looking for another option in Calpe?",
+    "channels.ap1Hook": "Do you prefer a large terrace?",
+    "channels.ap1Desc": "Discover mucahome1: spectacular private terrace with open views of the Peñón de Ifach, only 150 meters from the beach.",
+    "channels.ap1Btn": "Explore mucahome1 →",
+    "channels.ap2Hook": "Do you prefer having a pool?",
+    "channels.ap2Desc": "Discover mucahome2: fantastic shared swimming pool, tennis court, ping-pong area, and newly renovated in Calpe.",
+    "channels.ap2Btn": "Explore mucahome2 →",
+    "channels.portalSubAirbnb": "Official profile and reviews",
+    "channels.portalSubBooking": "Official listing and ratings",
+    "channels.portalSubVrbo": "Verified holiday rental",
+    "channels.socialSubFacebook": "Official Facebook page",
     "footer.rights": "All rights reserved."
   },
   de: {
@@ -165,7 +193,21 @@ const translations = {
     "btn.whatsapp": "Kontakt per WhatsApp",
     "booking.or": "oder füllen Sie unser Anfrageformular aus",
     "booking.send": "Anfrage Senden",
-    "airbnb.transparency": "Aus Gründen der Sicherheit und Transparenz können Sie uns auch finden auf",
+    "channels.title": "Finden Sie uns auch auf",
+    "channels.subtitle": "Sehen Sie sich unsere Profile, Bewertungen und Beiträge auf anderen Plattformen und sozialen Netzwerken an.",
+    "channels.portalsTitle": "Buchungen & Bewertungen",
+    "channels.socialTitle": "Folgen Sie uns",
+    "channels.otherApTag": "Suchen Sie eine andere Option in Calpe?",
+    "channels.ap1Hook": "Bevorzugen Sie eine große Terrasse?",
+    "channels.ap1Desc": "Entdecken Sie mucahome1: spektakuläre private Terrasse mit freiem Blick auf den Peñón de Ifach, nur 150 Meter vom Strand entfernt.",
+    "channels.ap1Btn": "mucahome1 entdecken →",
+    "channels.ap2Hook": "Möchten Sie lieber einen Pool?",
+    "channels.ap2Desc": "Entdecken Sie mucahome2: fantastischer Gemeinschaftspool, Tennisplatz, Tischtennisbereich und frisch renoviert in Calpe.",
+    "channels.ap2Btn": "mucahome2 entdecken →",
+    "channels.portalSubAirbnb": "Offizielles Profil und Bewertungen",
+    "channels.portalSubBooking": "Offizieller Eintrag und Rezensionen",
+    "channels.portalSubVrbo": "Verifizierte Ferienunterkunft",
+    "channels.socialSubFacebook": "Offizielle Facebook-Seite",
     "footer.rights": "Alle Rechte vorbehalten."
   },
   fr: {
@@ -218,7 +260,21 @@ const translations = {
     "btn.whatsapp": "Contacter par WhatsApp",
     "booking.or": "ou remplissez notre formulaire de demande",
     "booking.send": "Envoyer la Demande",
-    "airbnb.transparency": "Pour des raisons de sécurité et de transparence, vous pouvez aussi consulter notre fiche sur",
+    "channels.title": "Retrouvez-nous aussi sur",
+    "channels.subtitle": "Consultez nos profils, avis et publications sur d'autres plateformes et réseaux sociaux.",
+    "channels.portalsTitle": "Réservations et avis",
+    "channels.socialTitle": "Suivez-nous sur les réseaux",
+    "channels.otherApTag": "Vous cherchez une autre option à Calpe ?",
+    "channels.ap1Hook": "Préférez-vous une grande terrasse ?",
+    "channels.ap1Desc": "Découvrez mucahome1 : spectaculaire terrasse privée avec vue dégagée sur le Peñón de Ifach, à seulement 150 mètres de la plage.",
+    "channels.ap1Btn": "Découvrir mucahome1 →",
+    "channels.ap2Hook": "Préférez-vous avoir une piscine ?",
+    "channels.ap2Desc": "Découvrez mucahome2 : superbe piscine commune, court de tennis, espace ping-pong et récemment rénové à Calpe.",
+    "channels.ap2Btn": "Découvrir mucahome2 →",
+    "channels.portalSubAirbnb": "Profil officiel et commentaires",
+    "channels.portalSubBooking": "Fiche officielle et évaluations",
+    "channels.portalSubVrbo": "Hébergement vérifié",
+    "channels.socialSubFacebook": "Page officielle Facebook",
     "footer.rights": "Tous droits réservés."
   }
 };
@@ -283,6 +339,54 @@ function changeLanguage(lang) {
   // Re-renderizar opiniones y placeholders en el idioma correspondiente
   renderReviews();
   updatePlaceholders(lang);
+  updateChannelLinks(lang);
+}
+
+// Adaptar enlaces de plataformas según el idioma
+function updateChannelLinks(lang) {
+  const airbnbLinks = {
+    mucahome1: {
+      es: "https://www.airbnb.es/rooms/6578939?locale=es",
+      en: "https://www.airbnb.com/rooms/6578939?locale=en",
+      de: "https://www.airbnb.de/rooms/6578939?locale=de",
+      fr: "https://www.airbnb.fr/rooms/6578939?locale=fr"
+    },
+    mucahome2: {
+      es: "https://www.airbnb.es/rooms/13629203?locale=es",
+      en: "https://www.airbnb.com/rooms/13629203?locale=en",
+      de: "https://www.airbnb.de/rooms/13629203?locale=de",
+      fr: "https://www.airbnb.fr/rooms/13629203?locale=fr"
+    }
+  };
+
+  const bookingLinks = {
+    es: "https://www.booking.com/hotel/es/mucahome1-apartamento-terraza-vistas-y-playa-150-m.es.html",
+    en: "https://www.booking.com/hotel/es/mucahome1-apartamento-terraza-vistas-y-playa-150-m.en-gb.html",
+    de: "https://www.booking.com/hotel/es/mucahome1-apartamento-terraza-vistas-y-playa-150-m.de.html",
+    fr: "https://www.booking.com/hotel/es/mucahome1-apartamento-terraza-vistas-y-playa-150-m.fr.html"
+  };
+
+  const vrboLinks = {
+    es: "https://www.vrbo.com/es-es/p2411416",
+    en: "https://www.vrbo.com/en-gb/p2411416",
+    de: "https://www.vrbo.com/de-de/p2411416",
+    fr: "https://www.vrbo.com/fr-fr/p2411416"
+  };
+
+  const airbnbBtn = document.getElementById('channelAirbnb');
+  if (airbnbBtn && airbnbLinks[currentApId]) {
+    airbnbBtn.href = airbnbLinks[currentApId][lang] || airbnbLinks[currentApId].es;
+  }
+
+  const bookingBtn = document.getElementById('channelBooking');
+  if (bookingBtn && bookingLinks[lang]) {
+    bookingBtn.href = bookingLinks[lang];
+  }
+
+  const vrboBtn = document.getElementById('channelVrbo');
+  if (vrboBtn && vrboLinks[lang]) {
+    vrboBtn.href = vrboLinks[lang];
+  }
 }
 
 // Pintar Opiniones
