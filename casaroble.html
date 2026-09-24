@@ -19,8 +19,8 @@
     </div>
     
     <nav class="nav-menu">
-      <a href="#descripcion" data-i18n="nav.desc">Descripción</a>
       <a href="#galeria" data-i18n="nav.gallery">Galería</a>
+      <a href="#descripcion" data-i18n="nav.desc">Descripción</a>
       <a href="#calendario" data-i18n="nav.calendar">Disponibilidad</a>
       <a href="#opiniones" data-i18n="nav.reviews">Opiniones</a>
       <a href="#ubicacion" data-i18n="nav.map">Ubicación</a>
@@ -45,6 +45,26 @@
       <p data-i18n="roble.heroTag">Un cálido refugio donde el mar y la calma se encuentran. Piscina privada, cenador exterior y la playa a escasos pasos: tu oasis personal en la Costa Tropical.</p>
       
       <a href="#reservar" class="btn-primary" data-i18n="roble.heroCta">Reservar / Contactar</a>
+    </div>
+  </section>
+
+  <!-- Sección: Galería / Álbum de Fotos -->
+  <section id="galeria" class="ap-section alt-bg">
+    <div class="container">
+      <h2 class="text-center" data-i18n="nav.gallery">Álbum de Fotografías</h2>
+      <p class="text-center subtitle-p" data-i18n="gallery.robleSubtitle">Un recorrido visual auténtico y natural por todas las instalaciones de Casa Roble Carchuna.</p>
+      
+      <!-- Slider / Galería Dinámica -->
+      <div class="gallery-slider">
+        <div class="slider-main" id="sliderMain" style="background-image: url('assets/roble/05_cenador_comedor_exterior.jpg');">
+          <div class="slider-caption" id="sliderCaption">01. Gran Comedor Exterior de Madera</div>
+          <button class="slider-arrow prev-arrow" onclick="prevSlide()" aria-label="Foto anterior">&#10094;</button>
+          <button class="slider-arrow next-arrow" onclick="nextSlide()" aria-label="Foto siguiente">&#10095;</button>
+        </div>
+        <div class="slider-thumbs" id="sliderThumbs">
+          <!-- Las miniaturas se cargan dinámicamente con JS -->
+        </div>
+      </div>
     </div>
   </section>
 
@@ -86,26 +106,6 @@
           <li data-i18n="amenity.robleAc">❄️ Aire acondicionado y calefacción</li>
           <li data-i18n="amenity.robleWifi">⚡ Fibra óptica + WiFi alta velocidad</li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección: Galería / Álbum de Fotos -->
-  <section id="galeria" class="ap-section alt-bg">
-    <div class="container">
-      <h2 class="text-center" data-i18n="nav.gallery">Álbum de Fotografías</h2>
-      <p class="text-center subtitle-p" data-i18n="gallery.robleSubtitle">Un recorrido visual auténtico y natural por todas las instalaciones de Casa Roble Carchuna.</p>
-      
-      <!-- Slider / Galería Dinámica -->
-      <div class="gallery-slider">
-        <div class="slider-main" id="sliderMain" style="background-image: url('assets/roble/01_hero_piscina.jpg');">
-          <div class="slider-caption" id="sliderCaption">01. Piscina Privada y Solárium</div>
-          <button class="slider-arrow prev-arrow" onclick="prevSlide()" aria-label="Foto anterior">&#10094;</button>
-          <button class="slider-arrow next-arrow" onclick="nextSlide()" aria-label="Foto siguiente">&#10095;</button>
-        </div>
-        <div class="slider-thumbs" id="sliderThumbs">
-          <!-- Las 23 miniaturas se cargan dinámicamente con JS -->
-        </div>
       </div>
     </div>
   </section>
@@ -383,31 +383,30 @@
 
   <!-- Script Lógica y Traducciones -->
   <script>
-    // Inventario de las 23 Fotos
+    // Inventario de las 22 Fotos Seleccionadas
     const roblePhotos = [
-      { src: "assets/roble/01_hero_piscina.jpg", title: "01. Piscina Privada y Solárium", cat: "Piscina" },
+      { src: "assets/roble/05_cenador_comedor_exterior.jpg", title: "01. Gran Comedor Exterior de Madera", cat: "Cenador" },
       { src: "assets/roble/02_piscina_perspectiva.jpg", title: "02. Piscina con Vistas a la Casa", cat: "Piscina" },
       { src: "assets/roble/03_patio_jardin_balancin.jpg", title: "03. Patio con Césped y Balancín", cat: "Exteriores" },
       { src: "assets/roble/04_patio_tumbonas.jpg", title: "04. Solárium y Zona de Tumbonas", cat: "Exteriores" },
-      { src: "assets/roble/05_cenador_comedor_exterior.jpg", title: "05. Gran Comedor Exterior de Madera", cat: "Cenador" },
-      { src: "assets/roble/06_porche_chillout.jpg", title: "06. Porche Cubierto Chill-Out", cat: "Porche" },
-      { src: "assets/roble/07_detalle_bienvenida.jpg", title: "07. Bienvenida y Hospitalidad", cat: "Detalles" },
-      { src: "assets/roble/08_salon_comedor_principal.jpg", title: "08. Salón-Comedor Principal", cat: "Salón" },
-      { src: "assets/roble/09_comedor_interior.jpg", title: "09. Comedor Interior Acogedor", cat: "Salón" },
-      { src: "assets/roble/10_cocina_completa.jpg", title: "10. Cocina Totalmente Equipada", cat: "Cocina" },
-      { src: "assets/roble/11_cocina_electrodomesticos.jpg", title: "11. Equipamiento de Cocina y Menaje", cat: "Cocina" },
-      { src: "assets/roble/12_dormitorio_principal.jpg", title: "12. Dormitorio Principal de Matrimonio", cat: "Dormitorios" },
-      { src: "assets/roble/13_dormitorio_matrimonio_cama.jpg", title: "13. Cama de Matrimonio Confortable", cat: "Dormitorios" },
-      { src: "assets/roble/14_dormitorio_secundario.jpg", title: "14. Dormitorio Secundario Individual", cat: "Dormitorios" },
-      { src: "assets/roble/15_dormitorio_adicional.jpg", title: "15. Dormitorio Adicional Luminoso", cat: "Dormitorios" },
-      { src: "assets/roble/16_bano_completo.jpg", title: "16. Cuarto de Baño Completo", cat: "Baño" },
-      { src: "assets/roble/17_bano_plato_ducha.jpg", title: "17. Plato de Ducha con Mampara", cat: "Baño" },
-      { src: "assets/roble/18_barbacoa_de_obra.jpg", title: "18. Barbacoa de Obra Tradicional", cat: "Barbacoa" },
-      { src: "assets/roble/19_entrada_finca.jpg", title: "19. Acceso", cat: "Accesos" },
-      { src: "assets/roble/20_camino_arbolado_carchuna.jpg", title: "20. Camino de Acceso a la Propiedad", cat: "Entorno" },
-      { src: "assets/roble/21_playa_carchuna.jpg", title: "21. Playa y Palmeras de Carchuna", cat: "Playa" },
-      { src: "assets/roble/22_costa_barcas_pescadores.jpg", title: "22. Barcas Tradicionales y Costa", cat: "Playa" },
-      { src: "assets/roble/23_rutas_bicicleta.jpg", title: "23. Cicloturismo y Paseos junto al Mar", cat: "Actividades" }
+      { src: "assets/roble/06_porche_chillout.jpg", title: "05. Porche Cubierto Chill-Out", cat: "Porche" },
+      { src: "assets/roble/07_detalle_bienvenida.jpg", title: "06. Bienvenida y Hospitalidad", cat: "Detalles" },
+      { src: "assets/roble/08_salon_comedor_principal.jpg", title: "07. Salón-Comedor Principal", cat: "Salón" },
+      { src: "assets/roble/09_comedor_interior.jpg", title: "08. Comedor Interior Acogedor", cat: "Salón" },
+      { src: "assets/roble/10_cocina_completa.jpg", title: "09. Cocina Totalmente Equipada", cat: "Cocina" },
+      { src: "assets/roble/11_cocina_electrodomesticos.jpg", title: "10. Equipamiento de Cocina y Menaje", cat: "Cocina" },
+      { src: "assets/roble/12_dormitorio_principal.jpg", title: "11. Dormitorio Principal de Matrimonio", cat: "Dormitorios" },
+      { src: "assets/roble/13_dormitorio_matrimonio_cama.jpg", title: "12. Cama de Matrimonio Confortable", cat: "Dormitorios" },
+      { src: "assets/roble/14_dormitorio_secundario.jpg", title: "13. Dormitorio Secundario Individual", cat: "Dormitorios" },
+      { src: "assets/roble/15_dormitorio_adicional.jpg", title: "14. Dormitorio Adicional Luminoso", cat: "Dormitorios" },
+      { src: "assets/roble/16_bano_completo.jpg", title: "15. Cuarto de Baño Completo", cat: "Baño" },
+      { src: "assets/roble/17_bano_plato_ducha.jpg", title: "16. Plato de Ducha con Mampara", cat: "Baño" },
+      { src: "assets/roble/18_barbacoa_de_obra.jpg", title: "17. Barbacoa de Obra Tradicional", cat: "Barbacoa" },
+      { src: "assets/roble/19_entrada_finca.jpg", title: "18. Acceso", cat: "Accesos" },
+      { src: "assets/roble/20_camino_arbolado_carchuna.jpg", title: "19. Camino de Acceso a la Propiedad", cat: "Entorno" },
+      { src: "assets/roble/21_playa_carchuna.jpg", title: "20. Playa y Palmeras de Carchuna", cat: "Playa" },
+      { src: "assets/roble/22_costa_barcas_pescadores.jpg", title: "21. Barcas Tradicionales y Costa", cat: "Playa" },
+      { src: "assets/roble/23_rutas_bicicleta.jpg", title: "22. Cicloturismo y Paseos junto al Mar", cat: "Actividades" }
     ];
 
     let currentPhotoIdx = 0;
