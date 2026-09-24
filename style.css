@@ -394,6 +394,30 @@ body {
   gap: 10px;
 }
 
+.desc-cta-box {
+  margin-top: 25px;
+}
+
+.desc-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 1.05rem;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(238, 150, 75, 0.35);
+  text-decoration: none;
+}
+
+.desc-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(238, 150, 75, 0.55);
+}
+
 /* Gallery Slider */
 .gallery-slider {
   max-width: 900px;
