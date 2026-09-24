@@ -407,8 +407,55 @@ body {
   border-radius: 20px;
   box-shadow: var(--card-shadow);
   margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
   transition: background-image 0.5s ease-in-out;
 }
+
+.slider-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(11, 19, 43, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 5;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(11, 19, 43, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.slider-arrow:hover {
+  background: var(--accent-color);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-arrow { left: 16px; }
+.next-arrow { right: 16px; }
 
 .slider-thumbs {
   display: flex;
@@ -743,8 +790,28 @@ body {
     gap: 10px;
     font-size: 0.9rem;
   }
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 130px 20px 60px;
+  }
   .hero-content h1 {
     font-size: 2.2rem;
+    margin-bottom: 14px;
+  }
+  .hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 95%;
+  }
+  .hero-badges-list {
+    margin: 12px 0 22px;
+    gap: 6px;
+  }
+  .hero-pill {
+    font-size: 0.78rem;
+    padding: 4px 11px;
   }
   .license-separator {
     gap: 8px;
@@ -1005,5 +1072,203 @@ body {
   .cross-sell-content {
     padding: 25px 20px;
   }
+}
+
+/* ========================================================
+   ESTILOS ESPECÍFICOS: CASA ROBLE CARCHUNA & ENTORNO
+   ======================================================== */
+
+.roble-hero .hero-bg {
+  background-size: cover;
+  background-position: center 35%;
+}
+
+.hero-badges-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 18px 0 25px;
+}
+
+.hero-pill {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.surroundings-section {
+  padding: 80px 0;
+}
+
+.surroundings-group {
+  margin-bottom: 50px;
+}
+
+.surroundings-group-title {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  font-weight: 800;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid rgba(13, 59, 102, 0.1);
+  padding-bottom: 10px;
+}
+
+.surroundings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.place-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.place-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(13, 59, 102, 0.12);
+}
+
+.place-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.place-card h4 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.place-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fff8e1;
+  color: #b78103;
+  padding: 4px 9px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 1px solid #ffe082;
+  white-space: nowrap;
+}
+
+.place-dist {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.place-desc {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+/* Selector Interactivo de Fechas */
+.availability-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.rates-badge {
+  display: inline-block;
+  background: rgba(13, 59, 102, 0.08);
+  color: var(--primary-color);
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.rates-badge span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.date-picker-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.date-input-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+}
+
+.date-input-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.booking-badge-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #003580;
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+  margin-top: 15px;
+}
+
+.booking-badge-btn:hover {
+  background: #00224f;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.booking-badge-btn .b-logo {
+  background: #ffffff;
+  color: #003580;
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding: 2px 8px;
+  border-radius: 4px;
 }
 

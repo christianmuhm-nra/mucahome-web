@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Roble Carchuna - Refugio de Madera con Piscina en la Costa Tropical</title>
+  <meta name="description" content="Casa Roble Carchuna: refugio sinigual de madera con piscina privada, gran cenador exterior, barbacoa y 4 dormitorios junto a la playa en Carchuna (Granada).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3.2">
+</head>
+<body class="ap-page roble-page">
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">
+      <a href="casaroble.html">Casa Roble <span>Carchuna</span></a>
+    </div>
+    
+    <nav class="nav-menu">
+      <a href="#descripcion" data-i18n="nav.desc">Descripción</a>
+      <a href="#galeria" data-i18n="nav.gallery">Galería</a>
+      <a href="#calendario" data-i18n="nav.calendar">Disponibilidad</a>
+      <a href="#opiniones" data-i18n="nav.reviews">Opiniones</a>
+      <a href="#ubicacion" data-i18n="nav.map">Ubicación</a>
+      <a href="#entorno" data-i18n="nav.surroundings">Entorno</a>
+      <a href="#reservar" class="btn-nav" data-i18n="nav.book">Reservar / Contactar</a>
+      <a href="#precheckin" class="btn-nav btn-precheckin" data-i18n="nav.precheckin">Pre-Check-in</a>
+    </nav>
+
+    <div class="language-selector">
+      <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
+      <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+      <button class="lang-btn" onclick="changeLanguage('de')">DE</button>
+      <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+    </div>
+  </header>
+
+  <!-- Hero Apartment -->
+  <section class="hero ap-hero roble-hero">
+    <div class="hero-bg" style="background-image: linear-gradient(rgba(11, 19, 43, 0.45), rgba(11, 19, 43, 0.8)), url('assets/roble/21_playa_carchuna.jpg');"></div>
+    <div class="hero-content">
+      <h1>Casa Roble Carchuna</h1>
+      <p data-i18n="roble.heroTag">Un cálido refugio donde el mar y la calma se encuentran. Piscina privada, cenador exterior y la playa a escasos pasos: tu oasis personal en la Costa Tropical.</p>
+      
+      <div class="hero-badges-list">
+        <span class="hero-pill">🏊 <span data-i18n="pill.pool">Piscina Privada</span></span>
+        <span class="hero-pill">🌳 <span data-i18n="pill.porch">Gran Cenador de Madera</span></span>
+        <span class="hero-pill">🍖 <span data-i18n="pill.bbq">Barbacoa Tradicional</span></span>
+        <span class="hero-pill">🏖️ <span data-i18n="pill.beach">A pasos de la Playa</span></span>
+        <span class="hero-pill">🛏️ <span data-i18n="pill.rooms">4 Dormitorios</span></span>
+      </div>
+
+      <a href="#reservar" class="btn-primary" data-i18n="roble.heroCta">Consultar Disponibilidad</a>
+    </div>
+  </section>
+
+  <!-- Sección: Descripción -->
+  <section id="descripcion" class="ap-section container">
+    <div class="section-layout">
+      <div class="left-col">
+        <h2 data-i18n="roble.descTitle">Descripción del Alojamiento</h2>
+        
+        <p class="ap-full-desc" data-i18n="roble.descP1">
+          Hay lugares donde el ritmo se desacelera nada más cruzar la cancela. <strong>Casa Roble Carchuna</strong> es un refugio sinigual construido con la nobleza y calidez de la madera de roble, pensado para quienes buscan desconectar de la rutina con sencillez, privacidad y aire puro.
+        </p>
+        
+        <p class="ap-full-desc" data-i18n="roble.descP2">
+          Ubicada en una tranquila zona costera en Carchuna, a pocos minutos a pie de la playa, la vivienda ofrece una atmósfera acogedora y funcional donde el verdadero protagonista es el exterior: disfruta de un refrescante baño matinal en su <strong>piscina privada</strong>, prepara una sobremesa sin prisas en el <strong>gran cenador techado de madera</strong> o comparte una velada al fresco con su barbacoa de obra tradicional.
+        </p>
+
+        <p class="ap-full-desc" data-i18n="roble.descP3">
+          Con <strong>4 habitaciones independientes</strong> (un dormitorio principal de matrimonio y tres dormitorios individuales), es la base perfecta para familias o grupos reducidos que valoran la tranquilidad, la brisa marina y el encanto auténtico de la Costa Tropical.
+        </p>
+        
+        <div class="ap-specs">
+          <div class="spec-item">👥 <span data-i18n="roble.specCapacity">Capacidad: hasta 5 huéspedes</span></div>
+          <div class="spec-item">🛏️ <span data-i18n="roble.specRooms">4 Dormitorios (1 Doble + 3 Individuales)</span></div>
+          <div class="spec-item">🚿 <span data-i18n="roble.specBaths">1 Baño completo con ducha y mampara</span></div>
+          <div class="spec-item">🏊 <span data-i18n="roble.specPool">Piscina privada con solárium y césped</span></div>
+          <div class="spec-item">🍖 <span data-i18n="roble.specBbq">Barbacoa de obra de ladrillo refractario</span></div>
+          <div class="spec-item">🌳 <span data-i18n="roble.specPorch">Cenador de madera y porche chill-out</span></div>
+          <div class="spec-item">❄️ <span data-i18n="roble.specAc">Aire acondicionado frío / calor</span></div>
+          <div class="spec-item">🌊 <span data-i18n="roble.specDistance">A pocos pasos de la Playa de Carchuna</span></div>
+          <div class="spec-item">🚗 <span data-i18n="roble.specParking">Parking privado gratuito en la finca</span></div>
+        </div>
+      </div>
+
+      <div class="right-col">
+        <h3 data-i18n="roble.amenitiesTitle">Servicios y Equipamiento</h3>
+        <ul class="amenities-grid-list">
+          <li data-i18n="amenity.roblePool">🏊 Piscina privada exterior</li>
+          <li data-i18n="amenity.robleCenador">🌳 Gran cenador exterior de madera</li>
+          <li data-i18n="amenity.robleBbq">🍖 Barbacoa de obra tradicional</li>
+          <li data-i18n="amenity.roblePorche">🛋️ Porche con sofás chill-out</li>
+          <li data-i18n="amenity.robleAc">❄️ Aire acondicionado y calefacción</li>
+          <li data-i18n="amenity.robleWifi">⚡ Fibra óptica + WiFi alta velocidad</li>
+          <li data-i18n="amenity.robleTv">📺 Smart TV en el salón</li>
+          <li data-i18n="amenity.robleKitchen">🍳 Cocina completa con horno y vitro</li>
+          <li data-i18n="amenity.robleWashing">🧺 Lavadora y zona de lavado</li>
+          <li data-i18n="amenity.robleFridge">🧊 Frigorífico combi y microondas</li>
+          <li data-i18n="amenity.robleParking">🚗 Parking gratuito dentro del recinto</li>
+          <li data-i18n="amenity.robleKids">👶 Apto para niños y familias</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Galería / Álbum de Fotos -->
+  <section id="galeria" class="ap-section alt-bg">
+    <div class="container">
+      <h2 class="text-center" data-i18n="nav.gallery">Álbum de Fotografías</h2>
+      <p class="text-center subtitle-p" data-i18n="gallery.robleSubtitle">Un recorrido visual auténtico y natural por todas las instalaciones de Casa Roble Carchuna.</p>
+      
+      <!-- Slider / Galería Dinámica -->
+      <div class="gallery-slider">
+        <div class="slider-main" id="sliderMain" style="background-image: url('assets/roble/01_hero_piscina.jpg');">
+          <div class="slider-caption" id="sliderCaption">01. Piscina Privada y Solárium</div>
+          <button class="slider-arrow prev-arrow" onclick="prevSlide()" aria-label="Foto anterior">&#10094;</button>
+          <button class="slider-arrow next-arrow" onclick="nextSlide()" aria-label="Foto siguiente">&#10095;</button>
+        </div>
+        <div class="slider-thumbs" id="sliderThumbs">
+          <!-- Las 23 miniaturas se cargan dinámicamente con JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Calendario y Disponibilidad (Sin precios) -->
+  <section id="calendario" class="ap-section container">
+    <div class="section-layout">
+      <div class="left-col">
+        <h2 data-i18n="nav.calendar">Disponibilidad del Alojamiento</h2>
+        <p data-i18n="calendar.robleDesc">
+          Consulta la disponibilidad para tus vacaciones. Al reservar directamente con nosotros disfrutas del mejor trato personalizado, sin cargos de gestión ni comisiones de intermediarios.
+        </p>
+        
+        <div style="margin-top: 25px;">
+          <a href="#reservar" class="btn-primary" data-i18n="nav.book">Solicitar Reserva Directa</a>
+        </div>
+      </div>
+
+      <div class="right-col">
+        <div class="availability-card">
+          <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 15px;" data-i18n="cal.checkTitle">Comprobar Fechas Deseadas</h3>
+          <p style="font-size: 0.95rem; color: #666; margin-bottom: 20px;" data-i18n="cal.checkSubtitle">Selecciona tu fecha de llegada y salida para consultar disponibilidad en tiempo real:</p>
+          
+          <div class="date-picker-grid">
+            <div class="date-input-group">
+              <label for="checkinDate" data-i18n="cal.checkin">Fecha de Entrada</label>
+              <input type="date" id="checkinDate" onchange="calculateStay()">
+            </div>
+            <div class="date-input-group">
+              <label for="checkoutDate" data-i18n="cal.checkout">Fecha de Salida</label>
+              <input type="date" id="checkoutDate" onchange="calculateStay()">
+            </div>
+          </div>
+
+          <div id="staySummary" style="display: none; padding: 12px; background: rgba(13, 59, 102, 0.06); border-radius: 8px; margin-bottom: 15px; font-size: 0.95rem; color: var(--primary-color); font-weight: 600;">
+            Estancia seleccionada: <span id="nightsCount">0</span> noches
+          </div>
+
+          <button type="button" class="btn-primary" style="width: 100%;" onclick="applyDatesToBooking()" data-i18n="cal.applyBtn">
+            Solicitar Reserva para estas Fechas &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Opiniones / Reseñas -->
+  <section id="opiniones" class="ap-section alt-bg">
+    <div class="container">
+      <h2 class="text-center" data-i18n="nav.reviews">Opiniones de nuestros Huéspedes</h2>
+      <p class="text-center subtitle-p" data-i18n="reviews.subtitle">
+        Experiencias reales de quienes ya han disfrutado de su estancia en Casa Roble Carchuna.
+      </p>
+      
+      <div class="reviews-grid-list" id="reviewsGrid" style="max-width: 800px; margin: 0 auto 30px auto;">
+        <div class="review-card">
+          <div class="review-header">
+            <span class="review-author">Manuel 🇪🇸</span>
+            <span class="review-date">13 de octubre de 2025 &bull; Booking.com</span>
+          </div>
+          <div class="review-body">
+            "Nos encantó la casa, nos encantó la ubicación y nos encantó Julio, el propietario. Una gran persona, siempre atentos a que no nos faltará nada, ayudándonos y teniendo varios detalles con nosotros. La casa está en una ubicación muy buena a 3 min andando de la playa y en una zona muy buena para desconectar . Sin ninguna duda volveremos a ir!"
+          </div>
+        </div>
+      </div>
+
+      <p class="transparency-note text-center">⭐ <span data-i18n="reviews.transparency">Evaluación verificada importada directamente del portal oficial de Booking.com.</span></p>
+    </div>
+  </section>
+
+  <!-- Sección: Ubicación y Mapa Embebido (Primero el mapa) -->
+  <section id="ubicacion" class="ap-section container">
+    <div class="container">
+      <h2 class="text-center" data-i18n="nav.map">Ubicación Exacta</h2>
+      <p class="text-center subtitle-p" data-i18n="map.robleSubtitle">
+        Situada en Carchuna (Motril, Granada) en un entorno tranquilo junto a la brisa del mar Mediterráneo.
+      </p>
+      
+      <div class="map-iframe-container">
+        <iframe src="https://maps.google.com/maps?q=36.6986327,-3.4405467&hl=es&z=15&output=embed" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Entorno y Lugares de Interés (Luego el entorno) -->
+  <section id="entorno" class="ap-section alt-bg surroundings-section">
+    <div class="container">
+      <h2 class="text-center" data-i18n="surroundings.mainTitle">Entorno y Lugares Cerca</h2>
+      <p class="text-center subtitle-p" data-i18n="surroundings.mainSubtitle">
+        Descubre la tranquilidad de Carchuna, los fondos marinos de Calahonda y la riqueza cultural de la Costa Tropical y Granada.
+      </p>
+
+      <!-- Grupo 1: A pocos pasos de tu refugio -->
+      <div class="surroundings-group">
+        <h3 class="surroundings-group-title">
+          🚶 <span data-i18n="surroundings.group1Title">A pocos pasos de tu refugio (Caminando o en bici)</span>
+        </h3>
+        <div class="surroundings-grid">
+          
+          <!-- Playa de Carchuna -->
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4>Playa de Carchuna</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.carchunaBeach">📍 A 3 minutos a pie</span>
+            <p class="place-desc" data-i18n="desc.carchunaBeach">
+              La ubicación es inmejorable para los amantes del mar. Caminando desde la casa llegarás a la tranquila Playa de Carchuna, una extensa y cómoda franja de arena ideal para nadar y desconectar bajo el sol, lejos de las grandes aglomeraciones turísticas.
+            </p>
+          </div>
+
+          <!-- Faro de Sacratif -->
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4>Faro de Sacratif</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.sacratif">📍 Paseo al atardecer</span>
+            <p class="place-desc" data-i18n="desc.sacratif">
+              Para un paseo inolvidable al atardecer, tienes a la vuelta de la esquina el Faro de Sacratif. Esta torre centenaria construida en 1863 sobre los acantilados ofrece unas panorámicas espectaculares del horizonte del Mediterráneo y de la silueta costera.
+            </p>
+          </div>
+
+          <!-- Calahonda y sus Calas -->
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4>Calahonda y sus Calas</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.calahonda">📍 A 2 minutos en coche</span>
+            <p class="place-desc" data-i18n="desc.calahonda">
+              Conocida en toda Andalucía por sus aguas profundas y extraordinariamente transparentes, es la meca del buceo y snorkel. Descubre calas vírgenes como La Rijana y tabernas marineras donde degustar la auténtica quisquilla de Motril y pulpo a la brasa.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Grupo 2: A pocos minutos en coche -->
+      <div class="surroundings-group">
+        <h3 class="surroundings-group-title">
+          🚗 <span data-i18n="surroundings.group2Title">A pocos minutos en coche (La esencia de la Costa Tropical)</span>
+        </h3>
+        <div class="surroundings-grid">
+          
+          <!-- Motril -->
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4>Motril</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.motril">📍 A 10 minutos en coche</span>
+            <p class="place-desc" data-i18n="desc.motril">
+              Para salir a cenar buen marisco, hacer compras o pasar una mañana jugando al golf en Los Moriscos, el centro de Motril se encuentra a muy pocos minutos. Ofrece todas las comodidades y servicios de una ciudad sin perder el encanto y la hospitalidad sureña.
+            </p>
+          </div>
+
+          <!-- Castillo de Salobreña -->
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4>Castillo de Salobreña</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.salobrena">📍 A 15 minutos en coche</span>
+            <p class="place-desc" data-i18n="desc.salobrena">
+              Un viaje muy corto por la costa te llevará hasta el pintoresco Castillo de Salobreña. Coronando uno de los pueblos blancos más bonitos de Andalucía sobre un peñón frente al mar, esta imponente fortaleza árabe del siglo X es perfecta para una inmersión cultural matutina.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Grupo 3: Excursiones inolvidables -->
+      <div class="surroundings-group" style="margin-bottom: 0;">
+        <h3 class="surroundings-group-title">
+          🏛️ <span data-i18n="surroundings.group3Title">Excursiones inolvidables (A menos de una hora)</span>
+        </h3>
+        <div class="surroundings-grid">
+          
+          <!-- Alhambra de Granada -->
+          <div class="place-card" style="grid-column: 1 / -1;">
+            <div class="place-card-top">
+              <h4>La Alhambra y el Generalife (Granada)</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.alhambra">📍 A 50 minutos por autovía</span>
+            <p class="place-desc" data-i18n="desc.alhambra">
+              Nuestra casa tiene una gran ventaja: es la base estratégica perfecta para visitar Granada. En menos de una hora estarás en la mágica Alhambra. Para aprovechar al máximo tu excursión a este complejo monumental, te sugerimos gestionar tus pases con antelación. Durante tu visita, no dejes de pasear por el Generalife y relajarte entre sus hermosos jardines y estanques, para terminar deslumbrándote con la arquitectura y los patios de los espectaculares Palacios Nazaríes.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección: Reserva / Contacto / WhatsApp -->
+  <section id="reservar" class="ap-section booking-section">
+    <div class="hero-bg" style="background-image: linear-gradient(rgba(13, 59, 102, 0.9), rgba(11, 19, 43, 0.95));"></div>
+    <div class="container booking-content">
+      <h2 data-i18n="booking.title">Contactar y Reservar</h2>
+      <p data-i18n="booking.robleDirectDesc">
+        Reserva directamente con nosotros sin intermediarios ni comisiones adicionales. Escríbenos directamente por WhatsApp o envíanos tu solicitud mediante el formulario.
+      </p>
+      
+      <div class="booking-options">
+        <a href="https://wa.me/34637311655?text=Hola,%20estoy%20interesado%20en%20reservar%20Casa%20Roble%20Carchuna" target="_blank" class="btn-whatsapp">
+          💬 <span data-i18n="btn.whatsapp">Contactar por WhatsApp</span>
+        </a>
+        <span class="booking-or" data-i18n="booking.or">o rellena nuestro formulario de consulta</span>
+      </div>
+
+      <form class="booking-form" id="robleBookingForm" onsubmit="handleRobleBooking(event)">
+        <div class="form-row">
+          <input type="text" id="bookingName" required placeholder="Tu Nombre y Apellidos">
+          <input type="email" id="bookingEmail" required placeholder="Correo Electrónico de Contacto">
+        </div>
+        <div class="form-row">
+          <input type="tel" id="bookingPhone" placeholder="Teléfono (opcional)">
+          <input type="text" id="bookingDates" placeholder="Fechas estimadas (Entrada y Salida)">
+        </div>
+        <textarea id="bookingMessage" rows="4" required placeholder="Indica número de huéspedes y cualquier consulta adicional..."></textarea>
+        <button type="submit" class="btn-primary" data-i18n="booking.send">Enviar Solicitud</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Sección: Encuéntranos también en (Booking.com) -->
+  <section id="canales" class="ap-section channels-section">
+    <div class="container">
+      <div class="section-title-wrapper channels-header text-center">
+        <h2 data-i18n="channels.title">Encuéntranos también en</h2>
+        <p class="subtitle-p" data-i18n="channels.subtitle">Consulta nuestra ficha oficial, valoraciones y opiniones en otras plataformas.</p>
+      </div>
+
+      <div class="channels-grid" style="max-width: 550px; margin: 0 auto;">
+        <div class="channel-group" style="width: 100%;">
+          <h3 data-i18n="channels.portalsTitle">Portales de reservas</h3>
+          <div class="channel-buttons">
+            <a href="https://www.booking.com/hotel/es/oak-amp-sea-retreat-carchuna.es.html" target="_blank" rel="noopener noreferrer" class="channel-card-link" id="channelBooking">
+              <div class="channel-icon booking">
+                <span class="booking-mark">B.</span>
+              </div>
+              <div class="channel-info">
+                <span class="channel-name">Booking.com</span>
+                <span class="channel-sub" data-i18n="channels.portalSubBooking">Ficha oficial y opiniones</span>
+              </div>
+              <span class="channel-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Pre-Check-in -->
+  <div id="precheckinModal" class="modal-backdrop" style="display: none;">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closePrecheckin()">&times;</button>
+      <h3 data-i18n="precheckin.title">Pre-Check-in de Huéspedes</h3>
+      <p style="color: #555; margin: 15px 0 20px;" data-i18n="precheckin.desc">
+        Para agilizar tu llegada y cumplir con la normativa de registro de viajeros, puedes enviar tus datos previamente por WhatsApp o por correo a <strong>lahermitadejulio@hotmail.com</strong>.
+      </p>
+      <a href="https://wa.me/34637311655?text=Hola,%20deseo%20completar%20el%20pre-check-in%20para%20Casa%20Roble%20Carchuna" target="_blank" class="btn-whatsapp" style="display: inline-flex;">
+        💬 <span data-i18n="precheckin.btn">Enviar Pre-Check-in por WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Botón Flotante de WhatsApp -->
+  <a href="https://wa.me/34637311655?text=Hola,%20estoy%20interesado%20en%20reservar%20Casa%20Roble%20Carchuna" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" style="display: block;"><path d="M12.001 2C6.478 2 2 6.478 2 12c0 1.764.462 3.486 1.34 5.006L2 22l5.148-1.314A9.957 9.957 0 0012 22c5.522 0 10-4.478 10-10s-4.478-10-10-10zm5.82 14.286c-.244.686-1.42 1.314-1.956 1.396-.514.078-1.154.11-3.696-.944-3.242-1.344-5.328-4.664-5.49-4.88-.162-.216-1.306-1.74-1.306-3.322 0-1.582.828-2.36 1.12-2.68.294-.32.642-.4.856-.4.214 0 .428.002.616.012.2.01.468-.076.732.558.274.66.936 2.28 1.018 2.448.082.168.136.366.026.586-.11.22-.164.356-.328.548-.164.192-.344.428-.492.574-.164.164-.334.342-.144.668.19.326.844 1.392 1.81 2.254 1.246 1.11 2.298 1.452 2.624 1.616.326.164.516.136.708-.084.192-.22.82-1.074 1.038-1.442.218-.368.436-.308.73-.2.294.108 1.864.878 2.184 1.038.32.16.534.24.614.374.08.134.08.776-.164 1.462z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2026 <a href="https://www.mucahome.com" target="_blank">Mucahome Services</a>. <span data-i18n="footer.rights">Todos los derechos reservados.</span> Casa Roble Carchuna.</p>
+  </footer>
+
+  <!-- Script Lógica y Traducciones -->
+  <script>
+    // Inventario de las 23 Fotos
+    const roblePhotos = [
+      { src: "assets/roble/01_hero_piscina.jpg", title: "01. Piscina Privada y Solárium", cat: "Piscina" },
+      { src: "assets/roble/02_piscina_perspectiva.jpg", title: "02. Piscina con Vistas a la Casa", cat: "Piscina" },
+      { src: "assets/roble/03_patio_jardin_balancin.jpg", title: "03. Patio con Césped y Balancín", cat: "Exteriores" },
+      { src: "assets/roble/04_patio_tumbonas.jpg", title: "04. Solárium y Zona de Tumbonas", cat: "Exteriores" },
+      { src: "assets/roble/05_cenador_comedor_exterior.jpg", title: "05. Gran Comedor Exterior de Madera", cat: "Cenador" },
+      { src: "assets/roble/06_porche_chillout.jpg", title: "06. Porche Cubierto Chill-Out", cat: "Porche" },
+      { src: "assets/roble/07_detalle_bienvenida.jpg", title: "07. Bienvenida y Hospitalidad", cat: "Detalles" },
+      { src: "assets/roble/08_salon_comedor_principal.jpg", title: "08. Salón-Comedor Principal", cat: "Salón" },
+      { src: "assets/roble/09_comedor_interior.jpg", title: "09. Comedor Interior Acogedor", cat: "Salón" },
+      { src: "assets/roble/10_cocina_completa.jpg", title: "10. Cocina Totalmente Equipada", cat: "Cocina" },
+      { src: "assets/roble/11_cocina_electrodomesticos.jpg", title: "11. Equipamiento de Cocina y Menaje", cat: "Cocina" },
+      { src: "assets/roble/12_dormitorio_principal.jpg", title: "12. Dormitorio Principal de Matrimonio", cat: "Dormitorios" },
+      { src: "assets/roble/13_dormitorio_matrimonio_cama.jpg", title: "13. Cama de Matrimonio Confortable", cat: "Dormitorios" },
+      { src: "assets/roble/14_dormitorio_secundario.jpg", title: "14. Dormitorio Secundario Individual", cat: "Dormitorios" },
+      { src: "assets/roble/15_dormitorio_adicional.jpg", title: "15. Dormitorio Adicional Luminoso", cat: "Dormitorios" },
+      { src: "assets/roble/16_bano_completo.jpg", title: "16. Cuarto de Baño Completo", cat: "Baño" },
+      { src: "assets/roble/17_bano_plato_ducha.jpg", title: "17. Plato de Ducha con Mampara", cat: "Baño" },
+      { src: "assets/roble/18_barbacoa_de_obra.jpg", title: "18. Barbacoa de Obra Tradicional", cat: "Barbacoa" },
+      { src: "assets/roble/19_entrada_finca.jpg", title: "19. Acceso", cat: "Accesos" },
+      { src: "assets/roble/20_camino_arbolado_carchuna.jpg", title: "20. Camino de Acceso a la Propiedad", cat: "Entorno" },
+      { src: "assets/roble/21_playa_carchuna.jpg", title: "21. Playa y Palmeras de Carchuna", cat: "Playa" },
+      { src: "assets/roble/22_costa_barcas_pescadores.jpg", title: "22. Barcas Tradicionales y Costa", cat: "Playa" },
+      { src: "assets/roble/23_rutas_bicicleta.jpg", title: "23. Cicloturismo y Paseos junto al Mar", cat: "Actividades" }
+    ];
+
+    let currentPhotoIdx = 0;
+
+    function initGallery() {
+      const thumbsContainer = document.getElementById("sliderThumbs");
+      thumbsContainer.innerHTML = "";
+      roblePhotos.forEach((photo, idx) => {
+        const thumb = document.createElement("div");
+        thumb.className = `thumb-item ${idx === 0 ? 'active' : ''}`;
+        thumb.style.backgroundImage = `url('${photo.src}')`;
+        thumb.title = photo.title;
+        thumb.onclick = () => selectSlide(idx);
+        thumbsContainer.appendChild(thumb);
+      });
+      updateSlide();
+    }
+
+    function selectSlide(idx) {
+      currentPhotoIdx = idx;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentPhotoIdx = (currentPhotoIdx - 1 + roblePhotos.length) % roblePhotos.length;
+      updateSlide();
+    }
+
+    function nextSlide() {
+      currentPhotoIdx = (currentPhotoIdx + 1) % roblePhotos.length;
+      updateSlide();
+    }
+
+    function updateSlide() {
+      const main = document.getElementById("sliderMain");
+      const caption = document.getElementById("sliderCaption");
+      const photo = roblePhotos[currentPhotoIdx];
+      main.style.backgroundImage = `url('${photo.src}')`;
+      caption.innerText = photo.title;
+
+      document.querySelectorAll(".thumb-item").forEach((el, idx) => {
+        el.classList.toggle("active", idx === currentPhotoIdx);
+      });
+    }
+
+    // Selector de fechas
+    function calculateStay() {
+      const cin = document.getElementById("checkinDate").value;
+      const cout = document.getElementById("checkoutDate").value;
+      const summary = document.getElementById("staySummary");
+      const nightsSpan = document.getElementById("nightsCount");
+
+      if (cin && cout) {
+        const d1 = new Date(cin);
+        const d2 = new Date(cout);
+        const diffTime = d2 - d1;
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        if (diffDays > 0) {
+          nightsSpan.innerText = diffDays;
+          summary.style.display = "block";
+          document.getElementById("bookingDates").value = `${cin} al ${cout} (${diffDays} noches)`;
+        } else {
+          summary.style.display = "none";
+        }
+      }
+    }
+
+    function applyDatesToBooking() {
+      calculateStay();
+      const target = document.getElementById("reservar");
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Formulario de Reserva hacia lahermitadejulio@hotmail.com
+    function handleRobleBooking(event) {
+      event.preventDefault();
+      const name = document.getElementById("bookingName").value;
+      const email = document.getElementById("bookingEmail").value;
+      const phone = document.getElementById("bookingPhone").value || "No indicado";
+      const dates = document.getElementById("bookingDates").value || "Fechas por consultar";
+      const message = document.getElementById("bookingMessage").value;
+
+      const subject = encodeURIComponent(`Solicitud de Reserva: Casa Roble Carchuna - ${name}`);
+      const body = encodeURIComponent(
+        `Hola,\n\nHe recibido una solicitud de información / reserva para Casa Roble Carchuna:\n\n` +
+        `• Nombre: ${name}\n` +
+        `• Email: ${email}\n` +
+        `• Teléfono: ${phone}\n` +
+        `• Fechas: ${dates}\n\n` +
+        `• Mensaje / Consultas:\n${message}\n\n` +
+        `---\nEnviado desde la web oficial de Casa Roble Carchuna`
+      );
+
+      // Abrir cliente de correo
+      window.location.href = `mailto:lahermitadejulio@hotmail.com?subject=${subject}&body=${body}`;
+
+      alert("¡Gracias por tu solicitud! Se abrirá tu aplicación de correo para enviar el mensaje a lahermitadejulio@hotmail.com. También puedes contactarnos al instante por WhatsApp al +34 637 31 16 55.");
+    }
+
+    // Precheckin modal
+    document.querySelectorAll('a[href="#precheckin"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('precheckinModal').style.display = 'flex';
+      });
+    });
+
+    function closePrecheckin() {
+      document.getElementById('precheckinModal').style.display = 'none';
+    }
+
+    // Multilenguaje
+    const robleTranslations = {
+      es: {
+        "nav.desc": "Descripción",
+        "nav.gallery": "Galería",
+        "nav.calendar": "Disponibilidad",
+        "nav.reviews": "Opiniones",
+        "nav.map": "Ubicación",
+        "nav.surroundings": "Entorno",
+        "nav.book": "Reservar / Contactar",
+        "nav.precheckin": "Pre-Check-in",
+        "roble.heroTag": "Un cálido refugio donde el mar y la calma se encuentran. Piscina privada, cenador exterior y la playa a escasos pasos: tu oasis personal en la Costa Tropical.",
+        "roble.heroCta": "Consultar Disponibilidad",
+        "pill.pool": "Piscina Privada",
+        "pill.porch": "Gran Cenador de Madera",
+        "pill.bbq": "Barbacoa Tradicional",
+        "pill.beach": "A pasos de la Playa",
+        "pill.rooms": "4 Dormitorios",
+        "roble.descTitle": "Descripción del Alojamiento",
+        "roble.descP1": "Hay lugares donde el ritmo se desacelera nada más cruzar la cancela. Casa Roble Carchuna es un refugio sinigual construido con la nobleza y calidez de la madera de roble, pensado para quienes buscan desconectar de la rutina con sencillez, privacidad y aire puro.",
+        "roble.descP2": "Ubicada en una tranquila zona costera en Carchuna, a pocos minutos a pie de la playa, la vivienda ofrece una atmósfera acogedora y funcional donde el verdadero protagonista es el exterior: disfruta de un refrescante baño matinal en su piscina privada, prepara una sobremesa sin prisas en el gran cenador techado de madera o comparte una velada al fresco con su barbacoa de obra tradicional.",
+        "roble.descP3": "Con 4 habitaciones independientes (un dormitorio principal de matrimonio y tres dormitorios individuales), es la base perfecta para familias o grupos reducidos que valoran la tranquilidad, la brisa marina y el encanto auténtico de la Costa Tropical.",
+        "roble.specCapacity": "Capacidad: hasta 5 huéspedes",
+        "roble.specRooms": "4 Dormitorios (1 Doble + 3 Individuales)",
+        "roble.specBaths": "1 Baño completo con ducha y mampara",
+        "roble.specPool": "Piscina privada con solárium y césped",
+        "roble.specBbq": "Barbacoa de obra de ladrillo refractario",
+        "roble.specPorch": "Cenador de madera y porche chill-out",
+        "roble.specAc": "Aire acondicionado frío / calor",
+        "roble.specDistance": "A pocos pasos de la Playa de Carchuna",
+        "roble.specParking": "Parking privado gratuito en la finca",
+        "roble.amenitiesTitle": "Servicios y Equipamiento",
+        "amenity.roblePool": "🏊 Piscina privada exterior",
+        "amenity.robleCenador": "🌳 Gran cenador exterior de madera",
+        "amenity.robleBbq": "🍖 Barbacoa de obra tradicional",
+        "amenity.roblePorche": "🛋️ Porche con sofás chill-out",
+        "amenity.robleAc": "❄️ Aire acondicionado y calefacción",
+        "amenity.robleWifi": "⚡ Fibra óptica + WiFi alta velocidad",
+        "amenity.robleTv": "📺 Smart TV en el salón",
+        "amenity.robleKitchen": "🍳 Cocina completa con horno y vitro",
+        "amenity.robleWashing": "🧺 Lavadora y zona de lavado",
+        "amenity.robleFridge": "🧊 Frigorífico combi y microondas",
+        "amenity.robleParking": "🚗 Parking gratuito dentro del recinto",
+        "amenity.robleKids": "👶 Apto para niños y familias",
+        "gallery.robleSubtitle": "Un recorrido visual auténtico y natural por todas las instalaciones de Casa Roble Carchuna.",
+        "calendar.robleDesc": "Consulta la disponibilidad para tus vacaciones. Al reservar directamente con nosotros disfrutas del mejor trato personalizado, sin cargos de gestión ni comisiones de intermediarios.",
+        "cal.checkTitle": "Comprobar Fechas Deseadas",
+        "cal.checkSubtitle": "Selecciona tu fecha de llegada y salida para consultar disponibilidad en tiempo real:",
+        "cal.checkin": "Fecha de Entrada",
+        "cal.checkout": "Fecha de Salida",
+        "cal.applyBtn": "Solicitar Reserva para estas Fechas →",
+        "reviews.subtitle": "Experiencias reales de quienes ya han disfrutado de su estancia en Casa Roble Carchuna.",
+        "reviews.transparency": "Evaluación verificada importada directamente del portal oficial de Booking.com.",
+        "map.robleSubtitle": "Situada en Carchuna (Motril, Granada) en un entorno tranquilo junto a la brisa del mar Mediterráneo.",
+        "surroundings.mainTitle": "Entorno y Lugares Cerca",
+        "surroundings.mainSubtitle": "Descubre la tranquilidad de Carchuna, los fondos marinos de Calahonda y la riqueza cultural de la Costa Tropical y Granada.",
+        "surroundings.group1Title": "A pocos pasos de tu refugio (Caminando o en bici)",
+        "dist.carchunaBeach": "📍 A 3 minutos a pie",
+        "desc.carchunaBeach": "La ubicación es inmejorable para los amantes del mar. Caminando desde la casa llegarás a la tranquila Playa de Carchuna, una extensa y cómoda franja de arena ideal para nadar y desconectar bajo el sol, lejos de las grandes aglomeraciones turísticas.",
+        "dist.sacratif": "📍 Paseo al atardecer",
+        "desc.sacratif": "Para un paseo inolvidable al atardecer, tienes a la vuelta de la esquina el Faro de Sacratif. Esta torre centenaria construida en 1863 sobre los acantilados ofrece unas panorámicas espectaculares del horizonte del Mediterráneo y de la silueta costera.",
+        "dist.calahonda": "📍 A 2 minutos en coche",
+        "desc.calahonda": "Conocida en toda Andalucía por sus aguas profundas y extraordinariamente transparentes, es la meca del buceo y snorkel. Descubre calas vírgenes como La Rijana y tabernas marineras donde degustar la auténtica quisquilla de Motril y pulpo a la brasa.",
+        "surroundings.group2Title": "A pocos minutos en coche (La esencia de la Costa Tropical)",
+        "dist.motril": "📍 A 10 minutos en coche",
+        "desc.motril": "Para salir a cenar buen marisco, hacer compras o pasar una mañana jugando al golf en Los Moriscos, el centro de Motril se encuentra a muy pocos minutos. Ofrece todas las comodidades y servicios de una ciudad sin perder el encanto y la hospitalidad sureña.",
+        "dist.salobrena": "📍 A 15 minutos en coche",
+        "desc.salobrena": "Un viaje muy corto por la costa te llevará hasta el pintoresco Castillo de Salobreña. Coronando uno de los pueblos blancos más bonitos de Andalucía sobre un peñón frente al mar, esta imponente fortaleza árabe del siglo X es perfecta para una inmersión cultural matutina.",
+        "surroundings.group3Title": "Excursiones inolvidables (A menos de una hora)",
+        "dist.alhambra": "📍 A 50 minutos por autovía",
+        "desc.alhambra": "Nuestra casa tiene una gran ventaja: es la base estratégica perfecta para visitar Granada. En menos de una hora estarás en la mágica Alhambra. Para aprovechar al máximo tu excursión a este complejo monumental, te sugerimos gestionar tus pases con antelación. Durante tu visita, no dejes de pasear por el Generalife y relajarte entre sus hermosos jardines y estanques, para terminar deslumbrándote con la arquitectura y los patios de los espectaculares Palacios Nazaríes.",
+        "booking.title": "Contactar y Reservar",
+        "booking.robleDirectDesc": "Reserva directamente con nosotros sin intermediarios ni comisiones adicionales. Escríbenos directamente por WhatsApp o envíanos tu solicitud mediante el formulario.",
+        "btn.whatsapp": "Contactar por WhatsApp",
+        "booking.or": "o rellena nuestro formulario de consulta",
+        "booking.send": "Enviar Solicitud",
+        "channels.title": "Encuéntranos también en",
+        "channels.subtitle": "Consulta nuestra ficha oficial, valoraciones y opiniones en otras plataformas.",
+        "channels.portalsTitle": "Portales de reservas",
+        "channels.portalSubBooking": "Ficha oficial y opiniones",
+        "precheckin.title": "Pre-Check-in de Huéspedes",
+        "precheckin.desc": "Para agilizar tu llegada y cumplir con la normativa de registro de viajeros, puedes enviar tus datos previamente por WhatsApp o por correo a lahermitadejulio@hotmail.com.",
+        "precheckin.btn": "Enviar Pre-Check-in por WhatsApp",
+        "footer.rights": "Todos los derechos reservados."
+      },
+      en: {
+        "nav.desc": "Description",
+        "nav.gallery": "Gallery",
+        "nav.calendar": "Availability",
+        "nav.reviews": "Reviews",
+        "nav.map": "Location",
+        "nav.surroundings": "Surroundings",
+        "nav.book": "Book / Contact",
+        "nav.precheckin": "Pre-Check-in",
+        "roble.heroTag": "A warm haven where the sea and serenity meet. Private pool, outdoor gazebo and the beach just steps away: your personal oasis on the Costa Tropical.",
+        "roble.heroCta": "Check Availability",
+        "pill.pool": "Private Pool",
+        "pill.porch": "Large Wooden Porch",
+        "pill.bbq": "Traditional BBQ",
+        "pill.beach": "Steps from the Beach",
+        "pill.rooms": "4 Bedrooms",
+        "roble.descTitle": "Property Description",
+        "roble.descP1": "There are places where life slows down the moment you step through the gate. Casa Roble Carchuna is a unique retreat built with the warmth and nobility of oak wood, designed for those seeking to disconnect with simplicity, privacy, and fresh air.",
+        "roble.descP2": "Located in a peaceful coastal area in Carchuna just a short stroll from the beach, the property offers a warm and functional ambiance where the outdoors is the true star: enjoy a morning dip in your private pool, leisurely meals under the covered wooden gazebo, or barbecue evenings under the stars.",
+        "roble.descP3": "With 4 private bedrooms (one double bedroom and three single bedrooms), it is the ideal retreat for families and small groups who cherish quietude, sea breezes, and the authentic charm of Andalusia's Costa Tropical.",
+        "roble.specCapacity": "Capacity: up to 5 guests",
+        "roble.specRooms": "4 Bedrooms (1 Double + 3 Singles)",
+        "roble.specBaths": "1 Full Bathroom with walk-in shower",
+        "roble.specPool": "Private swimming pool with sun deck",
+        "roble.specBbq": "Traditional brick barbecue grill",
+        "roble.specPorch": "Wooden dining gazebo & chill-out porch",
+        "roble.specAc": "Air conditioning cooling & heating",
+        "roble.specDistance": "Short walk to Carchuna Beach",
+        "roble.specParking": "Free private parking inside the estate",
+        "roble.amenitiesTitle": "Amenities & Features",
+        "amenity.roblePool": "🏊 Private outdoor swimming pool",
+        "amenity.robleCenador": "🌳 Large covered wooden dining porch",
+        "amenity.robleBbq": "🍖 Traditional brick outdoor grill",
+        "amenity.roblePorche": "🛋️ Covered porch with lounge sofas",
+        "amenity.robleAc": "❄️ Air conditioning & heating",
+        "amenity.robleWifi": "⚡ High-speed fiber optic WiFi",
+        "amenity.robleTv": "📺 Smart TV in the living room",
+        "amenity.robleKitchen": "🍳 Full kitchen with oven & stove",
+        "amenity.robleWashing": "🧺 Washing machine & laundry area",
+        "amenity.robleFridge": "🧊 Fridge-freezer & microwave",
+        "amenity.robleParking": "🚗 Free parking inside the grounds",
+        "amenity.robleKids": "👶 Family and children friendly",
+        "gallery.robleSubtitle": "An authentic, natural visual journey through Casa Roble Carchuna.",
+        "calendar.robleDesc": "Check availability for your holiday. Direct booking guarantees personalized attention and zero booking fees.",
+        "cal.checkTitle": "Check Desired Dates",
+        "cal.checkSubtitle": "Select your check-in and check-out dates to verify availability:",
+        "cal.checkin": "Check-in Date",
+        "cal.checkout": "Check-out Date",
+        "cal.applyBtn": "Request Booking for These Dates →",
+        "reviews.subtitle": "Real experiences from guests who have stayed at Casa Roble Carchuna.",
+        "reviews.transparency": "Verified review imported directly from our official Booking.com listing.",
+        "map.robleSubtitle": "Located in Carchuna (Motril, Granada) in a peaceful setting by the Mediterranean sea breeze.",
+        "surroundings.mainTitle": "Surroundings & Nearby Highlights",
+        "surroundings.mainSubtitle": "Discover the tranquility of Carchuna, the crystal waters of Calahonda, and the wonders of Costa Tropical and Granada.",
+        "surroundings.group1Title": "A few steps away (Walking or cycling)",
+        "dist.carchunaBeach": "📍 3-minute walk",
+        "desc.carchunaBeach": "An ideal location for sea lovers. A short walk brings you to the expansive, peaceful Carchuna Beach, perfect for swimming and sunbathing away from tourist crowds.",
+        "dist.sacratif": "📍 Sunset walk",
+        "desc.sacratif": "A scenic lighthouse built in 1863 perched atop coastal cliffs, offering breathtaking sunset panoramas over the Mediterranean horizon.",
+        "dist.calahonda": "📍 2 minutes by car",
+        "desc.calahonda": "Renowned for deep, crystal-clear waters, a scuba diving and snorkeling paradise, pristine coves like La Rijana, and seafood taverns serving local Motril prawns and grilled octopus.",
+        "surroundings.group2Title": "Short drive away (Costa Tropical highlights)",
+        "dist.motril": "📍 10 minutes by car",
+        "desc.motril": "Great seafood dining, local shopping, 18-hole golf at Los Moriscos, and all city conveniences infused with southern Andalusian warmth.",
+        "dist.salobrena": "📍 15 minutes by car",
+        "desc.salobrena": "A magnificent 10th-century Moorish fortress crowning one of Spain's prettiest white villages, perched high on a rock overlooking the sea.",
+        "surroundings.group3Title": "Unforgettable day trips (under an hour)",
+        "dist.alhambra": "📍 50 minutes via highway",
+        "desc.alhambra": "Casa Roble is the perfect strategic base for visiting Granada and the majestic Alhambra Palace, Generalife gardens, and the Nasrid Palaces.",
+        "booking.title": "Contact & Direct Booking",
+        "booking.robleDirectDesc": "Book directly with us with zero booking fees. Send us a message on WhatsApp or complete our inquiry form.",
+        "btn.whatsapp": "Contact via WhatsApp",
+        "booking.or": "or fill out our inquiry form",
+        "booking.send": "Send Request",
+        "channels.title": "Find us also on",
+        "channels.subtitle": "Check our official profile, ratings and reviews on other platforms.",
+        "channels.portalsTitle": "Booking portals",
+        "channels.portalSubBooking": "Official listing & reviews",
+        "precheckin.title": "Guest Pre-Check-in",
+        "precheckin.desc": "Speed up your check-in and comply with local holiday regulations by sending your details in advance via WhatsApp or email to lahermitadejulio@hotmail.com.",
+        "precheckin.btn": "Submit Pre-Check-in via WhatsApp",
+        "footer.rights": "All rights reserved."
+      },
+      de: {
+        "nav.desc": "Beschreibung",
+        "nav.gallery": "Galerie",
+        "nav.calendar": "Verfügbarkeit",
+        "nav.reviews": "Bewertungen",
+        "nav.map": "Lage",
+        "nav.surroundings": "Umgebung",
+        "nav.book": "Buchen / Kontakt",
+        "nav.precheckin": "Pre-Check-in",
+        "roble.heroTag": "Ein gemütlicher Rückzugsort, wo Meer und Ruhe sich begegnen. Privater Pool, Pavillon im Freien und der Strand nur wenige Schritte entfernt: Ihre persönliche Oase an der Costa Tropical.",
+        "roble.heroCta": "Verfügbarkeit prüfen",
+        "pill.pool": "Privater Pool",
+        "pill.porch": "Große Holzveranda",
+        "pill.bbq": "Traditioneller Grill",
+        "pill.beach": "Schritte zum Strand",
+        "pill.rooms": "4 Schlafzimmer",
+        "roble.descTitle": "Unterkunftsbeschreibung",
+        "roble.descP1": "Es gibt Orte, an denen die Zeit stillzustehen scheint. Casa Roble Carchuna ist ein unvergleichlicher Zufluchtsort aus warmem Eichenholz, geschaffen für Ruhe, Privatsphäre und Entspannung.",
+        "roble.descP2": "In einer ruhigen Küstenlage in Carchuna gelegen, nur wenige Gehminuten vom Strand entfernt. Genießen Sie den privaten Pool, den überdachten Essbereich im Freien und entspannte Grillabende.",
+        "roble.descP3": "Mit 4 separaten Schlafzimmern (1 Doppelbett + 3 Einzelzimmer) ideal für Familien und kleine Gruppen.",
+        "map.robleSubtitle": "In Carchuna (Motril, Granada) in einer ruhigen Umgebung mit mediterraner Meeresbrise gelegen.",
+        "booking.title": "Kontakt & Direktbuchung",
+        "btn.whatsapp": "Per WhatsApp kontaktieren",
+        "booking.send": "Anfrage senden",
+        "channels.title": "Finden Sie uns auch auf",
+        "footer.rights": "Alle Rechte vorbehalten."
+      },
+      fr: {
+        "nav.desc": "Description",
+        "nav.gallery": "Galerie",
+        "nav.calendar": "Disponibilité",
+        "nav.reviews": "Avis",
+        "nav.map": "Localisation",
+        "nav.surroundings": "Environnement",
+        "nav.book": "Réserver / Contact",
+        "nav.precheckin": "Pre-Check-in",
+        "roble.heroTag": "Un havre chaleureux où la mer et le calme se rencontrent. Piscine privée, gazebo extérieur et la plage à deux pas : votre oasis personnelle sur la Costa Tropical.",
+        "roble.heroCta": "Vérifier la disponibilité",
+        "pill.pool": "Piscine Privée",
+        "pill.porch": "Grand Porche en Bois",
+        "pill.bbq": "Barbecue Traditionnel",
+        "pill.beach": "À deux pas de la plage",
+        "pill.rooms": "4 Chambres",
+        "roble.descTitle": "Description du Logement",
+        "roble.descP1": "Un lieu authentique où le rythme ralentit dès l'entrée. Casa Roble Carchuna est un havre sans pareil en bois de chêne chaleureux, idéal pour déconnecter en toute tranquillité.",
+        "roble.descP2": "Située dans un quartier côtier paisible à Carchuna, à quelques minutes à pied de la plage. Profitez de la piscine privée, du grand gazebo extérieur et du barbecue traditionnel.",
+        "roble.descP3": "Avec 4 chambres indépendantes (1 chambre double + 3 chambres simples), parfait pour les familles et petits groupes.",
+        "map.robleSubtitle": "Situé à Carchuna (Motril, Grenade) dans un cadre paisible bercé par la brise marine méditerranéenne.",
+        "booking.title": "Contact & Réservation Directe",
+        "btn.whatsapp": "Contacter par WhatsApp",
+        "booking.send": "Envoyer la demande",
+        "channels.title": "Retrouvez-nous également sur",
+        "footer.rights": "Tous droits réservés."
+      }
+    };
+
+    function changeLanguage(lang) {
+      localStorage.setItem('casaroble_lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.innerText.toLowerCase() === lang) btn.classList.add('active');
+      });
+      const dict = robleTranslations[lang] || robleTranslations['es'];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.innerHTML = dict[key];
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initGallery();
+      const savedLang = localStorage.getItem('casaroble_lang') || 'es';
+      changeLanguage(savedLang);
+    });
+  </script>
+</body>
+</html>
