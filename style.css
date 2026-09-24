@@ -395,27 +395,29 @@ body {
 }
 
 .desc-cta-box {
-  margin-top: 25px;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .desc-cta-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 100%;
-  text-align: center;
-  box-sizing: border-box;
+  padding: 15px 38px;
   font-size: 1.05rem;
-  padding: 16px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(238, 150, 75, 0.35);
+  border-radius: 30px;
   text-decoration: none;
+  box-shadow: 0 4px 15px rgba(238, 150, 75, 0.4);
+  transition: var(--transition);
 }
 
 .desc-cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(238, 150, 75, 0.55);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(238, 150, 75, 0.6);
 }
 
 /* Gallery Slider */
