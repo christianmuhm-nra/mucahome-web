@@ -21,7 +21,6 @@
     <nav class="nav-menu">
       <a href="#galeria" data-i18n="nav.gallery">Galería</a>
       <a href="#descripcion" data-i18n="nav.desc">Descripción</a>
-      <a href="#calendario" data-i18n="nav.calendar">Disponibilidad</a>
       <a href="#opiniones" data-i18n="nav.reviews">Opiniones</a>
       <a href="#ubicacion" data-i18n="nav.map">Ubicación</a>
       <a href="#entorno" data-i18n="nav.surroundings">Entorno</a>
@@ -108,47 +107,9 @@
         </ul>
       </div>
     </div>
-  </section>
 
-  <!-- Sección: Calendario y Disponibilidad (Sin precios) -->
-  <section id="calendario" class="ap-section container">
-    <div class="section-layout">
-      <div class="left-col">
-        <h2 data-i18n="nav.calendar">Disponibilidad del Alojamiento</h2>
-        <p data-i18n="calendar.robleDesc">
-          Consulta la disponibilidad para tus vacaciones. Al reservar directamente con nosotros disfrutas del mejor trato personalizado, sin cargos de gestión ni comisiones de intermediarios.
-        </p>
-        
-        <div style="margin-top: 25px;">
-          <a href="#reservar" class="btn-primary" data-i18n="nav.book">Solicitar Reserva Directa</a>
-        </div>
-      </div>
-
-      <div class="right-col">
-        <div class="availability-card">
-          <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 15px;" data-i18n="cal.checkTitle">Comprobar Fechas Deseadas</h3>
-          <p style="font-size: 0.95rem; color: #666; margin-bottom: 20px;" data-i18n="cal.checkSubtitle">Selecciona tu fecha de llegada y salida para consultar disponibilidad en tiempo real:</p>
-          
-          <div class="date-picker-grid">
-            <div class="date-input-group">
-              <label for="checkinDate" data-i18n="cal.checkin">Fecha de Entrada</label>
-              <input type="date" id="checkinDate" onchange="calculateStay()">
-            </div>
-            <div class="date-input-group">
-              <label for="checkoutDate" data-i18n="cal.checkout">Fecha de Salida</label>
-              <input type="date" id="checkoutDate" onchange="calculateStay()">
-            </div>
-          </div>
-
-          <div id="staySummary" style="display: none; padding: 12px; background: rgba(13, 59, 102, 0.06); border-radius: 8px; margin-bottom: 15px; font-size: 0.95rem; color: var(--primary-color); font-weight: 600;">
-            Estancia seleccionada: <span id="nightsCount">0</span> noches
-          </div>
-
-          <button type="button" class="btn-primary" style="width: 100%;" onclick="applyDatesToBooking()" data-i18n="cal.applyBtn">
-            Solicitar Reserva para estas Fechas &rarr;
-          </button>
-        </div>
-      </div>
+    <div class="text-center" style="margin-top: 45px;">
+      <a href="#reservar" class="btn-primary" data-i18n="nav.book">Reservar / Contactar</a>
     </div>
   </section>
 
@@ -457,33 +418,7 @@
       }
     }
 
-    // Selector de fechas
-    function calculateStay() {
-      const cin = document.getElementById("checkinDate").value;
-      const cout = document.getElementById("checkoutDate").value;
-      const summary = document.getElementById("staySummary");
-      const nightsSpan = document.getElementById("nightsCount");
 
-      if (cin && cout) {
-        const d1 = new Date(cin);
-        const d2 = new Date(cout);
-        const diffTime = d2 - d1;
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        if (diffDays > 0) {
-          nightsSpan.innerText = diffDays;
-          summary.style.display = "block";
-          document.getElementById("bookingDates").value = `${cin} al ${cout} (${diffDays} noches)`;
-        } else {
-          summary.style.display = "none";
-        }
-      }
-    }
-
-    function applyDatesToBooking() {
-      calculateStay();
-      const target = document.getElementById("reservar");
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
 
     // Formulario de Reserva hacia lahermitadejulio@hotmail.com
     function handleRobleBooking(event) {
@@ -518,7 +453,6 @@
       es: {
         "nav.desc": "Descripción",
         "nav.gallery": "Galería",
-        "nav.calendar": "Disponibilidad",
         "nav.reviews": "Opiniones",
         "nav.map": "Ubicación",
         "nav.surroundings": "Entorno",
@@ -544,12 +478,6 @@
         "amenity.robleAc": "❄️ Aire acondicionado y calefacción",
         "amenity.robleWifi": "⚡ Fibra óptica + WiFi alta velocidad",
         "gallery.robleSubtitle": "Un recorrido visual auténtico y natural por todas las instalaciones de Casa Roble Carchuna.",
-        "calendar.robleDesc": "Consulta la disponibilidad para tus vacaciones. Al reservar directamente con nosotros disfrutas del mejor trato personalizado, sin cargos de gestión ni comisiones de intermediarios.",
-        "cal.checkTitle": "Comprobar Fechas Deseadas",
-        "cal.checkSubtitle": "Selecciona tu fecha de llegada y salida para consultar disponibilidad en tiempo real:",
-        "cal.checkin": "Fecha de Entrada",
-        "cal.checkout": "Fecha de Salida",
-        "cal.applyBtn": "Solicitar Reserva para estas Fechas →",
         "reviews.subtitle": "Experiencias reales de quienes ya han disfrutado de su estancia en Casa Roble Carchuna.",
         "reviews.transparency": "Evaluación verificada importada directamente del portal oficial de Booking.com.",
         "map.robleSubtitle": "Situada en Carchuna (Motril, Granada) en un entorno tranquilo junto a la brisa del mar Mediterráneo.",
@@ -587,7 +515,6 @@
       en: {
         "nav.desc": "Description",
         "nav.gallery": "Gallery",
-        "nav.calendar": "Availability",
         "nav.reviews": "Reviews",
         "nav.map": "Location",
         "nav.surroundings": "Surroundings",
@@ -613,12 +540,6 @@
         "amenity.robleAc": "❄️ Air conditioning & heating",
         "amenity.robleWifi": "⚡ High-speed fiber optic WiFi",
         "gallery.robleSubtitle": "An authentic, natural visual journey through Casa Roble Carchuna.",
-        "calendar.robleDesc": "Check availability for your holiday. Direct booking guarantees personalized attention and zero booking fees.",
-        "cal.checkTitle": "Check Desired Dates",
-        "cal.checkSubtitle": "Select your check-in and check-out dates to verify availability:",
-        "cal.checkin": "Check-in Date",
-        "cal.checkout": "Check-out Date",
-        "cal.applyBtn": "Request Booking for These Dates →",
         "reviews.subtitle": "Real experiences from guests who have stayed at Casa Roble Carchuna.",
         "reviews.transparency": "Verified review imported directly from our official Booking.com listing.",
         "map.robleSubtitle": "Located in Carchuna (Motril, Granada) in a peaceful setting by the Mediterranean sea breeze.",
@@ -656,7 +577,6 @@
       de: {
         "nav.desc": "Beschreibung",
         "nav.gallery": "Galerie",
-        "nav.calendar": "Verfügbarkeit",
         "nav.reviews": "Bewertungen",
         "nav.map": "Lage",
         "nav.surroundings": "Umgebung",
@@ -682,7 +602,6 @@
       fr: {
         "nav.desc": "Description",
         "nav.gallery": "Galerie",
-        "nav.calendar": "Disponibilité",
         "nav.reviews": "Avis",
         "nav.map": "Localisation",
         "nav.surroundings": "Environnement",
