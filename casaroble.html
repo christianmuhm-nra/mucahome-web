@@ -44,15 +44,7 @@
       <h1>Casa Roble Carchuna</h1>
       <p data-i18n="roble.heroTag">Un cálido refugio donde el mar y la calma se encuentran. Piscina privada, cenador exterior y la playa a escasos pasos: tu oasis personal en la Costa Tropical.</p>
       
-      <div class="hero-badges-list">
-        <span class="hero-pill">🏊 <span data-i18n="pill.pool">Piscina Privada</span></span>
-        <span class="hero-pill">🌳 <span data-i18n="pill.porch">Gran Cenador de Madera</span></span>
-        <span class="hero-pill">🍖 <span data-i18n="pill.bbq">Barbacoa Tradicional</span></span>
-        <span class="hero-pill">🏖️ <span data-i18n="pill.beach">A pasos de la Playa</span></span>
-        <span class="hero-pill">🛏️ <span data-i18n="pill.rooms">4 Dormitorios</span></span>
-      </div>
-
-      <a href="#reservar" class="btn-primary" data-i18n="roble.heroCta">Consultar Disponibilidad</a>
+      <a href="#reservar" class="btn-primary" data-i18n="roble.heroCta">Reservar / Contactar</a>
     </div>
   </section>
 
@@ -78,17 +70,14 @@
           <div class="spec-item">👥 <span data-i18n="roble.specCapacity">Capacidad: hasta 5 huéspedes</span></div>
           <div class="spec-item">🛏️ <span data-i18n="roble.specRooms">4 Dormitorios (1 Doble + 3 Individuales)</span></div>
           <div class="spec-item">🚿 <span data-i18n="roble.specBaths">1 Baño completo con ducha y mampara</span></div>
-          <div class="spec-item">🏊 <span data-i18n="roble.specPool">Piscina privada con solárium y césped</span></div>
-          <div class="spec-item">🍖 <span data-i18n="roble.specBbq">Barbacoa de obra de ladrillo refractario</span></div>
-          <div class="spec-item">🌳 <span data-i18n="roble.specPorch">Cenador de madera y porche chill-out</span></div>
-          <div class="spec-item">❄️ <span data-i18n="roble.specAc">Aire acondicionado frío / calor</span></div>
+          <div class="spec-item">👶 <span data-i18n="roble.specKids">Apto para niños y familias</span></div>
           <div class="spec-item">🌊 <span data-i18n="roble.specDistance">A pocos pasos de la Playa de Carchuna</span></div>
           <div class="spec-item">🚗 <span data-i18n="roble.specParking">Parking privado gratuito en la finca</span></div>
         </div>
       </div>
 
       <div class="right-col">
-        <h3 data-i18n="roble.amenitiesTitle">Servicios y Equipamiento</h3>
+        <h3 data-i18n="roble.amenitiesTitle">Servicios e Instalaciones</h3>
         <ul class="amenities-grid-list">
           <li data-i18n="amenity.roblePool">🏊 Piscina privada exterior</li>
           <li data-i18n="amenity.robleCenador">🌳 Gran cenador exterior de madera</li>
@@ -96,12 +85,6 @@
           <li data-i18n="amenity.roblePorche">🛋️ Porche con sofás chill-out</li>
           <li data-i18n="amenity.robleAc">❄️ Aire acondicionado y calefacción</li>
           <li data-i18n="amenity.robleWifi">⚡ Fibra óptica + WiFi alta velocidad</li>
-          <li data-i18n="amenity.robleTv">📺 Smart TV en el salón</li>
-          <li data-i18n="amenity.robleKitchen">🍳 Cocina completa con horno y vitro</li>
-          <li data-i18n="amenity.robleWashing">🧺 Lavadora y zona de lavado</li>
-          <li data-i18n="amenity.robleFridge">🧊 Frigorífico combi y microondas</li>
-          <li data-i18n="amenity.robleParking">🚗 Parking gratuito dentro del recinto</li>
-          <li data-i18n="amenity.robleKids">👶 Apto para niños y familias</li>
         </ul>
       </div>
     </div>
@@ -466,7 +449,11 @@
       caption.innerText = photo.title;
 
       document.querySelectorAll(".thumb-item").forEach((el, idx) => {
-        el.classList.toggle("active", idx === currentPhotoIdx);
+        const isActive = (idx === currentPhotoIdx);
+        el.classList.toggle("active", isActive);
+        if (isActive) {
+          el.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        }
       });
     }
 
@@ -548,12 +535,7 @@
         "nav.book": "Reservar / Contactar",
         "nav.precheckin": "Pre-Check-in",
         "roble.heroTag": "Un cálido refugio donde el mar y la calma se encuentran. Piscina privada, cenador exterior y la playa a escasos pasos: tu oasis personal en la Costa Tropical.",
-        "roble.heroCta": "Consultar Disponibilidad",
-        "pill.pool": "Piscina Privada",
-        "pill.porch": "Gran Cenador de Madera",
-        "pill.bbq": "Barbacoa Tradicional",
-        "pill.beach": "A pasos de la Playa",
-        "pill.rooms": "4 Dormitorios",
+        "roble.heroCta": "Reservar / Contactar",
         "roble.descTitle": "Descripción del Alojamiento",
         "roble.descP1": "Hay lugares donde el ritmo se desacelera nada más cruzar la cancela. Casa Roble Carchuna es un refugio sinigual construido con la nobleza y calidez de la madera de roble, pensado para quienes buscan desconectar de la rutina con sencillez, privacidad y aire puro.",
         "roble.descP2": "Ubicada en una tranquila zona costera en Carchuna, a pocos minutos a pie de la playa, la vivienda ofrece una atmósfera acogedora y funcional donde el verdadero protagonista es el exterior: disfruta de un refrescante baño matinal en su piscina privada, prepara una sobremesa sin prisas en el gran cenador techado de madera o comparte una velada al fresco con su barbacoa de obra tradicional.",
@@ -561,25 +543,16 @@
         "roble.specCapacity": "Capacidad: hasta 5 huéspedes",
         "roble.specRooms": "4 Dormitorios (1 Doble + 3 Individuales)",
         "roble.specBaths": "1 Baño completo con ducha y mampara",
-        "roble.specPool": "Piscina privada con solárium y césped",
-        "roble.specBbq": "Barbacoa de obra de ladrillo refractario",
-        "roble.specPorch": "Cenador de madera y porche chill-out",
-        "roble.specAc": "Aire acondicionado frío / calor",
+        "roble.specKids": "Apto para niños y familias",
         "roble.specDistance": "A pocos pasos de la Playa de Carchuna",
         "roble.specParking": "Parking privado gratuito en la finca",
-        "roble.amenitiesTitle": "Servicios y Equipamiento",
+        "roble.amenitiesTitle": "Servicios e Instalaciones",
         "amenity.roblePool": "🏊 Piscina privada exterior",
         "amenity.robleCenador": "🌳 Gran cenador exterior de madera",
         "amenity.robleBbq": "🍖 Barbacoa de obra tradicional",
         "amenity.roblePorche": "🛋️ Porche con sofás chill-out",
         "amenity.robleAc": "❄️ Aire acondicionado y calefacción",
         "amenity.robleWifi": "⚡ Fibra óptica + WiFi alta velocidad",
-        "amenity.robleTv": "📺 Smart TV en el salón",
-        "amenity.robleKitchen": "🍳 Cocina completa con horno y vitro",
-        "amenity.robleWashing": "🧺 Lavadora y zona de lavado",
-        "amenity.robleFridge": "🧊 Frigorífico combi y microondas",
-        "amenity.robleParking": "🚗 Parking gratuito dentro del recinto",
-        "amenity.robleKids": "👶 Apto para niños y familias",
         "gallery.robleSubtitle": "Un recorrido visual auténtico y natural por todas las instalaciones de Casa Roble Carchuna.",
         "calendar.robleDesc": "Consulta la disponibilidad para tus vacaciones. Al reservar directamente con nosotros disfrutas del mejor trato personalizado, sin cargos de gestión ni comisiones de intermediarios.",
         "cal.checkTitle": "Comprobar Fechas Deseadas",
@@ -631,12 +604,7 @@
         "nav.book": "Book / Contact",
         "nav.precheckin": "Pre-Check-in",
         "roble.heroTag": "A warm haven where the sea and serenity meet. Private pool, outdoor gazebo and the beach just steps away: your personal oasis on the Costa Tropical.",
-        "roble.heroCta": "Check Availability",
-        "pill.pool": "Private Pool",
-        "pill.porch": "Large Wooden Porch",
-        "pill.bbq": "Traditional BBQ",
-        "pill.beach": "Steps from the Beach",
-        "pill.rooms": "4 Bedrooms",
+        "roble.heroCta": "Book / Contact",
         "roble.descTitle": "Property Description",
         "roble.descP1": "There are places where life slows down the moment you step through the gate. Casa Roble Carchuna is a unique retreat built with the warmth and nobility of oak wood, designed for those seeking to disconnect with simplicity, privacy, and fresh air.",
         "roble.descP2": "Located in a peaceful coastal area in Carchuna just a short stroll from the beach, the property offers a warm and functional ambiance where the outdoors is the true star: enjoy a morning dip in your private pool, leisurely meals under the covered wooden gazebo, or barbecue evenings under the stars.",
@@ -644,10 +612,7 @@
         "roble.specCapacity": "Capacity: up to 5 guests",
         "roble.specRooms": "4 Bedrooms (1 Double + 3 Singles)",
         "roble.specBaths": "1 Full Bathroom with walk-in shower",
-        "roble.specPool": "Private swimming pool with sun deck",
-        "roble.specBbq": "Traditional brick barbecue grill",
-        "roble.specPorch": "Wooden dining gazebo & chill-out porch",
-        "roble.specAc": "Air conditioning cooling & heating",
+        "roble.specKids": "Family and children friendly",
         "roble.specDistance": "Short walk to Carchuna Beach",
         "roble.specParking": "Free private parking inside the estate",
         "roble.amenitiesTitle": "Amenities & Features",
@@ -657,12 +622,6 @@
         "amenity.roblePorche": "🛋️ Covered porch with lounge sofas",
         "amenity.robleAc": "❄️ Air conditioning & heating",
         "amenity.robleWifi": "⚡ High-speed fiber optic WiFi",
-        "amenity.robleTv": "📺 Smart TV in the living room",
-        "amenity.robleKitchen": "🍳 Full kitchen with oven & stove",
-        "amenity.robleWashing": "🧺 Washing machine & laundry area",
-        "amenity.robleFridge": "🧊 Fridge-freezer & microwave",
-        "amenity.robleParking": "🚗 Free parking inside the grounds",
-        "amenity.robleKids": "👶 Family and children friendly",
         "gallery.robleSubtitle": "An authentic, natural visual journey through Casa Roble Carchuna.",
         "calendar.robleDesc": "Check availability for your holiday. Direct booking guarantees personalized attention and zero booking fees.",
         "cal.checkTitle": "Check Desired Dates",
@@ -714,16 +673,12 @@
         "nav.book": "Buchen / Kontakt",
         "nav.precheckin": "Pre-Check-in",
         "roble.heroTag": "Ein gemütlicher Rückzugsort, wo Meer und Ruhe sich begegnen. Privater Pool, Pavillon im Freien und der Strand nur wenige Schritte entfernt: Ihre persönliche Oase an der Costa Tropical.",
-        "roble.heroCta": "Verfügbarkeit prüfen",
-        "pill.pool": "Privater Pool",
-        "pill.porch": "Große Holzveranda",
-        "pill.bbq": "Traditioneller Grill",
-        "pill.beach": "Schritte zum Strand",
-        "pill.rooms": "4 Schlafzimmer",
+        "roble.heroCta": "Buchen / Kontakt",
         "roble.descTitle": "Unterkunftsbeschreibung",
         "roble.descP1": "Es gibt Orte, an denen die Zeit stillzustehen scheint. Casa Roble Carchuna ist ein unvergleichlicher Zufluchtsort aus warmem Eichenholz, geschaffen für Ruhe, Privatsphäre und Entspannung.",
         "roble.descP2": "In einer ruhigen Küstenlage in Carchuna gelegen, nur wenige Gehminuten vom Strand entfernt. Genießen Sie den privaten Pool, den überdachten Essbereich im Freien und entspannte Grillabende.",
         "roble.descP3": "Mit 4 separaten Schlafzimmern (1 Doppelbett + 3 Einzelzimmer) ideal für Familien und kleine Gruppen.",
+        "roble.specKids": "Ideal für Familien und Kinder",
         "map.robleSubtitle": "In Carchuna (Motril, Granada) in einer ruhigen Umgebung mit mediterraner Meeresbrise gelegen.",
         "booking.title": "Kontakt & Direktbuchung",
         "btn.whatsapp": "Per WhatsApp kontaktieren",
@@ -741,16 +696,12 @@
         "nav.book": "Réserver / Contact",
         "nav.precheckin": "Pre-Check-in",
         "roble.heroTag": "Un havre chaleureux où la mer et le calme se rencontrent. Piscine privée, gazebo extérieur et la plage à deux pas : votre oasis personnelle sur la Costa Tropical.",
-        "roble.heroCta": "Vérifier la disponibilité",
-        "pill.pool": "Piscine Privée",
-        "pill.porch": "Grand Porche en Bois",
-        "pill.bbq": "Barbecue Traditionnel",
-        "pill.beach": "À deux pas de la plage",
-        "pill.rooms": "4 Chambres",
+        "roble.heroCta": "Réserver / Contact",
         "roble.descTitle": "Description du Logement",
         "roble.descP1": "Un lieu authentique où le rythme ralentit dès l'entrée. Casa Roble Carchuna est un havre sans pareil en bois de chêne chaleureux, idéal pour déconnecter en toute tranquillité.",
         "roble.descP2": "Située dans un quartier côtier paisible à Carchuna, à quelques minutes à pied de la plage. Profitez de la piscine privée, du grand gazebo extérieur et du barbecue traditionnel.",
         "roble.descP3": "Avec 4 chambres indépendantes (1 chambre double + 3 chambres simples), parfait pour les familles et petits groupes.",
+        "roble.specKids": "Adapté aux familles et enfants",
         "map.robleSubtitle": "Situé à Carchuna (Motril, Grenade) dans un cadre paisible bercé par la brise marine méditerranéenne.",
         "booking.title": "Contact & Réservation Directe",
         "btn.whatsapp": "Contacter par WhatsApp",
