@@ -357,19 +357,14 @@
     </div>
   </section>
 
-  <!-- Modal Pre-Check-in -->
-  <div id="precheckinModal" class="modal-backdrop" style="display: none;">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closePrecheckin()">&times;</button>
-      <h3 data-i18n="precheckin.title">Pre-Check-in de Huéspedes</h3>
-      <p style="color: #555; margin: 15px 0 20px;" data-i18n="precheckin.desc">
-        Para agilizar tu llegada y cumplir con la normativa de registro de viajeros, puedes enviar tus datos previamente por WhatsApp o por correo a <strong>lahermitadejulio@hotmail.com</strong>.
-      </p>
-      <a href="https://wa.me/34637311655?text=Hola,%20deseo%20completar%20el%20pre-check-in%20para%20Casa%20Roble%20Carchuna" target="_blank" class="btn-whatsapp" style="display: inline-flex;">
-        💬 <span data-i18n="precheckin.btn">Enviar Pre-Check-in por WhatsApp</span>
-      </a>
+  <!-- Sección: Pre-Check-in -->
+  <section id="precheckin" class="ap-section alt-bg">
+    <div class="container text-center" style="max-width: 700px; margin: 0 auto; padding: 20px;">
+      <h2 data-i18n="precheckin.title">Prepara tu llegada — Pre-Check-in</h2>
+      <p class="subtitle-p" style="margin-bottom: 25px; line-height: 1.6;" data-i18n="precheckin.desc">Para cumplir con la normativa local y agilizar tu entrada al alojamiento el día de llegada, te invitamos a completar el pre-check-in obligatorio de forma rápida y segura antes de tu viaje.</p>
+      <a href="https://mucahome-registro.vercel.app/" target="_blank" class="btn-primary" style="display: inline-block; text-decoration: none; padding: 12px 30px;" data-i18n="precheckin.btn">📝 Iniciar Pre-Check-in Online</a>
     </div>
-  </div>
+  </section>
 
   <!-- Botón Flotante de WhatsApp -->
   <a href="https://wa.me/34637311655?text=Hola,%20estoy%20interesado%20en%20reservar%20Casa%20Roble%20Carchuna" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
@@ -516,17 +511,7 @@
       alert("¡Gracias por tu solicitud! Se abrirá tu aplicación de correo para enviar el mensaje a lahermitadejulio@hotmail.com. También puedes contactarnos al instante por WhatsApp al +34 637 31 16 55.");
     }
 
-    // Precheckin modal
-    document.querySelectorAll('a[href="#precheckin"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.getElementById('precheckinModal').style.display = 'flex';
-      });
-    });
 
-    function closePrecheckin() {
-      document.getElementById('precheckinModal').style.display = 'none';
-    }
 
     // Multilenguaje
     const robleTranslations = {
@@ -594,9 +579,9 @@
         "channels.subtitle": "Consulta nuestra ficha oficial, valoraciones y opiniones en otras plataformas.",
         "channels.portalsTitle": "Portales de reservas",
         "channels.portalSubBooking": "Ficha oficial y opiniones",
-        "precheckin.title": "Pre-Check-in de Huéspedes",
-        "precheckin.desc": "Para agilizar tu llegada y cumplir con la normativa de registro de viajeros, puedes enviar tus datos previamente por WhatsApp o por correo a lahermitadejulio@hotmail.com.",
-        "precheckin.btn": "Enviar Pre-Check-in por WhatsApp",
+        "precheckin.title": "Prepara tu llegada — Pre-Check-in",
+        "precheckin.desc": "Para cumplir con la normativa local y agilizar tu entrada al alojamiento el día de llegada, te invitamos a completar el pre-check-in obligatorio de forma rápida y segura antes de tu viaje.",
+        "precheckin.btn": "📝 Iniciar Pre-Check-in Online",
         "footer.rights": "Todos los derechos reservados."
       },
       en: {
@@ -663,9 +648,9 @@
         "channels.subtitle": "Check our official profile, ratings and reviews on other platforms.",
         "channels.portalsTitle": "Booking portals",
         "channels.portalSubBooking": "Official listing & reviews",
-        "precheckin.title": "Guest Pre-Check-in",
-        "precheckin.desc": "Speed up your check-in and comply with local holiday regulations by sending your details in advance via WhatsApp or email to lahermitadejulio@hotmail.com.",
-        "precheckin.btn": "Submit Pre-Check-in via WhatsApp",
+        "precheckin.title": "Prepare Your Arrival — Pre-Check-in",
+        "precheckin.desc": "To comply with local regulations and speed up your entry on arrival day, please complete the mandatory pre-check-in quickly and securely before your trip.",
+        "precheckin.btn": "📝 Start Online Pre-Check-in",
         "footer.rights": "All rights reserved."
       },
       de: {
@@ -689,6 +674,9 @@
         "btn.whatsapp": "Per WhatsApp kontaktieren",
         "booking.send": "Anfrage senden",
         "channels.title": "Finden Sie uns auch auf",
+        "precheckin.title": "Bereiten Sie Ihre Ankunft vor — Pre-Check-in",
+        "precheckin.desc": "Um die gesetzlichen Vorschriften zu erfüllen und den Check-in am Ankunftstag zu beschleunigen, bitten wir Sie, das Pre-Check-in vor Ihrer Reise schnell und sicher online auszufüllen.",
+        "precheckin.btn": "📝 Online Pre-Check-in starten",
         "footer.rights": "Alle Rechte vorbehalten."
       },
       fr: {
@@ -712,6 +700,9 @@
         "btn.whatsapp": "Contacter par WhatsApp",
         "booking.send": "Envoyer la demande",
         "channels.title": "Retrouvez-nous également sur",
+        "precheckin.title": "Préparez votre arrivée — Pre-Check-in",
+        "precheckin.desc": "Afin de respecter la réglementation locale et d'accélérer votre entrée le jour de l'arrivée, nous vous invitons à remplir le pre-check-in obligatoire en ligne avant votre voyage.",
+        "precheckin.btn": "📝 Commencer le Pre-Check-in en ligne",
         "footer.rights": "Tous droits réservés."
       }
     };
