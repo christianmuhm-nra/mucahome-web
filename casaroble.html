@@ -428,33 +428,39 @@
 
     function selectSlide(idx) {
       currentPhotoIdx = idx;
-      updateSlide();
+      updateSlide(true);
     }
 
     function prevSlide() {
       currentPhotoIdx = (currentPhotoIdx - 1 + roblePhotos.length) % roblePhotos.length;
-      updateSlide();
+      updateSlide(true);
     }
 
     function nextSlide() {
       currentPhotoIdx = (currentPhotoIdx + 1) % roblePhotos.length;
-      updateSlide();
+      updateSlide(true);
     }
 
-    function updateSlide() {
+    function updateSlide(scrollThumb = false) {
       const main = document.getElementById("sliderMain");
       const caption = document.getElementById("sliderCaption");
       const photo = roblePhotos[currentPhotoIdx];
       main.style.backgroundImage = `url('${photo.src}')`;
       caption.innerText = photo.title;
 
-      document.querySelectorAll(".thumb-item").forEach((el, idx) => {
-        const isActive = (idx === currentPhotoIdx);
-        el.classList.toggle("active", isActive);
-        if (isActive) {
-          el.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-        }
+      const thumbs = document.querySelectorAll(".thumb-item");
+      thumbs.forEach((el, idx) => {
+        el.classList.toggle("active", idx === currentPhotoIdx);
       });
+
+      if (scrollThumb) {
+        const thumbsContainer = document.getElementById("sliderThumbs");
+        const activeThumb = thumbs[currentPhotoIdx];
+        if (thumbsContainer && activeThumb) {
+          const scrollTarget = activeThumb.offsetLeft - (thumbsContainer.clientWidth / 2) + (activeThumb.clientWidth / 2);
+          thumbsContainer.scrollTo({ left: scrollTarget, behavior: "smooth" });
+        }
+      }
     }
 
     // Selector de fechas
