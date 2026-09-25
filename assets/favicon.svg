@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#114b82" />
+      <stop offset="100%" stop-color="#0a2a4a" />
+    </linearGradient>
+  </defs>
+  <!-- Fondo redondeado squircle -->
+  <rect width="512" height="512" rx="120" fill="url(#navyGrad)" />
+  
+  <!-- Chimenea estilizada -->
+  <path d="M 332 165 L 332 135 Q 332 128 340 128 L 360 128 Q 368 128 368 135 L 368 200" 
+        fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" />
+        
+  <!-- Tejado y estructura exterior de la casa -->
+  <path d="M 125 240 L 256 125 L 387 240 M 165 230 L 165 385 Q 165 395 175 395 L 337 395 Q 347 395 347 385 L 347 230" 
+        fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" />
+        
+  <!-- Ventana circular ático (ojo de buey mediterráneo) -->
+  <circle cx="256" cy="205" r="22" fill="#ffffff" />
+  
+  <!-- Puerta en arco con color cálido terracota / roble -->
+  <path d="M 226 395 L 226 315 A 30 30 0 0 1 286 315 L 286 395 Z" fill="#ee964b" />
+</svg>
