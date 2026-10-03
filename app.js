@@ -276,6 +276,76 @@ const translations = {
     "channels.portalSubVrbo": "Hébergement vérifié",
     "channels.socialSubFacebook": "Page officielle Facebook",
     "footer.rights": "Tous droits réservés."
+  },
+  no: {
+    "nav.desc": "Beskrivelse",
+    "nav.gallery": "Galleri",
+    "nav.calendar": "Kalender",
+    "nav.reviews": "Vurderinger",
+    "nav.map": "Beliggenhet",
+    "nav.precheckin": "Pre-innsjekking",
+    "nav.book": "Bestill / Kontakt",
+    
+    "ap1.heroTag": "Leilighet i Calpe med spektakulær terrasse og utsikt over Peñón de Ifach, 150 m fra stranden",
+    "ap1.fullDesc": "Nyt Calpe i denne spektakulære leiligheten, ideell for par eller små familier. Husets perle er den romslige terrassen, perfekt for måltider utendørs med fantastisk utsikt over majestetiske Peñón de Ifach. Fullt utstyrt, inkludert strandhåndklær og strandstoler.",
+    "ap2.heroTag": "Flott leilighet i Calpe med svømmebasseng, 200 m fra stranden",
+    "ap2.fullDesc": "Fullt utstyrt leilighet for en velfortjent ferie. Moderne og totalrenovert, beliggende i et utmerket område i Calpe. Tilgang til fantastisk felles svømmebasseng, tennisbane og bordtennisområde. Kun et steinkast fra et bredt utvalg av restauranter, butikker og gylne sandstrender.",
+    
+    "spec.capacity": "Kapasitet: 2–4 personer",
+    "spec.rooms": "1 Dobbelt soverom + sovesofa",
+    "spec.rooms2": "1 Dobbelt soverom + stor sovesofa",
+    "spec.baths": "1 Komplett bad",
+    "spec.distance": "Kun 150 meter fra stranden",
+    "spec.distance2": "Kun 200 meter fra stranden",
+    "spec.pool": "Felles basseng, tennis og bordtennis",
+    "spec.ac": "Klimaanlegg (kjøling og oppvarming)",
+    
+    "modal.amenities": "Inkluderte fasiliteter",
+    "amenity.tv": "📺 Smart-TV",
+    "amenity.wifi": "⚡ Fiberoptisk + lynraskt Wi-Fi",
+    "amenity.terrace": "🌅 Stor terrasse med åpen utsikt",
+    "amenity.beachGear": "🏖️ Strandstoler, parasoll og strandhåndklær",
+    "amenity.kitchen": "🍳 Fullt utstyrt kjøkken",
+    "amenity.fullyEquipped": "🍳 Fullt utstyrt",
+    "amenity.pool": "🏊 Fantastisk fellesbasseng",
+    "amenity.tennis": "🎾 Felles tennisbane",
+    "amenity.pingpong": "🏓 Bordtennisbord",
+    
+    "gallery.subtitle": "En visuell omvisning i leilighetens rom og fasiliteter.",
+    "gallery.subtitle2": "Oppdag leilighetens sports- og fritidsfasiliteter.",
+    
+    "calendar.bodyText": "Sjekk tilgjengelighet i kalenderen eller se om ønskede datoer er ledige. Kontakt oss direkte for å sikre ditt opphold til beste pris uten provisjoner.",
+    "calendar.free": "Ledig",
+    "calendar.occupied": "Opptatt",
+    
+    "reviews.transparency": "Anmeldelser importert direkte fra Airbnb og Google Maps.",
+    "map.subtitle": "Beliggende i andre linje fra stranden i Calpe, med alle fasiliteter og underholdning like ved.",
+    
+    "precheckin.title": "Gjør klar din ankomst — Pre-innsjekking",
+    "precheckin.desc": "For å overholde lokale forskrifter og gjøre innsjekkingen rask og smidig på ankomstdagen, inviterer vi deg til å fullføre den obligatoriske pre-innsjekkingen trygt på nett før reisen.",
+    "precheckin.btn": "📝 Start Pre-innsjekking på nett",
+    
+    "booking.title": "Kontakt og Bestilling",
+    "booking.directDesc": "Bestill direkte hos oss uten mellomledd eller administrasjonsgebyrer. Send oss en melding eller be om prisinformasjon.",
+    "btn.whatsapp": "Kontakt via WhatsApp",
+    "booking.or": "eller fyll ut vårt henvendelsesskjema",
+    "booking.send": "Send Forespørsel",
+    "channels.title": "Finn oss også på",
+    "channels.subtitle": "Se våre profiler, vurderinger og omtaler på andre plattformer og sosiale medier.",
+    "channels.portalsTitle": "Bestilling og anmeldelser",
+    "channels.socialTitle": "Følg oss på sosiale medier",
+    "channels.otherApTag": "Ser du etter et annet alternativ i Calpe?",
+    "channels.ap1Hook": "Foretrekker du en stor terrasse?",
+    "channels.ap1Desc": "Oppdag mucahome1: spektakulær privat terrasse med åpen utsikt til Peñón de Ifach og bare 150 meter fra havet.",
+    "channels.ap1Btn": "Utforsk mucahome1 →",
+    "channels.ap2Hook": "Foretrekker du svømmebasseng?",
+    "channels.ap2Desc": "Oppdag mucahome2: herlig fellesbasseng, tennisbane, bordtennis og nylig renovert i Calpe.",
+    "channels.ap2Btn": "Utforsk mucahome2 →",
+    "channels.portalSubAirbnb": "Offisiell profil og anmeldelser",
+    "channels.portalSubBooking": "Offisiell oppføring og omtaler",
+    "channels.portalSubVrbo": "Verifisert overnattingssted",
+    "channels.socialSubFacebook": "Offisiell Facebook-side",
+    "footer.rights": "Alle rettigheter forbeholdt."
   }
 };
 
@@ -349,13 +419,15 @@ function updateChannelLinks(lang) {
       es: "https://www.airbnb.es/rooms/6578939?locale=es",
       en: "https://www.airbnb.com/rooms/6578939?locale=en",
       de: "https://www.airbnb.de/rooms/6578939?locale=de",
-      fr: "https://www.airbnb.fr/rooms/6578939?locale=fr"
+      fr: "https://www.airbnb.fr/rooms/6578939?locale=fr",
+      no: "https://www.airbnb.no/rooms/6578939?locale=no"
     },
     mucahome2: {
       es: "https://www.airbnb.es/rooms/13629203?locale=es",
       en: "https://www.airbnb.com/rooms/13629203?locale=en",
       de: "https://www.airbnb.de/rooms/13629203?locale=de",
-      fr: "https://www.airbnb.fr/rooms/13629203?locale=fr"
+      fr: "https://www.airbnb.fr/rooms/13629203?locale=fr",
+      no: "https://www.airbnb.no/rooms/13629203?locale=no"
     }
   };
 
@@ -363,14 +435,16 @@ function updateChannelLinks(lang) {
     es: "https://www.booking.com/hotel/es/mucahome1-apartamento-terraza-vistas-y-playa-150-m.es.html",
     en: "https://www.booking.com/hotel/es/mucahome1-apartamento-terraza-vistas-y-playa-150-m.en-gb.html",
     de: "https://www.booking.com/hotel/es/mucahome1-apartamento-terraza-vistas-y-playa-150-m.de.html",
-    fr: "https://www.booking.com/hotel/es/mucahome1-apartamento-terraza-vistas-y-playa-150-m.fr.html"
+    fr: "https://www.booking.com/hotel/es/mucahome1-apartamento-terraza-vistas-y-playa-150-m.fr.html",
+    no: "https://www.booking.com/hotel/es/mucahome1-apartamento-terraza-vistas-y-playa-150-m.no.html"
   };
 
   const vrboLinks = {
     es: "https://www.vrbo.com/es-es/p2411416",
     en: "https://www.vrbo.com/en-gb/p2411416",
     de: "https://www.vrbo.com/de-de/p2411416",
-    fr: "https://www.vrbo.com/fr-fr/p2411416"
+    fr: "https://www.vrbo.com/fr-fr/p2411416",
+    no: "https://www.vrbo.com/en-gb/p2411416"
   };
 
   const airbnbBtn = document.getElementById('channelAirbnb');
@@ -379,13 +453,13 @@ function updateChannelLinks(lang) {
   }
 
   const bookingBtn = document.getElementById('channelBooking');
-  if (bookingBtn && bookingLinks[lang]) {
-    bookingBtn.href = bookingLinks[lang];
+  if (bookingBtn) {
+    bookingBtn.href = bookingLinks[lang] || bookingLinks.es;
   }
 
   const vrboBtn = document.getElementById('channelVrbo');
-  if (vrboBtn && vrboLinks[lang]) {
-    vrboBtn.href = vrboLinks[lang];
+  if (vrboBtn) {
+    vrboBtn.href = vrboLinks[lang] || vrboLinks.es;
   }
 }
 
@@ -409,7 +483,8 @@ function renderReviews() {
     es: `<h4>🎖️ Propietario Superhost en Airbnb</h4><p>Promedio de <strong>${hostStats.rating} ⭐</strong> basado en <strong>${hostStats.reviewsCount} evaluaciones</strong> excelentes.</p>`,
     en: `<h4>🎖️ Airbnb Superhost Owner</h4><p>Average rating of <strong>${hostStats.rating} ⭐</strong> based on <strong>${hostStats.reviewsCount} excellent reviews</strong>.</p>`,
     de: `<h4>🎖️ Airbnb Superhost-Gastgeber</h4><p>Durchschnittliche Bewertung von <strong>${hostStats.rating} ⭐</strong> basierend auf <strong>${hostStats.reviewsCount} exzellenten Bewertungen</strong>.</p>`,
-    fr: `<h4>🎖️ Propriétaire Superhost sur Airbnb</h4><p>Note moyenne de <strong>${hostStats.rating} ⭐</strong> basée sur <strong>${hostStats.reviewsCount} commentaires</strong> excellents.</p>`
+    fr: `<h4>🎖️ Propriétaire Superhost sur Airbnb</h4><p>Note moyenne de <strong>${hostStats.rating} ⭐</strong> basée sur <strong>${hostStats.reviewsCount} commentaires</strong> excellents.</p>`,
+    no: `<h4>🎖️ Airbnb Superhost-vert</h4><p>Gjennomsnittlig vurdering på <strong>${hostStats.rating} ⭐</strong> basert på <strong>${hostStats.reviewsCount} utmerkede anmeldelser</strong>.</p>`
   };
 
   headerCard.innerHTML = hostBadges[currentLang] || hostBadges.es;
@@ -447,6 +522,10 @@ function updatePlaceholders(lang) {
     nameInput.placeholder = "Votre Nom";
     emailInput.placeholder = "Adresse e-mail";
     msgInput.placeholder = "Indiquez les dates estimées et le nombre de personnes...";
+  } else if (lang === 'no') {
+    nameInput.placeholder = "Ditt Navn";
+    emailInput.placeholder = "E-postadresse";
+    msgInput.placeholder = "Oppgi anslåtte datoer og antall gjester...";
   } else {
     nameInput.placeholder = "Tu Nombre";
     emailInput.placeholder = "Correo Electrónico";
@@ -479,7 +558,8 @@ function handleBooking(event) {
     es: "Se abrirá tu aplicación de correo para enviar la solicitud de reserva a nuestro buzón.",
     en: "Your email application will now open to send the booking request to us.",
     de: "Ihre E-Mail-App wird nun geöffnet, um die Buchungsanfrage an uns zu senden.",
-    fr: "Votre application de messagerie va s'ouvrir pour nous envoyer la demande de réservation."
+    fr: "Votre application de messagerie va s'ouvrir pour nous envoyer la demande de réservation.",
+    no: "E-postprogrammet ditt åpnes nå for å sende bestillingsforespørselen til oss."
   };
 
   const userLang = currentLang || 'es';

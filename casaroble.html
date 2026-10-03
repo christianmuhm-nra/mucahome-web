@@ -38,6 +38,7 @@
       <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
       <button class="lang-btn" onclick="changeLanguage('de')">DE</button>
       <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+      <button class="lang-btn" onclick="changeLanguage('no')">NO</button>
     </div>
   </header>
 
@@ -482,7 +483,15 @@
       // Abrir cliente de correo
       window.location.href = `mailto:lahermitadejulio@hotmail.com?subject=${subject}&body=${body}`;
 
-      alert("¡Gracias por tu solicitud! Se abrirá tu aplicación de correo para enviar el mensaje a lahermitadejulio@hotmail.com. También puedes contactarnos al instante por WhatsApp al +34 637 31 16 55.");
+      const alertMessages = {
+        es: "¡Gracias por tu solicitud! Se abrirá tu aplicación de correo para enviar el mensaje a lahermitadejulio@hotmail.com. También puedes contactarnos al instante por WhatsApp al +34 637 31 16 55.",
+        en: "Thank you for your request! Your email client will now open to send the message to lahermitadejulio@hotmail.com. You can also contact us instantly via WhatsApp at +34 637 31 16 55.",
+        de: "Vielen Dank für Ihre Anfrage! Ihr E-Mail-Programm wird nun geöffnet, um die Nachricht an lahermitadejulio@hotmail.com zu senden. Sie können uns auch sofort per WhatsApp unter +34 637 31 16 55 erreichen.",
+        fr: "Merci pour votre demande ! Votre application de messagerie va s'ouvrir pour envoyer le message à lahermitadejulio@hotmail.com. Vous pouvez également nous contacter directement par WhatsApp au +34 637 31 16 55.",
+        no: "Takk for din henvendelse! E-postprogrammet ditt åpnes nå for å sende meldingen til lahermitadejulio@hotmail.com. Du kan også kontakte oss direkte på WhatsApp på +34 637 31 16 55."
+      };
+      const curLang = localStorage.getItem('casaroble_lang') || 'es';
+      alert(alertMessages[curLang] || alertMessages.es);
     }
 
 
@@ -720,8 +729,138 @@
         "precheckin.desc": "Afin de respecter la réglementation locale et d'accélérer votre entrée le jour de l'arrivée, nous vous invitons à remplir le pre-check-in obligatoire en ligne avant votre voyage.",
         "precheckin.btn": "📝 Commencer le Pre-Check-in en ligne",
         "footer.rights": "Tous droits réservés."
+      },
+      no: {
+        "nav.desc": "Beskrivelse",
+        "nav.gallery": "Galleri",
+        "nav.reviews": "Vurderinger",
+        "nav.map": "Beliggenhet",
+        "nav.surroundings": "Omgivelser",
+        "nav.book": "Bestill / Kontakt",
+        "nav.precheckin": "Pre-innsjekking",
+        "roble.heroTag": "Et varmt tilfluktssted hvor havet og roen møtes. Privat basseng, utendørs lysthus og stranden kun 2 minutters gange unna: din personlige oase på Costa Tropical.",
+        "roble.heroCta": "Bestill / Kontakt",
+        "roble.descTitle": "Beskrivelse av overnattingsstedet",
+        "roble.descP1": "Det finnes steder hvor tempoet roer seg så snart du trer inn porten. Casa Roble Carchuna er et unikt tilfluktssted bygget med varmen og elegansen fra eiketre, skapt for dem som ønsker å koble av fra hverdagen med enkelhet, privatliv og frisk luft.",
+        "roble.descP2": "Beliggende i et fredelig kystområde i Carchuna, kun to minutters gange fra stranden, byr eiendommen på en innbydende og funksjonell atmosfære der utendørsområdet er den virkelige stjernen: nyt en forfriskende morgendukkert i det private bassenget, lange måltider i det store overbygde lysthuset i tre, eller en hyggelig kveld ved den tradisjonelle grillen.",
+        "roble.descP3": "Med 4 separate soverom (ett hovedsoverom med dobbeltseng og tre enkeltrom) er dette den perfekte basen for familier eller mindre grupper som verdsetter stillhet, havbris og den ekte sjarmen ved Andalusias Costa Tropical.",
+        "roble.specCapacity": "Kapasitet: opptil 5 gjester",
+        "roble.specRooms": "4 Soverom (1 Dobbeltseng + 3 Enkeltrom)",
+        "roble.specBaths": "1 Komplett bad med dusjkabinett",
+        "roble.specKids": "Ideelt for barnefamilier",
+        "roble.specDistance": "2 min gange til Carchuna-stranden",
+        "roble.specParking": "Gratis privat parkering på eiendommen",
+        "roble.amenitiesTitle": "Fasiliteter og utstyr",
+        "amenity.roblePool": "🏊 Privat utendørs svømmebasseng",
+        "amenity.robleCenador": "🌳 Stort overbygd lysthus i tre",
+        "amenity.robleBbq": "🍖 Tradisjonell murt utegrill",
+        "amenity.roblePorche": "🛋️ Veranda med chill-out-sofaer",
+        "amenity.robleAc": "❄️ Klimaanlegg og oppvarming",
+        "amenity.robleWifi": "⚡ Høyhastighets fiberoptisk Wi-Fi",
+        "gallery.robleSubtitle": "En autentisk og naturlig visuell omvisning i alle fasiliteter på Casa Roble Carchuna.",
+        "reviews.subtitle": "Ekte opplevelser fra gjester som har bodd på Casa Roble Carchuna.",
+        "review.manuelDate": "13. oktober 2025 &bull; Booking.com",
+        "review.manuelText": "\"Vi elsket huset, beliggenheten og Julio, eieren. En fantastisk person, alltid oppmerksom på at vi ikke manglet noe, hjalp oss og var utrolig imøtekommende. Huset har en flott beliggenhet kun 3 minutters gange fra stranden og i et perfekt område for å koble av. Vi kommer definitivt tilbake!\"",
+        "review.stanDate": "11. september 2025 &bull; Booking.com",
+        "review.stanText": "<strong>\"Akkurat slik det skal være.\"</strong> \"Verten gjorde alt for at vi skulle føle oss velkomne. Vi hadde uflaks med motorsykkelen vår, og han kjørte oss til og med til Motril for å kjøpe deler. Svært rent.\"",
+        "reviews.transparency": "Verifiserte anmeldelser importert direkte fra vår offisielle oppføring på Booking.com.",
+        "map.robleSubtitle": "Beliggende i Carchuna (Motril, Granada) i rolige omgivelser ved middelhavsbrisen.",
+        "surroundings.mainTitle": "Nærområde og severdigheter",
+        "surroundings.mainSubtitle": "Oppdag roen i Carchuna, det krystallklare havet i Calahonda og den kulturelle rikdommen på Costa Tropical og i Granada.",
+        "surroundings.group1Title": "Få skritt unna (Til fots eller på sykkel)",
+        "dist.carchunaBeach": "📍 2 minutters gange",
+        "desc.carchunaBeach": "Beliggenheten er uslåelig for havglade gjester. En kort spasertur fra huset tar deg til den fredelige Carchuna-stranden, en langstrakt sandstrand perfekt for bading og soling, langt unna store turistmengder.",
+        "dist.sacratif": "📍 Kveldstur ved solnedgang",
+        "desc.sacratif": "For en uforglemmelig kveldstur ved solnedgang ligger Sacratif-fyret like i nærheten. Dette historiske fyrtårnet fra 1863 ruver over klippene og byr på spektakulær panoramautsikt over Middelhavets horisont.",
+        "place.calahonda": "Calahonda og marinbukten",
+        "dist.calahonda": "📍 2 minutter med bil",
+        "desc.calahonda": "Sjarmerende kyst- og fiskerlandsby med en dyp bukt og usedvanlig klart vann, et eldorado for dykkeentusiaster. Kjente strandrestauranter serverer fersk fisk, grillet blekksprut og de berømte rekene fra Motril.",
+        "surroundings.group2Title": "Få minutter med bil (Costa Tropicals perler)",
+        "place.puenteTorrenueva": "Hengebroen i Torrenueva Costa",
+        "dist.puenteTorrenueva": "📍 5 minutter med bil",
+        "desc.puenteTorrenueva": "Den første hengebroen over havet i det spanske Middelhavet. 60 meter lang og 35 meter over klippene i Jolúcar (rute PR-A 420), med gangvei i tre, glassgulv i midten og spektakulær LED-kveldsbelysning.",
+        "place.calaRijana": "Cala Rijana",
+        "dist.calaRijana": "📍 6 minutter med bil",
+        "desc.calaRijana": "En av de mest spektakulære og uberørte vikene i Andalusia. Beskyttet av en dramatisk klippevegg og et historisk utkikkstårn, med krystallklart turkist vann som danner et naturlig akvarium for snorkling og padlebrett.",
+        "place.motril": "Motril",
+        "dist.motril": "📍 10 minutter med bil",
+        "desc.motril": "For sjømatmiddager, shopping eller en runde golf på Los Moriscos ligger Motril sentrum kun få minutter unna, med alle byens fasiliteter og ekte andalusisk gjestfrihet.",
+        "place.salobrena": "Salobreña slott",
+        "dist.salobrena": "📍 15 minutter med bil",
+        "desc.salobrena": "En kort kjøretur langs kysten tar deg til pittoreske Salobreña. Den mauriske festningen fra det 10. århundre troner over en av Spanias vakreste hvite landsbyer med panoramautsikt over havet.",
+        "surroundings.group3Title": "Uforglemmelige dagsturer (Under en time)",
+        "dist.alhambra": "📍 50 minutter på motorvei",
+        "desc.alhambra": "Casa Roble er den perfekte strategiske basen for å besøke Granada og det storslåtte Alhambra-palasset, hagene i Generalife og de spektakulære Nasrid-palassene.",
+        "booking.title": "Kontakt og Direktebestilling",
+        "booking.robleDirectDesc": "Bestill direkte hos oss uten mellomledd eller provisjoner. Send oss en melding på WhatsApp eller fyll ut vårt henvendelsesskjema.",
+        "btn.whatsapp": "Kontakt via WhatsApp",
+        "booking.or": "eller fyll ut vårt henvendelsesskjema",
+        "booking.send": "Send Forespørsel",
+        "channels.title": "Finn oss også på",
+        "channels.subtitle": "Se vår offisielle profil, vurderinger og anmeldelser på andre plattformer.",
+        "channels.portalsTitle": "Bestillingsportaler",
+        "channels.portalSubBooking": "Offisiell oppføring og anmeldelser",
+        "precheckin.title": "Gjør klar din ankomst — Pre-innsjekking",
+        "precheckin.desc": "For å overholde lokale forskrifter og gjøre innsjekkingen rask og smidig på ankomstdagen, inviterer vi deg til å fullføre den obligatoriske pre-innsjekkingen trygt på nett før reisen.",
+        "precheckin.btn": "📝 Start Pre-innsjekking på nett",
+        "footer.rights": "Alle rettigheter forbeholdt."
       }
     };
+
+    function updateRoblePlaceholders(lang) {
+      const nameInput = document.getElementById("bookingName");
+      const emailInput = document.getElementById("bookingEmail");
+      const phoneInput = document.getElementById("bookingPhone");
+      const datesInput = document.getElementById("bookingDates");
+      const msgInput = document.getElementById("bookingMessage");
+      if (!nameInput) return;
+
+      if (lang === 'en') {
+        nameInput.placeholder = "Your Full Name";
+        emailInput.placeholder = "Contact Email";
+        phoneInput.placeholder = "Phone (optional)";
+        datesInput.placeholder = "Estimated Dates (Check-in & Check-out)";
+        msgInput.placeholder = "Indicate number of guests and any questions...";
+      } else if (lang === 'de') {
+        nameInput.placeholder = "Ihr Vor- und Nachname";
+        emailInput.placeholder = "Kontakt-E-Mail";
+        phoneInput.placeholder = "Telefon (optional)";
+        datesInput.placeholder = "Ungefähre Reisedaten (Anreise & Abreise)";
+        msgInput.placeholder = "Geben Sie die Gästeanzahl und weitere Fragen an...";
+      } else if (lang === 'fr') {
+        nameInput.placeholder = "Votre Nom et Prénom";
+        emailInput.placeholder = "Adresse e-mail";
+        phoneInput.placeholder = "Téléphone (facultatif)";
+        datesInput.placeholder = "Dates estimées (Arrivée & Départ)";
+        msgInput.placeholder = "Indiquez le nombre de personnes et toute question...";
+      } else if (lang === 'no') {
+        nameInput.placeholder = "Ditt fulle navn";
+        emailInput.placeholder = "E-postadresse";
+        phoneInput.placeholder = "Telefon (valgfritt)";
+        datesInput.placeholder = "Ønskede datoer (Innsjekk og utsjekk)";
+        msgInput.placeholder = "Oppgi antall gjester og eventuelle spørsmål...";
+      } else {
+        nameInput.placeholder = "Tu Nombre y Apellidos";
+        emailInput.placeholder = "Correo Electrónico de Contacto";
+        phoneInput.placeholder = "Teléfono (opcional)";
+        datesInput.placeholder = "Fechas estimadas (Entrada y Salida)";
+        msgInput.placeholder = "Indica número de huéspedes y cualquier consulta adicional...";
+      }
+    }
+
+    function updateRobleChannels(lang) {
+      const bookingLinks = {
+        es: "https://www.booking.com/hotel/es/oak-amp-sea-retreat-carchuna.es.html",
+        en: "https://www.booking.com/hotel/es/oak-amp-sea-retreat-carchuna.en-gb.html",
+        de: "https://www.booking.com/hotel/es/oak-amp-sea-retreat-carchuna.de.html",
+        fr: "https://www.booking.com/hotel/es/oak-amp-sea-retreat-carchuna.fr.html",
+        no: "https://www.booking.com/hotel/es/oak-amp-sea-retreat-carchuna.no.html"
+      };
+      const bookingBtn = document.getElementById('channelBooking');
+      if (bookingBtn) {
+        bookingBtn.href = bookingLinks[lang] || bookingLinks.es;
+      }
+    }
 
     function changeLanguage(lang) {
       localStorage.setItem('casaroble_lang', lang);
@@ -734,6 +873,8 @@
         const key = el.getAttribute('data-i18n');
         if (dict[key]) el.innerHTML = dict[key];
       });
+      updateRoblePlaceholders(lang);
+      updateRobleChannels(lang);
     }
 
     window.addEventListener('DOMContentLoaded', () => {
