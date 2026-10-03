@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terrazas Torre Golf Green, Pool & Sea - Las Terrazas de la Torre Golf Resort, Murcia</title>
+  <meta name="description" content="Terrazas Torre Golf Green, Pool & Sea: Luminoso apartamento de 65 m² en primera línea de golf con terraza acristalada (cortina de cristal), piscinas comunitarias y entorno privilegiado en Las Terrazas de la Torre (Murcia).">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3.7">
+</head>
+<body class="ap-page terrazas-page">
+
+  <!-- Header & Navegación -->
+  <header class="main-header">
+    <div class="logo">
+      <a href="terrazasgolf.html">Terrazas Torre Golf <span>Green, Pool & Sea</span></a>
+    </div>
+    
+    <nav class="nav-menu">
+      <a href="#galeria" data-i18n="nav.gallery">Galería</a>
+      <a href="#descripcion" data-i18n="nav.desc">Descripción</a>
+      <a href="#servicios" data-i18n="nav.amenities">Servicios</a>
+      <a href="#ubicacion" data-i18n="nav.map">Ubicación</a>
+      <a href="#entorno" data-i18n="nav.surroundings">Entorno</a>
+      <a href="#reservar" class="btn-nav" data-i18n="nav.book">Reservar / Contactar</a>
+      <a href="#precheckin" class="btn-nav btn-precheckin" data-i18n="nav.precheckin">Pre-Check-in</a>
+    </nav>
+
+    <!-- Selector de 4 idiomas estándar Mucahome (ES, EN, DE, FR) -->
+    <div class="language-selector">
+      <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
+      <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+      <button class="lang-btn" onclick="changeLanguage('de')">DE</button>
+      <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero ap-hero roble-hero">
+    <div class="hero-bg" style="background-image: linear-gradient(rgba(11, 19, 43, 0.45), rgba(11, 19, 43, 0.78)), url('assets/terrazas/01_hero_terraza_golf.jpg'); background-position: center 42%;"></div>
+    <div class="hero-content">
+      <h1>Terrazas Torre Golf <span>Green, Pool & Sea</span></h1>
+      <p data-i18n="hero.subtitle">Luminoso apartamento en primera línea de golf con terraza acristalada panorámica, piscinas comunitarias y el encanto del Mediterráneo a pocos minutos.</p>
+      
+      <div class="hero-badges-list">
+        <span class="hero-pill" data-i18n="hero.badgeGolf">⛳ Primera Línea de Golf</span>
+        <span class="hero-pill" data-i18n="hero.badgeTerrace">🌅 Terraza con Cortina de Cristal</span>
+        <span class="hero-pill" data-i18n="hero.badgePool">🏊 Piscinas Comunitarias</span>
+        <span class="hero-pill" data-i18n="hero.badgeOrientation">☀️ Orientación Sureste</span>
+      </div>
+
+      <a href="#reservar" class="btn-primary" data-i18n="hero.cta">Reservar / Contactar</a>
+    </div>
+  </section>
+
+  <!-- Sección: Galería / Álbum de Fotos -->
+  <section id="galeria" class="ap-section alt-bg">
+    <div class="container">
+      <h2 class="text-center" data-i18n="gallery.title">Álbum de Fotografías</h2>
+      <p class="text-center subtitle-p" data-i18n="gallery.subtitle">Un recorrido visual por el apartamento, su terraza acristalada y las instalaciones del resort.</p>
+      
+      <!-- Slider Dinámico -->
+      <div class="gallery-slider">
+        <div class="slider-main" id="sliderMain" style="background-image: url('assets/terrazas/01_hero_terraza_golf.jpg');">
+          <div class="slider-caption" id="sliderCaption">01. Terraza Acristalada y Vistas al Golf</div>
+          <button class="slider-arrow prev-arrow" onclick="prevSlide()" aria-label="Foto anterior">&#10094;</button>
+          <button class="slider-arrow next-arrow" onclick="nextSlide()" aria-label="Foto siguiente">&#10095;</button>
+        </div>
+        <div class="slider-thumbs" id="sliderThumbs">
+          <!-- Miniaturas cargadas por JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Descripción y Ficha Técnica -->
+  <section id="descripcion" class="ap-section">
+    <div class="container">
+      <div class="section-layout">
+        <div class="left-col">
+          <h2 data-i18n="desc.title">Descripción del Alojamiento</h2>
+          
+          <p class="ap-full-desc" data-i18n="desc.p1">
+            Bienvenido a <strong>Terrazas Torre Golf Green, Pool & Sea</strong>, un acogedor refugio diseñado para disfrutar de la luz, el golf y el clima privilegiado de Murcia durante todo el año. Ubicado en el prestigioso complejo privado <strong>Las Terrazas de la Torre Golf Resort</strong>, este apartamento de 65 m² combina confort, funcionalidad y unas vistas abiertas y despejadas al campo de golf.
+          </p>
+          
+          <p class="ap-full-desc" data-i18n="desc.p2">
+            La gran protagonista de la vivienda es su <strong>espectacular terraza acristalada</strong>, equipada con un sistema de <em>cortina de cristal</em> abatible. Esta innovación permite abrirla por completo para dejar fluir la suave brisa y fundirse con el entorno verde, o mantenerla cerrada formando un acogedor salón panorámico exterior. Es el rincón perfecto para desayunar al sol, compartir veladas o teletrabajar con total tranquilidad mirando a los greens.
+          </p>
+
+          <p class="ap-full-desc" data-i18n="desc.p3">
+            Su magnífica <strong>orientación sureste</strong> garantiza sol y abundante luz natural desde primera hora de la mañana, convirtiendo la vivienda en un espacio cálido y muy agradable en otoño e invierno. El interior cuenta con salón de concepto abierto con sofá cama confortable de 2 plazas, Smart TV y aire acondicionado con bomba de calor; cocina americana totalmente equipada con electrodomésticos modernos; un dormitorio independiente con cama de matrimonio, Smart TV propia y salida directa a la terraza; y un baño contemporáneo con plato de ducha de obra de gran formato.
+          </p>
+
+          <p class="ap-full-desc" data-i18n="desc.p4">
+            Con capacidad para <strong>2 a 4 huéspedes</strong>, es la elección ideal tanto para golfistas como para parejas, familias o profesionales en remoto que valoran la paz, el confort y la comodidad de contar con piscinas a escasos pasos, supermercado Spar dentro del resort y vigilancia privada 24 horas.
+          </p>
+          
+          <!-- Especificaciones Clave -->
+          <div class="ap-specs">
+            <div class="spec-item">👥 <span data-i18n="specs.capacity">Capacidad: 2 a 4 huéspedes</span></div>
+            <div class="spec-item">📐 <span data-i18n="specs.area">Apartamento de 65 m²</span></div>
+            <div class="spec-item">🛏️ <span data-i18n="specs.rooms">1 Dormitorio Doble + Sofá Cama 2 Plazas</span></div>
+            <div class="spec-item">🚿 <span data-i18n="specs.baths">1 Baño Completo con Ducha de Gran Formato</span></div>
+            <div class="spec-item">🌅 <span data-i18n="specs.terrace">Terraza con Cortina de Cristal Abatible</span></div>
+            <div class="spec-item">☀️ <span data-i18n="specs.orientation">Orientación Sureste (Máxima Luz Natural)</span></div>
+            <div class="spec-item">⛳ <span data-i18n="specs.frontline">Primera Línea de Campo de Golf</span></div>
+            <div class="spec-item">🏊 <span data-i18n="specs.pools">Piscinas Comunitarias a Pocos Pasos</span></div>
+            <div class="spec-item">🛡️ <span data-i18n="specs.security">Recinto Privado con Seguridad 24 Horas</span></div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Servicios e Instalaciones -->
+        <div class="right-col" id="servicios">
+          <h3 data-i18n="amenities.title">Servicios e Instalaciones</h3>
+          <ul class="amenities-grid-list">
+            <li data-i18n="amenity.terrace">🌅 Terraza panorámica con cortina de cristal</li>
+            <li data-i18n="amenity.pools">🏊 Amplias piscinas comunitarias</li>
+            <li data-i18n="amenity.ac">❄️ Aire acondicionado (frío / calor)</li>
+            <li data-i18n="amenity.wifi">⚡ Fibra óptica + WiFi de alta velocidad</li>
+            <li data-i18n="amenity.smarttv">📺 2 Smart TV (salón y dormitorio)</li>
+            <li data-i18n="amenity.kitchen">🍳 Cocina completa con vitro, horno y nevera</li>
+            <li data-i18n="amenity.washing">🧺 Lavadora en el apartamento</li>
+            <li data-i18n="amenity.spar">🛒 Supermercado Spar dentro del resort</li>
+            <li data-i18n="amenity.clubhouse">🍸 Casa Club, Cafetería & Lola's Bar</li>
+            <li data-i18n="amenity.golf">⛳ Campo de Golf Saurines de 18 hoyos</li>
+            <li data-i18n="amenity.security">🛡️ Seguridad privada 24/7 con control de acceso</li>
+            <li data-i18n="amenity.beaches">🌊 A 15-20 min de las playas del Mar Menor</li>
+          </ul>
+
+          <div class="desc-cta-box" style="margin-top: 40px; text-align: center; display: flex; justify-content: center;">
+            <a href="#reservar" class="btn-primary desc-cta-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 15px 38px; font-size: 1.05rem; border-radius: 30px; text-decoration: none;">
+              <span data-i18n="nav.book">Reservar / Contactar</span> &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Ubicación y Mapa Exacto -->
+  <section id="ubicacion" class="ap-section alt-bg">
+    <div class="container">
+      <h2 class="text-center" data-i18n="map.title">Ubicación del Complejo</h2>
+      <p class="text-center subtitle-p" data-i18n="map.subtitle">
+        Calle Fernando Alonso, 1 — Las Terrazas de la Torre Golf Resort, 30709 Roldán, Torre-Pacheco (Murcia).
+      </p>
+      
+      <div class="map-iframe-container">
+        <iframe src="https://maps.google.com/maps?q=Las+Terrazas+de+la+Torre+Golf+Resort,+Torre-Pacheco,+Murcia&hl=es&z=14&output=embed" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Entorno y Lugares Cercanos -->
+  <section id="entorno" class="ap-section surroundings-section">
+    <div class="container">
+      <h2 class="text-center" data-i18n="surroundings.mainTitle">Entorno y Lugares de Interés</h2>
+      <p class="text-center subtitle-p" data-i18n="surroundings.mainSubtitle">
+        Disfruta de la tranquilidad del golf, las cálidas playas del Mar Menor y la historia milenaria de la Región de Murcia.
+      </p>
+
+      <!-- Grupo 1: Dentro del Resort -->
+      <div class="surroundings-group">
+        <h3 class="surroundings-group-title">
+          ⛳ <span data-i18n="surroundings.group1Title">Dentro de Las Terrazas de la Torre (A pocos pasos)</span>
+        </h3>
+        <div class="surroundings-grid">
+          
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4 data-i18n="place.saurinesGolf">Campo Saurines de la Torre</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.resortStep">📍 En primera línea</span>
+            <p class="place-desc" data-i18n="desc.saurinesGolf">
+              Espectacular campo de golf de 18 hoyos (par 72) con diseño semidesértico estilo Las Vegas/Arizona creado por Jack Nicklaus y gestionado por UGOLF. Destaca por sus calles onduladas entre dunas y su gran lago central de 6 hectáreas.
+            </p>
+          </div>
+
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4 data-i18n="place.spar">Town Centre & Supermercado Spar</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.walkResort">📍 A 2 minutos a pie</span>
+            <p class="place-desc" data-i18n="desc.spar">
+              El complejo cuenta en su centro neurálgico con un supermercado Spar completo para realizar las compras del día a día con total comodidad y sin necesidad de utilizar el coche.
+            </p>
+          </div>
+
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4 data-i18n="place.clubhouse">Casa Club & Lola's Bar</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.walkResort">📍 A 2 minutos a pie</span>
+            <p class="place-desc" data-i18n="desc.clubhouse">
+              Punto de encuentro y vida social del resort. Ofrece cafetería, terraza al aire libre, desayunos, carta de tapas y hamburguesas, además de veladas de música en vivo y retransmisiones deportivas.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Grupo 2: Playas y Mar Menor -->
+      <div class="surroundings-group">
+        <h3 class="surroundings-group-title">
+          🌊 <span data-i18n="surroundings.group2Title">Playas y Costa (15 a 25 minutos en coche)</span>
+        </h3>
+        <div class="surroundings-grid">
+          
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4 data-i18n="place.marmenor">Playas del Mar Menor (Los Alcázares)</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.marmenor">📍 A 15-18 minutos en coche</span>
+            <p class="place-desc" data-i18n="desc.marmenor">
+              La mayor albufera de agua salada de Europa. Aguas templadas, tranquilas y de escasa profundidad, perfectas para nadar sin oleaje, practicar paddle surf o pasear por su largo paseo marítimo disfrutando de arroces y calderos murcianos.
+            </p>
+          </div>
+
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4 data-i18n="place.sanpedro">Salinas y Lodos de San Pedro del Pinatar</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.sanpedro">📍 A 20-22 minutos en coche</span>
+            <p class="place-desc" data-i18n="desc.sanpedro">
+              Parque regional protegido que alberga bandadas de flamencos y senderos naturales entre lagunas salineras. Muy conocido por sus famosas charcas de lodos terapéuticos al aire libre, con reconocidos beneficios para la piel y las articulaciones.
+            </p>
+          </div>
+
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4 data-i18n="place.calblanque">Cabo de Palos y Calas de Calblanque</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.calblanque">📍 A 25-30 minutos en coche</span>
+            <p class="place-desc" data-i18n="desc.calblanque">
+              El encanto del Mediterráneo abierto. El Parque Regional de Calblanque ofrece playas y dunas fósiles vírgenes. Cabo de Palos, con su majestuoso faro, es la capital del submarinismo gracias a la Reserva Marina de Islas Hormigas y a sus excelentes restaurantes de pescado fresco.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Grupo 3: Ciudades, Servicios y Aeropuertos -->
+      <div class="surroundings-group" style="margin-bottom: 0;">
+        <h3 class="surroundings-group-title">
+          🏛️ <span data-i18n="surroundings.group3Title">Ciudades y Conexiones Estratégicas</span>
+        </h3>
+        <div class="surroundings-grid">
+          
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4 data-i18n="place.roldan">Roldán y Balsicas</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.roldan">📍 A 3-5 minutos en coche</span>
+            <p class="place-desc" data-i18n="desc.roldan">
+              Pueblos tradicionales vecinos donde encontrarás farmacias, bancos, panaderías artesanas, supermercados locales, mercadillos semanales de fruta fresca y la estación de tren de Balsicas con conexión directa hacia Murcia y Madrid.
+            </p>
+          </div>
+
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4 data-i18n="place.cartagena">Cartagena Histórica y Puerto</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.cartagena">📍 A 25 minutos por autovía</span>
+            <p class="place-desc" data-i18n="desc.cartagena">
+              Una joya cultural con más de 3.000 años de historia. Visita el espectacular Teatro Romano, el Museo Nacional de Arqueología Subacuática (ARQVA), su puerto comercial y su elegante calle Mayor peatonal llena de terrazas.
+            </p>
+          </div>
+
+          <div class="place-card">
+            <div class="place-card-top">
+              <h4 data-i18n="place.murcia">Murcia Capital & Aeropuerto de Corvera</h4>
+            </div>
+            <span class="place-dist" data-i18n="dist.murcia">📍 Aeropuerto: 15 min | Murcia: 25 min</span>
+            <p class="place-desc" data-i18n="desc.murcia">
+              El Aeropuerto Internacional de la Región de Murcia (Corvera - RMU) está a solo 15 minutos en coche. La capital regional, Murcia, cautiva con su impresionante Catedral barroca, sus animadas plazas de tapeo (Plaza de las Flores) y sus calles comerciales.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección: Contacto / Reserva Directa -->
+  <section id="reservar" class="ap-section booking-section">
+    <div class="hero-bg" style="background-image: linear-gradient(rgba(13, 59, 102, 0.92), rgba(11, 19, 43, 0.96));"></div>
+    <div class="container booking-content">
+      <h2 data-i18n="booking.title">Contactar y Reservar</h2>
+      <p data-i18n="booking.desc">
+        Reserva directamente con nosotros sin intermediarios ni comisiones adicionales. Escríbenos directamente por WhatsApp o envíanos tu solicitud mediante el formulario.
+      </p>
+      
+      <div class="booking-options">
+        <a href="https://wa.me/34608122535?text=Hola,%20estoy%20interesado%20en%20consultar%20/%20reservar%20en%20Terrazas%20Torre%20Golf%20Green,%20Pool%20%26%20Sea" target="_blank" class="btn-whatsapp">
+          💬 <span data-i18n="btn.whatsapp">Contactar por WhatsApp (608 122 535)</span>
+        </a>
+        <span class="booking-or" data-i18n="booking.or">o rellena nuestro formulario de consulta directa</span>
+      </div>
+
+      <form class="booking-form" id="terrazasBookingForm" onsubmit="handleTerrazasBooking(event)">
+        <div class="form-row">
+          <input type="text" id="bookingName" required placeholder="Tu Nombre y Apellidos">
+          <input type="email" id="bookingEmail" required placeholder="Correo Electrónico de Contacto">
+        </div>
+        <div class="form-row">
+          <input type="tel" id="bookingPhone" placeholder="Teléfono (opcional)">
+          <input type="text" id="bookingDates" placeholder="Fechas estimadas (Entrada y Salida)">
+        </div>
+        <textarea id="bookingMessage" rows="4" required placeholder="Indica número de huéspedes y cualquier consulta adicional..."></textarea>
+        <button type="submit" class="btn-primary" data-i18n="booking.send">Enviar Consulta / Solicitud</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Sección: Pre-Check-in -->
+  <section id="precheckin" class="ap-section alt-bg">
+    <div class="container text-center" style="max-width: 700px; margin: 0 auto; padding: 20px;">
+      <h2 data-i18n="precheckin.title">Prepara tu llegada — Pre-Check-in</h2>
+      <p class="subtitle-p" style="margin-bottom: 25px; line-height: 1.6;" data-i18n="precheckin.desc">
+        Para cumplir con la normativa turística y hacer que tu entrada sea inmediata y sin esperas el día de llegada, te invitamos a completar el registro obligatorio online antes de tu viaje.
+      </p>
+      <a href="https://mucahome-registro.vercel.app/" target="_blank" class="btn-primary" style="display: inline-block; text-decoration: none; padding: 12px 30px;" data-i18n="precheckin.btn">📝 Iniciar Pre-Check-in Online</a>
+    </div>
+  </section>
+
+  <!-- Botón Flotante de WhatsApp -->
+  <a href="https://wa.me/34608122535?text=Hola,%20estoy%20interesado%20en%20consultar%20/%20reservar%20en%20Terrazas%20Torre%20Golf%20Green,%20Pool%20%26%20Sea" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" style="display: block;"><path d="M12.001 2C6.478 2 2 6.478 2 12c0 1.764.462 3.486 1.34 5.006L2 22l5.148-1.314A9.957 9.957 0 0012 22c5.522 0 10-4.478 10-10s-4.478-10-10-10zm5.82 14.286c-.244.686-1.42 1.314-1.956 1.396-.514.078-1.154.11-3.696-.944-3.242-1.344-5.328-4.664-5.49-4.88-.162-.216-1.306-1.74-1.306-3.322 0-1.582.828-2.36 1.12-2.68.294-.32.642-.4.856-.4.214 0 .428.002.616.012.2.01.468-.076.732.558.274.66.936 2.28 1.018 2.448.082.168.136.366.026.586-.11.22-.164.356-.328.548-.164.192-.344.428-.492.574-.164.164-.334.342-.144.668.19.326.844 1.392 1.81 2.254 1.246 1.11 2.298 1.452 2.624 1.616.326.164.516.136.708-.084.192-.22.82-1.074 1.038-1.442.218-.368.436-.308.73-.2.294.108 1.864.878 2.184 1.038.32.16.534.24.614.374.08.134.08.776-.164 1.462z"/></svg>
+  </a>
+
+  <!-- Footer Oficial -->
+  <footer class="main-footer">
+    <p>&copy; 2026 <a href="https://www.mucahome.com" target="_blank">Mucahome Services</a>. <span data-i18n="footer.rights">Todos los derechos reservados.</span> Terrazas Torre Golf Green, Pool & Sea.</p>
+  </footer>
+
+  <!-- Script Lógica, Galería y Traducciones (ES, EN, DE, FR) -->
+  <script>
+    // Inventario de Fotos Curadas y Optimizadas
+    const terrazasPhotos = [
+      {
+        src: "assets/terrazas/01_hero_terraza_golf.jpg",
+        title_es: "01. Terraza Acristalada y Vistas al Golf",
+        title_en: "01. Enclosed Glass Terrace & Golf Views",
+        title_de: "01. Verglaste Terrasse mit Golfblick",
+        title_fr: "01. Terrasse Vitrée et Vue sur le Golf"
+      },
+      {
+        src: "assets/terrazas/02_salon_luminoso.jpg",
+        title_es: "02. Salón-Comedor Luminoso con Climatización",
+        title_en: "02. Bright Living-Dining Room with A/C",
+        title_de: "02. Helles Wohn- und Esszimmer mit Klimaanlage",
+        title_fr: "02. Salon-Salle à Manger Lumineux et Climatisé"
+      },
+      {
+        src: "assets/terrazas/03_terraza_cortina_cristal.jpg",
+        title_es: "03. Terraza con Cortina de Cristal y Acceso al Jardín",
+        title_en: "03. Glass Curtain Terrace with Garden Steps",
+        title_de: "03. Glasvorhang-Terrasse mit Gartenzugang",
+        title_fr: "03. Terrasse en Verre Panoramique et Accès Jardin"
+      },
+      {
+        src: "assets/terrazas/04_piscina_resort.jpg",
+        title_es: "04. Piscina Comunitaria del Complejo",
+        title_en: "04. Resort Community Swimming Pool",
+        title_de: "04. Gemeinschaftspool der Anlage",
+        title_fr: "04. Piscine Commune du Complexe"
+      },
+      {
+        src: "assets/terrazas/05_vistas_campo_golf.jpg",
+        title_es: "05. Vistas Panorámicas al Campo de Golf Saurines",
+        title_en: "05. Panoramic Views of Saurines Golf Course",
+        title_de: "05. Panoramablick auf den Golfplatz Saurines",
+        title_fr: "05. Vue Panoramique sur le Golf Saurines"
+      },
+      {
+        src: "assets/terrazas/06_cocina_equipada.jpg",
+        title_es: "06. Cocina Abierta Totalmente Equipada",
+        title_en: "06. Fully Equipped Open Kitchen",
+        title_de: "06. Voll ausgestattete offene Küche",
+        title_fr: "06. Cuisine Américaine Entièrement Équipée"
+      },
+      {
+        src: "assets/terrazas/07_dormitorio_principal.jpg",
+        title_es: "07. Dormitorio Principal con Cama Doble",
+        title_en: "07. Master Bedroom with Double Bed",
+        title_de: "07. Hauptschlafzimmer mit Doppelbett",
+        title_fr: "07. Chambre Principale avec Lit Double"
+      },
+      {
+        src: "assets/terrazas/08_bano_ducha_lluvia.jpg",
+        title_es: "08. Baño Moderno con Ducha de Gran Formato",
+        title_en: "08. Modern Bathroom with Walk-in Shower",
+        title_de: "08. Modernes Bad mit ebenerdiger Regendusche",
+        title_fr: "08. Salle de Bain Moderne avec Douche à l'Italienne"
+      },
+      {
+        src: "assets/terrazas/09_salon_concepto_abierto.jpg",
+        title_es: "09. Ambiente Diáfano de Salón y Cocina Integrada",
+        title_en: "09. Open Concept Living Area & Kitchen Bar",
+        title_de: "09. Offener Wohnbereich mit Küchentheke",
+        title_fr: "09. Espace de Vie Ouvert et Bar Cuisine"
+      },
+      {
+        src: "assets/terrazas/10_dormitorio_detalle_tv.jpg",
+        title_es: "10. Dormitorio con Smart TV y Espejo Vestidor",
+        title_en: "10. Bedroom with Wall Smart TV & Full Mirror",
+        title_de: "10. Schlafzimmer mit Wand-Smart-TV & Ganzkörperspiegel",
+        title_fr: "10. Chambre avec Smart TV Murale & Grand Miroir"
+      },
+      {
+        src: "assets/terrazas/11_cocina_electrodomesticos.jpg",
+        title_es: "11. Zona de Cocinado, Horno y Lavadora",
+        title_en: "11. Cooking Area, Oven & Washing Machine",
+        title_de: "11. Kochbereich, Backofen & Waschmaschine",
+        title_fr: "11. Zone de Cuisson, Four et Lave-linge"
+      },
+      {
+        src: "assets/terrazas/12_jardines_palmeras_resort.jpg",
+        title_es: "12. Jardines Cuidados y Palmeras del Resort",
+        title_en: "12. Manicured Resort Gardens & Palm Trees",
+        title_de: "12. Gepflegte Gartenanlagen & Palmen des Resorts",
+        title_fr: "12. Jardins Soignés et Palmiers du Resort"
+      },
+      {
+        src: "assets/terrazas/13_edificio_arquitectura_mediterranea.jpg",
+        title_es: "13. Arquitectura Mediterránea del Complejo",
+        title_en: "13. Mediterranean Architecture of the Complex",
+        title_de: "13. Weiße mediterrane Architektur der Anlage",
+        title_fr: "13. Architecture Méditerranéenne Blanche du Complexe"
+      },
+      {
+        src: "assets/terrazas/14_salon_perspectiva_terraza.jpg",
+        title_es: "14. Perspectiva del Salón hacia la Terraza Exterior",
+        title_en: "14. Living Room View Towards Sunny Terrace",
+        title_de: "14. Wohnzimmer-Blick zur sonnigen Außenterrasse",
+        title_fr: "14. Vue du Salon vers la Terrasse Ensoleillée"
+      }
+    ];
+
+    let currentPhotoIdx = 0;
+    let currentLang = 'es';
+
+    function initGallery() {
+      const thumbsContainer = document.getElementById("sliderThumbs");
+      thumbsContainer.innerHTML = "";
+      terrazasPhotos.forEach((photo, idx) => {
+        const thumb = document.createElement("div");
+        thumb.className = `thumb-item ${idx === 0 ? 'active' : ''}`;
+        thumb.style.backgroundImage = `url('${photo.src}')`;
+        thumb.title = getPhotoTitle(photo, currentLang);
+        thumb.onclick = () => selectSlide(idx);
+        thumbsContainer.appendChild(thumb);
+      });
+      updateSlide();
+    }
+
+    function getPhotoTitle(photo, lang) {
+      if (lang === 'en') return photo.title_en;
+      if (lang === 'de') return photo.title_de;
+      if (lang === 'fr') return photo.title_fr;
+      return photo.title_es;
+    }
+
+    function selectSlide(idx) {
+      currentPhotoIdx = idx;
+      updateSlide(true);
+    }
+
+    function prevSlide() {
+      currentPhotoIdx = (currentPhotoIdx - 1 + terrazasPhotos.length) % terrazasPhotos.length;
+      updateSlide(true);
+    }
+
+    function nextSlide() {
+      currentPhotoIdx = (currentPhotoIdx + 1) % terrazasPhotos.length;
+      updateSlide(true);
+    }
+
+    function updateSlide(scrollThumb = false) {
+      const main = document.getElementById("sliderMain");
+      const caption = document.getElementById("sliderCaption");
+      const photo = terrazasPhotos[currentPhotoIdx];
+      main.style.backgroundImage = `url('${photo.src}')`;
+      caption.innerText = getPhotoTitle(photo, currentLang);
+
+      const thumbs = document.querySelectorAll(".thumb-item");
+      thumbs.forEach((el, idx) => {
+        el.classList.toggle("active", idx === currentPhotoIdx);
+      });
+
+      if (scrollThumb) {
+        const thumbsContainer = document.getElementById("sliderThumbs");
+        const activeThumb = thumbs[currentPhotoIdx];
+        if (thumbsContainer && activeThumb) {
+          const scrollTarget = activeThumb.offsetLeft - (thumbsContainer.clientWidth / 2) + (activeThumb.clientWidth / 2);
+          thumbsContainer.scrollTo({ left: scrollTarget, behavior: "smooth" });
+        }
+      }
+    }
+
+    // Manejador del Formulario de Reserva/Consulta
+    function handleTerrazasBooking(event) {
+      event.preventDefault();
+      const name = document.getElementById("bookingName").value.trim();
+      const email = document.getElementById("bookingEmail").value.trim();
+      const phone = document.getElementById("bookingPhone").value.trim() || "No indicado";
+      const dates = document.getElementById("bookingDates").value.trim() || "Fechas por consultar";
+      const message = document.getElementById("bookingMessage").value.trim();
+
+      // Asunto requerido: "Solicitud de reserva / consulta Terrazas Torre Golf Green, Pool & Sea - [Nombre]"
+      const subject = encodeURIComponent(`Solicitud de reserva / consulta: Terrazas Torre Golf Green, Pool & Sea - ${name}`);
+      const body = encodeURIComponent(
+        `Hola,\n\nHe recibido una nueva solicitud de consulta / reserva para Terrazas Torre Golf Green, Pool & Sea:\n\n` +
+        `• Nombre: ${name}\n` +
+        `• Email: ${email}\n` +
+        `• Teléfono: ${phone}\n` +
+        `• Fechas estimadas: ${dates}\n\n` +
+        `• Mensaje / Consultas:\n${message}\n\n` +
+        `---\nEnviado desde la web oficial de Terrazas Torre Golf Green, Pool & Sea (aptos.mucahome.com)`
+      );
+
+      // Redirigir a correo oficial mu_info@gmx.net
+      window.location.href = `mailto:mu_info@gmx.net?subject=${subject}&body=${body}`;
+    }
+
+    // Diccionario Multilingüe Completo (ES, EN, DE, FR)
+    const terrazasTranslations = {
+      es: {
+        "nav.gallery": "Galería",
+        "nav.desc": "Descripción",
+        "nav.amenities": "Servicios",
+        "nav.map": "Ubicación",
+        "nav.surroundings": "Entorno",
+        "nav.book": "Reservar / Contactar",
+        "nav.precheckin": "Pre-Check-in",
+        "hero.subtitle": "Luminoso apartamento en primera línea de golf con terraza acristalada panorámica, piscinas comunitarias y el encanto del Mediterráneo a pocos minutos.",
+        "hero.badgeGolf": "⛳ Primera Línea de Golf",
+        "hero.badgeTerrace": "🌅 Terraza con Cortina de Cristal",
+        "hero.badgePool": "🏊 Piscinas Comunitarias",
+        "hero.badgeOrientation": "☀️ Orientación Sureste",
+        "hero.cta": "Reservar / Contactar",
+        "gallery.title": "Álbum de Fotografías",
+        "gallery.subtitle": "Un recorrido visual por el apartamento, su terraza acristalada y las instalaciones del resort.",
+        "desc.title": "Descripción del Alojamiento",
+        "desc.p1": "Bienvenido a <strong>Terrazas Torre Golf Green, Pool & Sea</strong>, un acogedor refugio diseñado para disfrutar de la luz, el golf y el clima privilegiado de Murcia durante todo el año. Ubicado en el prestigioso complejo privado <strong>Las Terrazas de la Torre Golf Resort</strong>, este apartamento de 65 m² combina confort, funcionalidad y unas vistas abiertas y despejadas al campo de golf.",
+        "desc.p2": "La gran protagonista de la vivienda es su <strong>espectacular terraza acristalada</strong>, equipada con un sistema de <em>cortina de cristal</em> abatible. Esta innovación permite abrirla por completo para dejar fluir la suave brisa y fundirse con el entorno verde, o mantenerla cerrada formando un acogedor salón panorámico exterior. Es el rincón perfecto para desayunar al sol, compartir veladas o teletrabajar con total tranquilidad mirando a los greens.",
+        "desc.p3": "Su magnífica <strong>orientación sureste</strong> garantiza sol y abundante luz natural desde primera hora de la mañana, convirtiendo la vivienda en un espacio cálido y muy agradable en otoño e invierno. El interior cuenta con salón de concepto abierto con sofá cama confortable de 2 plazas, Smart TV y aire acondicionado con bomba de calor; cocina americana totalmente equipada con electrodomésticos modernos; un dormitorio independiente con cama de matrimonio, Smart TV propia y salida directa a la terraza; y un baño contemporáneo con plato de ducha de obra de gran formato.",
+        "desc.p4": "Con capacidad para <strong>2 a 4 huéspedes</strong>, es la elección ideal tanto para golfistas como para parejas, familias o profesionales en remoto que valoran la paz, el confort y la comodidad de contar con piscinas a escasos pasos, supermercado Spar dentro del resort y vigilancia privada 24 horas.",
+        "specs.capacity": "Capacidad: 2 a 4 huéspedes",
+        "specs.area": "Apartamento de 65 m²",
+        "specs.rooms": "1 Dormitorio Doble + Sofá Cama 2 Plazas",
+        "specs.baths": "1 Baño Completo con Ducha de Gran Formato",
+        "specs.terrace": "Terraza con Cortina de Cristal Abatible",
+        "specs.orientation": "Orientación Sureste (Máxima Luz Natural)",
+        "specs.frontline": "Primera Línea de Campo de Golf",
+        "specs.pools": "Piscinas Comunitarias a Pocos Pasos",
+        "specs.security": "Recinto Privado con Seguridad 24 Horas",
+        "amenities.title": "Servicios e Instalaciones",
+        "amenity.terrace": "🌅 Terraza panorámica con cortina de cristal",
+        "amenity.pools": "🏊 Amplias piscinas comunitarias",
+        "amenity.ac": "❄️ Aire acondicionado (frío / calor)",
+        "amenity.wifi": "⚡ Fibra óptica + WiFi de alta velocidad",
+        "amenity.smarttv": "📺 2 Smart TV (salón y dormitorio)",
+        "amenity.kitchen": "🍳 Cocina completa con vitro, horno y nevera",
+        "amenity.washing": "🧺 Lavadora en el apartamento",
+        "amenity.spar": "🛒 Supermercado Spar dentro del resort",
+        "amenity.clubhouse": "🍸 Casa Club, Cafetería & Lola's Bar",
+        "amenity.golf": "⛳ Campo de Golf Saurines de 18 hoyos",
+        "amenity.security": "🛡️ Seguridad privada 24/7 con control de acceso",
+        "amenity.beaches": "🌊 A 15-20 min de las playas del Mar Menor",
+        "map.title": "Ubicación del Complejo",
+        "map.subtitle": "Calle Fernando Alonso, 1 — Las Terrazas de la Torre Golf Resort, 30709 Roldán, Torre-Pacheco (Murcia).",
+        "surroundings.mainTitle": "Entorno y Lugares de Interés",
+        "surroundings.mainSubtitle": "Disfruta de la tranquilidad del golf, las cálidas playas del Mar Menor y la historia milenaria de la Región de Murcia.",
+        "surroundings.group1Title": "Dentro de Las Terrazas de la Torre (A pocos pasos)",
+        "place.saurinesGolf": "Campo Saurines de la Torre",
+        "dist.resortStep": "📍 En primera línea",
+        "desc.saurinesGolf": "Espectacular campo de golf de 18 hoyos (par 72) con diseño semidesértico estilo Las Vegas/Arizona creado por Jack Nicklaus y gestionado por UGOLF. Destaca por sus calles onduladas entre dunas y su gran lago central de 6 hectáreas.",
+        "place.spar": "Town Centre & Supermercado Spar",
+        "dist.walkResort": "📍 A 2 minutos a pie",
+        "desc.spar": "El complejo cuenta en su centro neurálgico con un supermercado Spar completo para realizar las compras del día a día con total comodidad y sin necesidad de utilizar el coche.",
+        "place.clubhouse": "Casa Club & Lola's Bar",
+        "desc.clubhouse": "Punto de encuentro y vida social del resort. Ofrece cafetería, terraza al aire libre, desayunos, carta de tapas y hamburguesas, además de veladas de música en vivo y retransmisiones deportivas.",
+        "surroundings.group2Title": "Playas y Costa (15 a 25 minutos en coche)",
+        "place.marmenor": "Playas del Mar Menor (Los Alcázares)",
+        "dist.marmenor": "📍 A 15-18 minutos en coche",
+        "desc.marmenor": "La mayor albufera de agua salada de Europa. Aguas templadas, tranquilas y de escasa profundidad, perfectas para nadar sin oleaje, practicar paddle surf o pasear por su largo paseo marítimo disfrutando de arroces y calderos murcianos.",
+        "place.sanpedro": "Salinas y Lodos de San Pedro del Pinatar",
+        "dist.sanpedro": "📍 A 20-22 minutos en coche",
+        "desc.sanpedro": "Parque regional protegido que alberga bandadas de flamencos y senderos naturales entre lagunas salineras. Muy conocido por sus famosas charcas de lodos terapéuticos al aire libre, con reconocidos beneficios para la piel y las articulaciones.",
+        "place.calblanque": "Cabo de Palos y Calas de Calblanque",
+        "dist.calblanque": "📍 A 25-30 minutos en coche",
+        "desc.calblanque": "El encanto del Mediterráneo abierto. El Parque Regional de Calblanque ofrece playas y dunas fósiles vírgenes. Cabo de Palos, con su majestuoso faro, es la capital del submarinismo gracias a la Reserva Marina de Islas Hormigas y a sus excelentes restaurantes de pescado fresco.",
+        "surroundings.group3Title": "Ciudades y Conexiones Estratégicas",
+        "place.roldan": "Roldán y Balsicas",
+        "dist.roldan": "📍 A 3-5 minutos en coche",
+        "desc.roldan": "Pueblos tradicionales vecinos donde encontrarás farmacias, bancos, panaderías artesanas, supermercados locales, mercadillos semanales de fruta fresca y la estación de tren de Balsicas con conexión directa hacia Murcia y Madrid.",
+        "place.cartagena": "Cartagena Histórica y Puerto",
+        "dist.cartagena": "📍 A 25 minutos por autovía",
+        "desc.cartagena": "Una joya cultural con más de 3.000 años de historia. Visita el espectacular Teatro Romano, el Museo Nacional de Arqueología Subacuática (ARQVA), su puerto comercial y su elegante calle Mayor peatonal llena de terrazas.",
+        "place.murcia": "Murcia Capital & Aeropuerto de Corvera",
+        "dist.murcia": "📍 Aeropuerto: 15 min | Murcia: 25 min",
+        "desc.murcia": "El Aeropuerto Internacional de la Región de Murcia (Corvera - RMU) está a solo 15 minutos en coche. La capital regional, Murcia, cautiva con su impresionante Catedral barroca, sus animadas plazas de tapeo (Plaza de las Flores) y sus calles comerciales.",
+        "booking.title": "Contactar y Reservar",
+        "booking.desc": "Reserva directamente con nosotros sin intermediarios ni comisiones adicionales. Escríbenos directamente por WhatsApp o envíanos tu solicitud mediante el formulario.",
+        "btn.whatsapp": "Contactar por WhatsApp (608 122 535)",
+        "booking.or": "o rellena nuestro formulario de consulta directa",
+        "booking.send": "Enviar Consulta / Solicitud",
+        "precheckin.title": "Prepara tu llegada — Pre-Check-in",
+        "precheckin.desc": "Para cumplir con la normativa turística y hacer que tu entrada sea inmediata y sin esperas el día de llegada, te invitamos a completar el registro obligatorio online antes de tu viaje.",
+        "precheckin.btn": "📝 Iniciar Pre-Check-in Online",
+        "footer.rights": "Todos los derechos reservados."
+      },
+      en: {
+        "nav.gallery": "Gallery",
+        "nav.desc": "Description",
+        "nav.amenities": "Amenities",
+        "nav.map": "Location",
+        "nav.surroundings": "Surroundings",
+        "nav.book": "Book / Contact",
+        "nav.precheckin": "Pre-Check-in",
+        "hero.subtitle": "Bright frontline golf apartment featuring a panoramic glass terrace, community swimming pools, and the Mediterranean charm just minutes away.",
+        "hero.badgeGolf": "⛳ Frontline Golf",
+        "hero.badgeTerrace": "🌅 Glass Curtain Terrace",
+        "hero.badgePool": "🏊 Community Pools",
+        "hero.badgeOrientation": "☀️ Southeast Facing",
+        "hero.cta": "Book / Contact",
+        "gallery.title": "Photo Album",
+        "gallery.subtitle": "A complete visual tour through the apartment, its enclosed glass terrace, and the resort facilities.",
+        "desc.title": "Accommodation Description",
+        "desc.p1": "Welcome to <strong>Terrazas Torre Golf Green, Pool & Sea</strong>, a luminous retreat designed to enjoy sunny days, golf, and the privileged climate of Murcia throughout the whole year. Situated in the exclusive private resort <strong>Las Terrazas de la Torre Golf Resort</strong>, this 65 m² apartment blends comfort, functionality, and uninterrupted golf views.",
+        "desc.p2": "The true highlight of this home is its <strong>spectacular glass-enclosed terrace</strong>, fitted with a retractable <em>glass curtain</em> system. This modern design allows you to fold the panels open completely to let the gentle breeze flow in, or keep them closed to create a cozy, sheltered outdoor lounge with direct panoramic views over the golf fairways. It is the perfect spot for breakfast in the morning sun, evening drinks, or remote working overlooking the greens.",
+        "desc.p3": "Its advantageous <strong>southeast orientation</strong> ensures plenty of morning sunshine and natural warmth, making the apartment particularly comfortable during autumn and winter months. The interior features an open-concept living room with a comfortable double sofa bed, Smart TV, and reverse-cycle air conditioning; a fully equipped modern kitchen; an independent bedroom with a double bed, its own wall-mounted Smart TV, and direct terrace access; and a contemporary bathroom with a spacious walk-in shower.",
+        "desc.p4": "Accommodating <strong>2 to 4 guests</strong>, it is the ideal choice for golfers, couples, small families, or remote teleworkers seeking tranquility, excellent amenities, multiple swimming pools, an on-site Spar supermarket, and 24/7 security.",
+        "specs.capacity": "Capacity: 2 to 4 guests",
+        "specs.area": "65 m² Apartment",
+        "specs.rooms": "1 Double Bedroom + 2-Person Sofa Bed",
+        "specs.baths": "1 Modern Bathroom with Walk-in Shower",
+        "specs.terrace": "Panoramic Retractable Glass Curtain Terrace",
+        "specs.orientation": "Southeast Facing (Maximum Natural Sunlight)",
+        "specs.frontline": "Frontline Saurines Golf Course",
+        "specs.pools": "Community Swimming Pools Steps Away",
+        "specs.security": "Gated Resort with 24/7 Security",
+        "amenities.title": "Amenities & Facilities",
+        "amenity.terrace": "🌅 Panoramic glass-curtain terrace",
+        "amenity.pools": "🏊 Large community swimming pools",
+        "amenity.ac": "❄️ Air conditioning (cooling & heating)",
+        "amenity.wifi": "⚡ High-speed fiber optic Wi-Fi",
+        "amenity.smarttv": "📺 2 Smart TVs (living room & bedroom)",
+        "amenity.kitchen": "🍳 Full kitchen with hob, oven & fridge",
+        "amenity.washing": "🧺 Washing machine in the apartment",
+        "amenity.spar": "🛒 On-site Spar supermarket in the resort",
+        "amenity.clubhouse": "🍸 Clubhouse, Cafeteria & Lola's Bar",
+        "amenity.golf": "⛳ 18-hole Saurines Golf Course",
+        "amenity.security": "🛡️ 24/7 on-site security & access barrier",
+        "amenity.beaches": "🌊 15-20 min to Mar Menor calm beaches",
+        "map.title": "Resort Location",
+        "map.subtitle": "Calle Fernando Alonso, 1 — Las Terrazas de la Torre Golf Resort, 30709 Roldán, Torre-Pacheco (Murcia).",
+        "surroundings.mainTitle": "Surroundings & Nearby Highlights",
+        "surroundings.mainSubtitle": "Enjoy the peaceful golf atmosphere, warm Mar Menor beaches, and the historic heritage of the Region of Murcia.",
+        "surroundings.group1Title": "Inside Las Terrazas de la Torre (Steps Away)",
+        "place.saurinesGolf": "Saurines de la Torre Golf Course",
+        "dist.resortStep": "📍 Frontline",
+        "desc.saurinesGolf": "Spectacular 18-hole (par 72) semi-desert style golf course designed by Jack Nicklaus and managed by UGOLF. Known for its rolling fairways amidst dunes and its stunning 6-hectare central lake.",
+        "place.spar": "Town Centre & Spar Supermarket",
+        "dist.walkResort": "📍 2 minutes walk",
+        "desc.spar": "Convenient Spar supermarket located within the resort town centre, allowing you to get daily groceries easily without having to drive.",
+        "place.clubhouse": "Clubhouse & Lola's Bar",
+        "desc.clubhouse": "The social hub of the resort. Features an outdoor terrace, coffee, breakfasts, tapas, burgers, live music events, and televised sports.",
+        "surroundings.group2Title": "Beaches & Coastline (15 to 25 mins by car)",
+        "place.marmenor": "Mar Menor Beaches (Los Alcázares)",
+        "dist.marmenor": "📍 15-18 minutes drive",
+        "desc.marmenor": "Europe's largest saltwater lagoon. Warm, tranquil, shallow waters ideal for safe family swimming, paddle boarding, or strolling along the seaside promenade lined with seafood restaurants.",
+        "place.sanpedro": "Salinas & Mud Baths of San Pedro",
+        "dist.sanpedro": "📍 20-22 minutes drive",
+        "desc.sanpedro": "Protected nature reserve home to flocks of pink flamingos and walking trails. Famous for its free open-air therapeutic mineral mud baths.",
+        "place.calblanque": "Cabo de Palos & Calblanque Coves",
+        "dist.calblanque": "📍 25-30 minutes drive",
+        "desc.calblanque": "Unspoiled Mediterranean beauty. Calblanque Regional Park features golden dunes and wild beaches. Cabo de Palos boasts a landmark lighthouse, world-class diving reserves, and fresh fish restaurants.",
+        "surroundings.group3Title": "Cities & Strategic Connections",
+        "place.roldan": "Roldán & Balsicas",
+        "dist.roldan": "📍 3-5 minutes drive",
+        "desc.roldan": "Charming neighbouring towns offering pharmacies, banks, bakeries, traditional weekly fresh markets, and the Balsicas train station with connections to Murcia and Madrid.",
+        "place.cartagena": "Historic Cartagena & Port",
+        "dist.cartagena": "📍 25 minutes via highway",
+        "desc.cartagena": "A cultural gem with over 3,000 years of maritime history. Visit the monumental Roman Theatre, the ARQVA underwater archaeology museum, and the bustling pedestrian boulevard.",
+        "place.murcia": "Murcia City & Corvera Airport",
+        "dist.murcia": "📍 Airport: 15 min | Murcia: 25 min",
+        "desc.murcia": "Region of Murcia International Airport (Corvera - RMU) is only 15 minutes away by car. The regional capital of Murcia enchants visitors with its baroque Cathedral and lively tapas squares.",
+        "booking.title": "Contact & Direct Booking",
+        "booking.desc": "Book directly with us with no intermediary fees. Send us a message on WhatsApp or fill out our direct inquiry form.",
+        "btn.whatsapp": "Contact via WhatsApp (+34 608 122 535)",
+        "booking.or": "or fill out our direct inquiry form below",
+        "booking.send": "Send Inquiry / Request",
+        "precheckin.title": "Prepare your arrival — Pre-Check-in",
+        "precheckin.desc": "To comply with local tourism regulations and enable a smooth, instant check-in upon arrival, please complete the mandatory online pre-check-in before travelling.",
+        "precheckin.btn": "📝 Start Online Pre-Check-in",
+        "footer.rights": "All rights reserved."
+      },
+      de: {
+        "nav.gallery": "Galerie",
+        "nav.desc": "Beschreibung",
+        "nav.amenities": "Ausstattung",
+        "nav.map": "Lage",
+        "nav.surroundings": "Umgebung",
+        "nav.book": "Buchen / Kontakt",
+        "nav.precheckin": "Pre-Check-in",
+        "hero.subtitle": "Helle Ferienwohnung in erster Golflinie mit verglaster Panoramaterrasse, Gemeinschaftspools und mediterranem Flair nur wenige Minuten entfernt.",
+        "hero.badgeGolf": "⛳ Erste Golflinie",
+        "hero.badgeTerrace": "🌅 Verglaste Panoramaterrasse",
+        "hero.badgePool": "🏊 Gemeinschaftspools",
+        "hero.badgeOrientation": "☀️ Südost-Ausrichtung",
+        "hero.cta": "Buchen / Kontakt",
+        "gallery.title": "Fotogalerie",
+        "gallery.subtitle": "Ein kompletter Rundgang durch das Apartment, die verglaste Terrasse und die Einrichtungen des Resorts.",
+        "desc.title": "Beschreibung der Unterkunft",
+        "desc.p1": "Willkommen im <strong>Terrazas Torre Golf Green, Pool & Sea</strong>, einem lichtdurchfluteten Rückzugsort, um die Sonne, den Golfsport und das milde Klima Murcias das ganze Jahr über zu genießen. In der privaten Wohnanlage <strong>Las Terrazas de la Torre Golf Resort</strong> gelegen, bietet dieses 65 m² große Apartment Komfort, Funktionalität und freien Blick auf den Golfplatz.",
+        "desc.p2": "Das absolute Highlight der Wohnung ist ihre <strong>spektakuläre verglaste Terrasse</strong> mit einem flexiblen <em>Glasvorhang-System</em>. Die Glaselemente lassen sich komplett zur Seite schieben, um die erfrischende Brise hereinzulassen, oder vollständig schließen – so entsteht ein geschützter, sonniger Außen-Wohnbereich mit Blick auf die Greens. Ideal für ein entspanntes Frühstück, Telearbeit oder lauschige Abende.",
+        "desc.p3": "Dank der hervorragenden <strong>Südost-Ausrichtung</strong> genießen Sie bereits ab den frühen Morgenstunden viel natürliches Licht und angenehme Wärme – besonders wertvoll in den Herbst- und Wintermonaten. Die Wohnung umfasst ein offenes Wohnzimmer mit bequemem Schlafsofa für 2 Personen, Smart-TV und Klimaanlage (kalt/warm); eine voll ausgestattete Einbauküche; ein separates Schlafzimmer mit Doppelbett, eigenem Smart-TV und direktem Terrassenzugang; sowie ein modernes Badezimmer mit großer ebenerdiger Dusche.",
+        "desc.p4": "Mit Platz für <strong>2 bis 4 Personen</strong> ist es die perfekte Wahl für Golfer, Paare, kleine Familien oder Remote-Worker, die Ruhe, Komfort, Pools in unmittelbarer Nähe, einen Spar-Supermarkt im Resort und 24-Stunden-Sicherheitsdienst schätzen.",
+        "specs.capacity": "Kapazität: 2 bis 4 Gäste",
+        "specs.area": "65 m² Apartment",
+        "specs.rooms": "1 Doppelzimmer + Schlafsofa (2 Pers.)",
+        "specs.baths": "1 Modernes Bad mit Regendusche",
+        "specs.terrace": "Terrasse mit flexiblem Glassystem",
+        "specs.orientation": "Südost-Ausrichtung (Viel Tageslicht)",
+        "specs.frontline": "Erste Linie am Saurines Golfplatz",
+        "specs.pools": "Gemeinschaftspools nur wenige Schritte entfernt",
+        "specs.security": "Gesicherte Anlage mit 24h-Wachdienst",
+        "amenities.title": "Ausstattung & Services",
+        "amenity.terrace": "🌅 Panoramaterrasse mit Glasvorhang",
+        "amenity.pools": "🏊 Großzügige Gemeinschaftspools",
+        "amenity.ac": "❄️ Klimaanlage & Heizung",
+        "amenity.wifi": "⚡ Highspeed-Glasfaser-WLAN",
+        "amenity.smarttv": "📺 2 Smart-TVs (Wohn- und Schlafzimmer)",
+        "amenity.kitchen": "🍳 Komplettküche mit Herd, Ofen & Kühlschrank",
+        "amenity.washing": "🧺 Waschmaschine in der Wohnung",
+        "amenity.spar": "🛒 Spar-Supermarkt direkt im Resort",
+        "amenity.clubhouse": "🍸 Clubhaus, Café & Lola's Bar",
+        "amenity.golf": "⛳ 18-Loch Saurines Golfplatz",
+        "amenity.security": "🛡️ 24/7 privater Sicherheitsdienst & Schranke",
+        "amenity.beaches": "🌊 15-20 Min zu den Stränden des Mar Menor",
+        "map.title": "Lage der Anlage",
+        "map.subtitle": "Calle Fernando Alonso, 1 — Las Terrazas de la Torre Golf Resort, 30709 Roldán, Torre-Pacheco (Murcia).",
+        "surroundings.mainTitle": "Umgebung & Ausflugsziele",
+        "surroundings.mainSubtitle": "Erleben Sie die Ruhe des Golfresorts, das warme Mar Menor und das reiche kulturelle Erbe der Region Murcia.",
+        "surroundings.group1Title": "Im Resort Las Terrazas de la Torre (Wenige Schritte)",
+        "place.saurinesGolf": "Saurines de la Torre Golfplatz",
+        "dist.resortStep": "📍 In erster Reihe",
+        "desc.saurinesGolf": "Spektakulärer 18-Loch-Meisterschaftsplatz (Par 72) im Halbwüstenstil von Jack Nicklaus, betrieben von UGOLF. Geprägt von sanften Dünen und einem beeindruckenden 6 Hektar großen zentralen See.",
+        "place.spar": "Town Centre & Spar-Supermarkt",
+        "dist.walkResort": "📍 2 Minuten zu Fuß",
+        "desc.spar": "Direkt im Herzen des Resorts gelegen. Erledigen Sie Ihre täglichen Einkäufe bequem zu Fuß ohne Auto.",
+        "place.clubhouse": "Clubhaus & Lola's Bar",
+        "desc.clubhouse": "Der gesellige Treffpunkt des Resorts mit schöner Sonnenterrasse, Frühstück, Tapas, Burgern, Live-Musik und Sportübertragungen.",
+        "surroundings.group2Title": "Strände & Küste (15 bis 25 Minuten Fahrt)",
+        "place.marmenor": "Strände des Mar Menor (Los Alcázares)",
+        "dist.marmenor": "📍 15-18 Minuten mit dem Auto",
+        "desc.marmenor": "Europas größte Salzwasserlagune. Warmes, ruhiges und seichtes Wasser, ideal zum entspannten Baden, Stand-Up-Paddling oder für Spaziergänge entlang der Promenade mit traditionellen Caldero-Restaurants.",
+        "place.sanpedro": "Salinen & Heilschlamm von San Pedro",
+        "dist.sanpedro": "📍 20-22 Minuten mit dem Auto",
+        "desc.sanpedro": "Geschützter Regionalpark mit Flamingokolonien. Weithin bekannt für die kostenlosen therapeutischen Freiluft-Schlammbäder, die wohltuend für Haut und Gelenke sind.",
+        "place.calblanque": "Cabo de Palos & Naturstrand Calblanque",
+        "dist.calblanque": "📍 25-30 Minuten mit dem Auto",
+        "desc.calblanque": "Wildromantisches Mittelmeer. Der Naturpark Calblanque bietet unberührte Buchten und Dünen. Cabo de Palos besticht durch seinen Leuchtturm, eines der besten Tauchreviere Spaniens und frischen Fisch.",
+        "surroundings.group3Title": "Städte & Verkehrsanbindung",
+        "place.roldan": "Roldán & Balsicas",
+        "dist.roldan": "📍 3-5 Minuten mit dem Auto",
+        "desc.roldan": "Typisch spanische Nachbarorte mit Apotheken, Banken, Wochenmärkten und dem Bahnhof Balsicas mit Verbindungen nach Murcia und Madrid.",
+        "place.cartagena": "Historisches Cartagena & Hafen",
+        "dist.cartagena": "📍 25 Minuten über die Autobahn",
+        "desc.cartagena": "Beeindruckende Hafenstadt mit über 3.000 Jahren Geschichte. Besuchen Sie das Römische Theater, das Meeresmuseum ARQVA und die lebendige Fußgängerzone.",
+        "place.murcia": "Murcia Hauptstadt & Flughafen Corvera",
+        "dist.murcia": "📍 Flughafen: 15 Min | Murcia: 25 Min",
+        "desc.murcia": "Der internationale Flughafen Murcia-Corvera (RMU) liegt nur 15 Fahrminuten entfernt. Die Provinzhauptstadt Murcia begeistert mit ihrer Barockkathedrale und gemütlichen Tapas-Plätzen.",
+        "booking.title": "Kontakt & Direktbuchung",
+        "booking.desc": "Buchen Sie direkt bei uns ohne Zwischenhändler und zusätzliche Gebühren. Schreiben Sie uns per WhatsApp oder nutzen Sie unser Anfrageformular.",
+        "btn.whatsapp": "Kontakt per WhatsApp (+34 608 122 535)",
+        "booking.or": "oder füllen Sie unser Anfrageformular aus",
+        "booking.send": "Anfrage absenden",
+        "precheckin.title": "Anreise vorbereiten — Pre-Check-in",
+        "precheckin.desc": "Um den behördlichen Vorschriften zu entsprechen und Ihnen einen reibungslosen Check-in am Anreisetag zu ermöglichen, füllen Sie bitte vorab den Online-Pre-Check-in aus.",
+        "precheckin.btn": "📝 Online Pre-Check-in starten",
+        "footer.rights": "Alle Rechte vorbehalten."
+      },
+      fr: {
+        "nav.gallery": "Galerie",
+        "nav.desc": "Description",
+        "nav.amenities": "Services",
+        "nav.map": "Localisation",
+        "nav.surroundings": "Environs",
+        "nav.book": "Réserver / Contact",
+        "nav.precheckin": "Pre-Check-in",
+        "hero.subtitle": "Appartement lumineux en première ligne de golf avec terrasse vitrée panoramique, piscines communes et le charme de la Méditerranée à quelques minutes.",
+        "hero.badgeGolf": "⛳ Première Ligne de Golf",
+        "hero.badgeTerrace": "🌅 Terrasse avec Rideau de Verre",
+        "hero.badgePool": "🏊 Piscines Communes",
+        "hero.badgeOrientation": "☀️ Orientation Sud-Est",
+        "hero.cta": "Réserver / Contact",
+        "gallery.title": "Album Photos",
+        "gallery.subtitle": "Une visite visuelle complète de l'appartement, de sa terrasse vitrée et des superbes installations du complexe.",
+        "desc.title": "Description du Logement",
+        "desc.p1": "Bienvenue à <strong>Terrazas Torre Golf Green, Pool & Sea</strong>, un havre de paix lumineux conçu pour profiter du soleil, du golf et du climat exceptionnel de Murcie tout au long de l'année. Situé au sein du complexe résidentiel privé <strong>Las Terrazas de la Torre Golf Resort</strong>, cet appartement de 65 m² allie confort moderne et vue panoramique dégagée sur le parcours.",
+        "desc.p2": "La pièce maîtresse de la maison est sa <strong>splendide terrasse vitrée</strong>, dotée d'un système innovant de <em>rideaux de verre</em> rétractables. Vous pouvez ouvrir l'ensemble des panneaux pour respirer la brise méditerranéenne ou les refermer afin de créer un salon extérieur d'hiver chaleureux avec vue sur les greens. Un endroit de rêve pour le petit déjeuner, le télétravail ou des soirées au calme.",
+        "desc.p3": "Son excellente <strong>orientation sud-est</strong> garantit un ensoleillement optimal dès le lever du jour, rendant l'appartement particulièrement doux et agréable durant l'automne et l'hiver. L'intérieur comprend un salon ouvert avec canapé-lit 2 places très confortable, Smart TV et climatisation réversible ; une cuisine américaine toute équipée ; une chambre double indépendante avec Smart TV murale et accès direct à la terrasse ; et une salle de bain moderne avec grande douche à l'italienne.",
+        "desc.p4": "Pouvant accueillir de <strong>2 à 4 personnes</strong>, c'est le pied-à-terre parfait pour golfeurs, couples, familles ou télétravailleurs appréciant le calme, des piscines à proximité immédiate, un supermarché Spar sur place et un service de sécurité 24h/24.",
+        "specs.capacity": "Capacité : 2 à 4 personnes",
+        "specs.area": "Appartement de 65 m²",
+        "specs.rooms": "1 Chambre Double + Canapé-lit 2 Places",
+        "specs.baths": "1 Salle de Bain Moderne avec Douche Italienne",
+        "specs.terrace": "Terrasse avec Rideau de Verre Coulissant",
+        "specs.orientation": "Orientation Sud-Est (Ensoleillement Idéal)",
+        "specs.frontline": "Première Ligne du Golf Saurines",
+        "specs.pools": "Piscines Communes à Proximité Immédiate",
+        "specs.security": "Complexe Sécurisé 24h/24",
+        "amenities.title": "Services & Équipements",
+        "amenity.terrace": "🌅 Terrasse panoramique fermée en verre",
+        "amenity.pools": "🏊 Grandes piscines extérieures communes",
+        "amenity.ac": "❄️ Climatisation réversible (froid / chaud)",
+        "amenity.wifi": "⚡ Fibre optique & Wi-Fi haut débit",
+        "amenity.smarttv": "📺 2 Smart TV (salon et chambre)",
+        "amenity.kitchen": "🍳 Cuisine équipée avec plaques, four et frigo",
+        "amenity.washing": "🧺 Lave-linge dans le logement",
+        "amenity.spar": "🛒 Supermarché Spar à l'intérieur du resort",
+        "amenity.clubhouse": "🍸 Clubhouse, Cafétéria & Lola's Bar",
+        "amenity.golf": "⛳ Parcours de Golf Saurines 18 trous",
+        "amenity.security": "🛡️ Gardiennage privé 24h/24 et barrière",
+        "amenity.beaches": "🌊 À 15-20 min des plages calmes du Mar Menor",
+        "map.title": "Localisation du Complexe",
+        "map.subtitle": "Calle Fernando Alonso, 1 — Las Terrazas de la Torre Golf Resort, 30709 Roldán, Torre-Pacheco (Murcie).",
+        "surroundings.mainTitle": "Environs & Lieux d'Intérêt",
+        "surroundings.mainSubtitle": "Profitez de la quiétude du golf, des eaux calmes du Mar Menor et de la richesse historique de la région de Murcie.",
+        "surroundings.group1Title": "Dans Las Terrazas de la Torre (À quelques pas)",
+        "place.saurinesGolf": "Parcours Saurines de la Torre",
+        "dist.resortStep": "📍 En première ligne",
+        "desc.saurinesGolf": "Superbe parcours 18 trous (par 72) de style semi-désertique signé Jack Nicklaus et géré par UGOLF. Caractérisé par des fairways vallonnés entre dunes et son grand lac central de 6 hectares.",
+        "place.spar": "Town Centre & Supermarché Spar",
+        "dist.walkResort": "📍 À 2 minutes à pied",
+        "desc.spar": "Le centre du complexe dispose d'un supermarché Spar complet pour vos courses quotidiennes en toute simplicité et sans utiliser votre véhicule.",
+        "place.clubhouse": "Clubhouse & Lola's Bar",
+        "desc.clubhouse": "Cœur convivial du domaine avec grande terrasse ombragée, petits déjeuners, carte de tapas, burgers, retransmissions sportives et soirées musicales.",
+        "surroundings.group2Title": "Plages & Littoral (15 à 25 min en voiture)",
+        "place.marmenor": "Plages du Mar Menor (Los Alcázares)",
+        "dist.marmenor": "📍 À 15-18 minutes en voiture",
+        "desc.marmenor": "La plus vaste lagune salée d'Europe. Des eaux calmes, tièdes et sans vagues, idéales pour la baignade en toute sécurité, le paddle et les terrasses de restaurants proposant le riz caldero typique.",
+        "place.sanpedro": "Salines & Bains de Boue de San Pedro",
+        "dist.sanpedro": "📍 À 20-22 minutes en voiture",
+        "desc.sanpedro": "Parc naturel protégé peuplé de flamants roses. Réputé pour ses bains de boue thérapeutique gratuits en plein air, bénéfiques pour la peau et les articulations.",
+        "place.calblanque": "Cabo de Palos & Criques de Calblanque",
+        "dist.calblanque": "📍 À 25-30 minutes en voiture",
+        "desc.calblanque": "La beauté sauvage de la Méditerranée. Les criques protégées de Calblanque offrent un cadre naturel d'exception. Cabo de Palos séduit avec son phare emblématique et sa célèbre réserve marine de plongée.",
+        "surroundings.group3Title": "Villes & Accès Stratégiques",
+        "place.roldan": "Roldán & Balsicas",
+        "dist.roldan": "📍 À 3-5 minutes en voiture",
+        "desc.roldan": "Villages authentiques voisins avec pharmacies, banques, marchés hebdomadaires et gare de Balsicas reliant rapidement Murcie et Madrid.",
+        "place.cartagena": "Carthagène Historique & Port",
+        "dist.cartagena": "📍 À 25 minutes par autoroute",
+        "desc.cartagena": "Cité portuaire prestigieuse avec plus de 3 000 ans d'histoire. Découvrez son Théâtre Romain restauré, le musée d'archéologie sous-marine et ses ruelles piétonnes animées.",
+        "place.murcia": "Murcie Capitale & Aéroport de Corvera",
+        "dist.murcia": "📍 Aéroport : 15 min | Murcie : 25 min",
+        "desc.murcia": "L'aéroport international de la Région de Murcie (Corvera - RMU) n'est qu'à 15 minutes en voiture. Murcie séduit par sa majestueuse cathédrale baroque et ses places conviviales pour savourer des tapas.",
+        "booking.title": "Contact & Réservation Directe",
+        "booking.desc": "Réservez directement auprès de nous sans intermédiaire ni commission supplémentaire. Contactez-nous par WhatsApp ou remplissez le formulaire de demande.",
+        "btn.whatsapp": "Contacter par WhatsApp (+34 608 122 535)",
+        "booking.or": "ou remplissez notre formulaire ci-dessous",
+        "booking.send": "Envoyer la Demande",
+        "precheckin.title": "Préparez votre arrivée — Pre-Check-in",
+        "precheckin.desc": "Pour respecter les normes touristiques et faciliter votre entrée dès votre arrivée, nous vous invitons à remplir le pre-check-in en ligne obligatoire avant votre départ.",
+        "precheckin.btn": "📝 Démarrer le Pre-Check-in en ligne",
+        "footer.rights": "Tous droits réservés."
+      }
+    };
+
+    function updateTerrazasPlaceholders(lang) {
+      const nameInput = document.getElementById("bookingName");
+      const emailInput = document.getElementById("bookingEmail");
+      const phoneInput = document.getElementById("bookingPhone");
+      const datesInput = document.getElementById("bookingDates");
+      const msgInput = document.getElementById("bookingMessage");
+      if (!nameInput) return;
+
+      if (lang === 'en') {
+        nameInput.placeholder = "Your Full Name";
+        emailInput.placeholder = "Contact Email";
+        phoneInput.placeholder = "Phone (optional)";
+        datesInput.placeholder = "Estimated Dates (Check-in & Check-out)";
+        msgInput.placeholder = "Indicate number of guests and any questions...";
+      } else if (lang === 'de') {
+        nameInput.placeholder = "Ihr Vor- und Nachname";
+        emailInput.placeholder = "Kontakt-E-Mail";
+        phoneInput.placeholder = "Telefon (optional)";
+        datesInput.placeholder = "Ungefähre Reisedaten (Anreise & Abreise)";
+        msgInput.placeholder = "Geben Sie die Gästeanzahl und weitere Fragen an...";
+      } else if (lang === 'fr') {
+        nameInput.placeholder = "Votre Nom et Prénom";
+        emailInput.placeholder = "Adresse e-mail";
+        phoneInput.placeholder = "Téléphone (facultatif)";
+        datesInput.placeholder = "Dates estimées (Arrivée & Départ)";
+        msgInput.placeholder = "Indiquez le nombre de personnes et vos questions...";
+      } else {
+        nameInput.placeholder = "Tu Nombre y Apellidos";
+        emailInput.placeholder = "Correo Electrónico de Contacto";
+        phoneInput.placeholder = "Teléfono (opcional)";
+        datesInput.placeholder = "Fechas estimadas (Entrada y Salida)";
+        msgInput.placeholder = "Indica número de huéspedes y cualquier consulta adicional...";
+      }
+    }
+
+    function changeLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('terrazas_lang', lang);
+      
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.innerText.toLowerCase() === lang) btn.classList.add('active');
+      });
+
+      const dict = terrazasTranslations[lang] || terrazasTranslations['es'];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.innerHTML = dict[key];
+      });
+
+      updateTerrazasPlaceholders(lang);
+      updateSlide();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initGallery();
+      const savedLang = localStorage.getItem('terrazas_lang') || 'es';
+      changeLanguage(savedLang);
+    });
+  </script>
+</body>
+</html>
