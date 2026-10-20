@@ -503,26 +503,36 @@
     // Registro de tiempo de carga para verificación humana (anti-bot)
     const terrazasFormInitTime = Date.now();
 
+    function getTerrazasLang() {
+      const activeBtn = document.querySelector('.lang-btn.active');
+      if (activeBtn) {
+        const text = activeBtn.innerText.trim().toLowerCase();
+        if (text && terrazasTranslations[text]) return text;
+      }
+      return localStorage.getItem('terrazas_lang') || 'es';
+    }
+
     // Manejador del Formulario de Reserva/Consulta (FormSubmit Seguro AJAX con Honeypot)
     async function handleTerrazasBooking(event) {
       event.preventDefault();
       const form = event.target;
       const statusBox = document.getElementById("terrazasFormStatus");
       const submitBtn = document.getElementById("terrazasSubmitBtn");
-      const currentLang = localStorage.getItem("mucahome_lang") || "es";
+      const lang = getTerrazasLang();
+      const dict = terrazasTranslations[lang] || terrazasTranslations['es'];
 
       // 1. Detección de Bots por Honeypot
       const honeyField = form.querySelector('[name="_honey"]');
       if (honeyField && honeyField.value.trim() !== "") {
         form.reset();
-        showTerrazasStatus("success", getStatusText("success", currentLang));
+        showTerrazasStatus("success", "booking.success");
         return;
       }
 
       // 2. Detección de Bots por tiempo (mínimo 1.8 segundos)
       if (Date.now() - terrazasFormInitTime < 1800) {
         form.reset();
-        showTerrazasStatus("success", getStatusText("success", currentLang));
+        showTerrazasStatus("success", "booking.success");
         return;
       }
 
@@ -535,7 +545,7 @@
       // UI: Estado enviando
       submitBtn.disabled = true;
       const originalBtnText = submitBtn.innerText;
-      submitBtn.innerText = getStatusText("sending", currentLang);
+      submitBtn.innerText = dict["booking.sending"] || "Enviando...";
       statusBox.className = "form-status-msg";
       statusBox.style.display = "none";
 
@@ -563,49 +573,28 @@
 
         if (response.ok && (data.success === "true" || data.success === true || (data.message && data.message.includes("Activation")))) {
           form.reset();
-          showTerrazasStatus("success", getStatusText("success", currentLang));
+          showTerrazasStatus("success", "booking.success");
         } else {
-          showTerrazasStatus("error", getStatusText("error", currentLang));
+          showTerrazasStatus("error", "booking.error");
         }
       } catch (err) {
         console.error("Error al enviar formulario:", err);
-        showTerrazasStatus("error", getStatusText("error", currentLang));
+        showTerrazasStatus("error", "booking.error");
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerText = originalBtnText;
       }
     }
 
-    function showTerrazasStatus(type, msg) {
+    function showTerrazasStatus(type, key) {
       const box = document.getElementById("terrazasFormStatus");
       if (!box) return;
+      const lang = getTerrazasLang();
+      const dict = terrazasTranslations[lang] || terrazasTranslations['es'];
       box.className = `form-status-msg ${type}`;
-      box.innerHTML = msg;
+      box.setAttribute('data-i18n', key);
+      box.innerHTML = dict[key] || terrazasTranslations['es'][key];
       box.style.display = "block";
-    }
-
-    function getStatusText(key, lang) {
-      const texts = {
-        sending: {
-          es: "Enviando...",
-          en: "Sending...",
-          de: "Wird gesendet...",
-          fr: "Envoi en cours..."
-        },
-        success: {
-          es: "✓ ¡Gracias! Tu consulta ha sido enviada con éxito. Te responderemos muy pronto.",
-          en: "✓ Thank you! Your inquiry has been sent successfully. We will get back to you shortly.",
-          de: "✓ Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.",
-          fr: "✓ Merci ! Votre demande a bien été envoyée. Nous vous répondrons très rapidement."
-        },
-        error: {
-          es: "⚠️ Ha ocurrido un problema al enviar el formulario. Por favor, contáctanos directamente por WhatsApp o inténtalo de nuevo.",
-          en: "⚠️ An error occurred while sending the form. Please contact us directly via WhatsApp or try again.",
-          de: "⚠️ Beim Senden des Formulars ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns direkt per WhatsApp.",
-          fr: "⚠️ Une erreur s'est produite lors de l'envoi du formulaire. Veuillez nous contacter directamente via WhatsApp."
-        }
-      };
-      return (texts[key] && texts[key][lang]) || texts[key]["es"];
     }
 
     // Diccionario Multilingüe Completo (ES, EN, DE, FR)
@@ -686,6 +675,9 @@
         "btn.whatsapp": "Contactar por WhatsApp (608 122 535)",
         "booking.or": "o rellena nuestro formulario de consulta directa",
         "booking.send": "Enviar Consulta / Solicitud",
+        "booking.sending": "Enviando...",
+        "booking.success": "✓ ¡Gracias! Tu consulta ha sido enviada con éxito. Te responderemos muy pronto.",
+        "booking.error": "⚠️ Ha ocurrido un problema al enviar el formulario. Por favor, contáctanos directamente por WhatsApp o inténtalo de nuevo.",
         "precheckin.title": "Prepara tu llegada — Pre-Check-in",
         "precheckin.desc": "Para cumplir con la normativa turística y hacer que tu entrada sea inmediata y sin esperas el día de llegada, te invitamos a completar el registro obligatorio online antes de tu viaje.",
         "precheckin.btn": "📝 Iniciar Pre-Check-in Online",
@@ -767,6 +759,9 @@
         "btn.whatsapp": "Contact via WhatsApp (+34 608 122 535)",
         "booking.or": "or fill out our direct inquiry form below",
         "booking.send": "Send Inquiry / Request",
+        "booking.sending": "Sending...",
+        "booking.success": "✓ Thank you! Your inquiry has been sent successfully. We will get back to you shortly.",
+        "booking.error": "⚠️ An error occurred while sending the form. Please contact us directly via WhatsApp or try again.",
         "precheckin.title": "Prepare your arrival — Pre-Check-in",
         "precheckin.desc": "To comply with local tourism regulations and enable a smooth, instant check-in upon arrival, please complete the mandatory online pre-check-in before travelling.",
         "precheckin.btn": "📝 Start Online Pre-Check-in",
@@ -848,6 +843,9 @@
         "btn.whatsapp": "Kontakt per WhatsApp (+34 608 122 535)",
         "booking.or": "oder füllen Sie unser Anfrageformular aus",
         "booking.send": "Anfrage absenden",
+        "booking.sending": "Wird gesendet...",
+        "booking.success": "✓ Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.",
+        "booking.error": "⚠️ Beim Senden des Formulars ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns direkt per WhatsApp oder versuchen Sie es erneut.",
         "precheckin.title": "Anreise vorbereiten — Pre-Check-in",
         "precheckin.desc": "Um den behördlichen Vorschriften zu entsprechen und Ihnen einen reibungslosen Check-in am Anreisetag zu ermöglichen, füllen Sie bitte vorab den Online-Pre-Check-in aus.",
         "precheckin.btn": "📝 Online Pre-Check-in starten",
@@ -929,6 +927,9 @@
         "btn.whatsapp": "Contacter par WhatsApp (+34 608 122 535)",
         "booking.or": "ou remplissez notre formulaire ci-dessous",
         "booking.send": "Envoyer la Demande",
+        "booking.sending": "Envoi en cours...",
+        "booking.success": "✓ Merci ! Votre demande a bien été envoyée. Nous vous répondrons très rapidement.",
+        "booking.error": "⚠️ Une erreur s'est produite lors de l'envoi du formulaire. Veuillez nous contacter directement via WhatsApp ou réessayer.",
         "precheckin.title": "Préparez votre arrivée — Pre-Check-in",
         "precheckin.desc": "Pour respecter les normes touristiques et faciliter votre entrée dès votre arrivée, nous vous invitons à remplir le pre-check-in en ligne obligatoire avant votre départ.",
         "precheckin.btn": "📝 Démarrer le Pre-Check-in en ligne",

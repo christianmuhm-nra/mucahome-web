@@ -467,26 +467,36 @@
     // Registro de tiempo de carga para verificación humana (anti-bot)
     const robleFormInitTime = Date.now();
 
+    function getRobleLang() {
+      const activeBtn = document.querySelector('.lang-btn.active');
+      if (activeBtn) {
+        const text = activeBtn.innerText.trim().toLowerCase();
+        if (text && robleTranslations[text]) return text;
+      }
+      return localStorage.getItem('casaroble_lang') || 'es';
+    }
+
     // Manejador del Formulario de Reserva/Consulta (FormSubmit Seguro AJAX con Honeypot)
     async function handleRobleBooking(event) {
       event.preventDefault();
       const form = event.target;
       const statusBox = document.getElementById("robleFormStatus");
       const submitBtn = document.getElementById("robleSubmitBtn");
-      const curLang = localStorage.getItem('casaroble_lang') || 'es';
+      const lang = getRobleLang();
+      const dict = robleTranslations[lang] || robleTranslations['es'];
 
       // 1. Detección de Bots por Honeypot
       const honeyField = form.querySelector('[name="_honey"]');
       if (honeyField && honeyField.value.trim() !== "") {
         form.reset();
-        showRobleStatus("success", getRobleStatusText("success", curLang));
+        showRobleStatus("success", "booking.success");
         return;
       }
 
       // 2. Detección de Bots por tiempo (mínimo 1.8 segundos)
       if (Date.now() - robleFormInitTime < 1800) {
         form.reset();
-        showRobleStatus("success", getRobleStatusText("success", curLang));
+        showRobleStatus("success", "booking.success");
         return;
       }
 
@@ -499,7 +509,7 @@
       // UI: Estado enviando
       submitBtn.disabled = true;
       const originalBtnText = submitBtn.innerText;
-      submitBtn.innerText = getRobleStatusText("sending", curLang);
+      submitBtn.innerText = dict["booking.sending"] || "Enviando...";
       statusBox.className = "form-status-msg";
       statusBox.style.display = "none";
 
@@ -527,52 +537,28 @@
 
         if (response.ok && (data.success === "true" || data.success === true || (data.message && data.message.includes("Activation")))) {
           form.reset();
-          showRobleStatus("success", getRobleStatusText("success", curLang));
+          showRobleStatus("success", "booking.success");
         } else {
-          showRobleStatus("error", getRobleStatusText("error", curLang));
+          showRobleStatus("error", "booking.error");
         }
       } catch (err) {
         console.error("Error al enviar formulario:", err);
-        showRobleStatus("error", getRobleStatusText("error", curLang));
+        showRobleStatus("error", "booking.error");
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerText = originalBtnText;
       }
     }
 
-    function showRobleStatus(type, msg) {
+    function showRobleStatus(type, key) {
       const box = document.getElementById("robleFormStatus");
       if (!box) return;
+      const lang = getRobleLang();
+      const dict = robleTranslations[lang] || robleTranslations['es'];
       box.className = `form-status-msg ${type}`;
-      box.innerHTML = msg;
+      box.setAttribute('data-i18n', key);
+      box.innerHTML = dict[key] || robleTranslations['es'][key];
       box.style.display = "block";
-    }
-
-    function getRobleStatusText(key, lang) {
-      const texts = {
-        sending: {
-          es: "Enviando...",
-          en: "Sending...",
-          de: "Wird gesendet...",
-          fr: "Envoi en cours...",
-          no: "Sender..."
-        },
-        success: {
-          es: "✓ ¡Gracias! Tu consulta ha sido enviada con éxito. Te responderemos muy pronto.",
-          en: "✓ Thank you! Your inquiry has been sent successfully. We will get back to you shortly.",
-          de: "✓ Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.",
-          fr: "✓ Merci ! Votre demande a bien été envoyée. Nous vous répondrons très rapidement.",
-          no: "✓ Takk! Forespørselen din er sendt. Vi svarer deg så snart som mulig."
-        },
-        error: {
-          es: "⚠️ Ha ocurrido un problema al enviar el formulario. Por favor, contáctanos directamente por WhatsApp o inténtalo de nuevo.",
-          en: "⚠️ An error occurred while sending the form. Please contact us directly via WhatsApp or try again.",
-          de: "⚠️ Beim Senden des Formulars ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns direkt per WhatsApp.",
-          fr: "⚠️ Une erreur s'est produite lors de l'envoi du formulaire. Veuillez nous contacter directamente via WhatsApp.",
-          no: "⚠️ Det oppsto en feil under sendingen. Vennligst kontakt oss direkte via WhatsApp."
-        }
-      };
-      return (texts[key] && texts[key][lang]) || texts[key]["es"];
     }
 
 
@@ -645,6 +631,9 @@
         "btn.whatsapp": "Contactar por WhatsApp",
         "booking.or": "o rellena nuestro formulario de consulta",
         "booking.send": "Enviar Solicitud",
+        "booking.sending": "Enviando...",
+        "booking.success": "✓ ¡Gracias! Tu consulta ha sido enviada con éxito. Te responderemos muy pronto.",
+        "booking.error": "⚠️ Ha ocurrido un problema al enviar el formulario. Por favor, contáctanos directamente por WhatsApp o inténtalo de nuevo.",
         "channels.title": "Encuéntranos también en",
         "channels.subtitle": "Consulta nuestra ficha oficial, valoraciones y opiniones en otras plataformas.",
         "channels.portalsTitle": "Portales de reservas",
@@ -720,6 +709,9 @@
         "btn.whatsapp": "Contact via WhatsApp",
         "booking.or": "or fill out our inquiry form",
         "booking.send": "Send Request",
+        "booking.sending": "Sending...",
+        "booking.success": "✓ Thank you! Your inquiry has been sent successfully. We will get back to you shortly.",
+        "booking.error": "⚠️ An error occurred while sending the form. Please contact us directly via WhatsApp or try again.",
         "channels.title": "Find us also on",
         "channels.subtitle": "Check our official profile, ratings and reviews on other platforms.",
         "channels.portalsTitle": "Booking portals",
@@ -775,6 +767,9 @@
         "booking.title": "Kontakt & Direktbuchung",
         "btn.whatsapp": "Per WhatsApp kontaktieren",
         "booking.send": "Anfrage senden",
+        "booking.sending": "Wird gesendet...",
+        "booking.success": "✓ Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.",
+        "booking.error": "⚠️ Beim Senden des Formulars ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns direkt per WhatsApp oder versuchen Sie es erneut.",
         "channels.title": "Finden Sie uns auch auf",
         "precheckin.title": "Bereiten Sie Ihre Ankunft vor — Pre-Check-in",
         "precheckin.desc": "Um die gesetzlichen Vorschriften zu erfüllen und den Check-in am Ankunftstag zu beschleunigen, bitten wir Sie, das Pre-Check-in vor Ihrer Reise schnell und sicher online auszufüllen.",
@@ -827,6 +822,9 @@
         "booking.title": "Contact & Réservation Directe",
         "btn.whatsapp": "Contacter par WhatsApp",
         "booking.send": "Envoyer la demande",
+        "booking.sending": "Envoi en cours...",
+        "booking.success": "✓ Merci ! Votre demande a bien été envoyée. Nous vous répondrons très rapidement.",
+        "booking.error": "⚠️ Une erreur s'est produite lors de l'envoi du formulaire. Veuillez nous contacter directement via WhatsApp ou réessayer.",
         "channels.title": "Retrouvez-nous également sur",
         "precheckin.title": "Préparez votre arrivée — Pre-Check-in",
         "precheckin.desc": "Afin de respecter la réglementation locale et d'accélérer votre entrée le jour de l'arrivée, nous vous invitons à remplir le pre-check-in obligatoire en ligne avant votre voyage.",
@@ -899,6 +897,9 @@
         "btn.whatsapp": "Kontakt via WhatsApp",
         "booking.or": "eller fyll ut vårt henvendelsesskjema",
         "booking.send": "Send Forespørsel",
+        "booking.sending": "Sender...",
+        "booking.success": "✓ Takk! Forespørselen din er sendt. Vi svarer deg så snart som mulig.",
+        "booking.error": "⚠️ Det oppsto en feil under sendingen. Vennligst kontakt oss direkte via WhatsApp eller prøv igjen.",
         "channels.title": "Finn oss også på",
         "channels.subtitle": "Se vår offisielle profil, vurderinger og anmeldelser på andre plattformer.",
         "channels.portalsTitle": "Bestillingsportaler",

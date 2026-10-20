@@ -53,6 +53,9 @@ const translations = {
     "btn.whatsapp": "Contactar por WhatsApp",
     "booking.or": "o rellena nuestro formulario de consulta",
     "booking.send": "Enviar Solicitud",
+    "booking.sending": "Enviando...",
+    "booking.success": "✓ ¡Gracias! Tu consulta ha sido enviada con éxito. Te responderemos muy pronto.",
+    "booking.error": "⚠️ Ha ocurrido un problema al enviar el formulario. Por favor, contáctanos directamente por WhatsApp o inténtalo de nuevo.",
     "channels.title": "Encuéntranos también en",
     "channels.subtitle": "Consulta nuestros perfiles, valoraciones y publicaciones en otras plataformas y redes sociales.",
     "channels.portalsTitle": "Reservas y valoraciones",
@@ -123,6 +126,9 @@ const translations = {
     "btn.whatsapp": "Contact via WhatsApp",
     "booking.or": "or fill out our inquiry form",
     "booking.send": "Send Request",
+    "booking.sending": "Sending...",
+    "booking.success": "✓ Thank you! Your inquiry has been sent successfully. We will get back to you shortly.",
+    "booking.error": "⚠️ An error occurred while sending the form. Please contact us directly via WhatsApp or try again.",
     "channels.title": "Also find us on",
     "channels.subtitle": "Check our profiles, reviews, and posts on other platforms and social networks.",
     "channels.portalsTitle": "Bookings & reviews",
@@ -193,6 +199,9 @@ const translations = {
     "btn.whatsapp": "Kontakt per WhatsApp",
     "booking.or": "oder füllen Sie unser Anfrageformular aus",
     "booking.send": "Anfrage Senden",
+    "booking.sending": "Wird gesendet...",
+    "booking.success": "✓ Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.",
+    "booking.error": "⚠️ Beim Senden des Formulars ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns direkt per WhatsApp oder versuchen Sie es erneut.",
     "channels.title": "Finden Sie uns auch auf",
     "channels.subtitle": "Sehen Sie sich unsere Profile, Bewertungen und Beiträge auf anderen Plattformen und sozialen Netzwerken an.",
     "channels.portalsTitle": "Buchungen & Bewertungen",
@@ -260,6 +269,9 @@ const translations = {
     "btn.whatsapp": "Contacter par WhatsApp",
     "booking.or": "ou remplissez notre formulaire de demande",
     "booking.send": "Envoyer la Demande",
+    "booking.sending": "Envoi en cours...",
+    "booking.success": "✓ Merci ! Votre demande a bien été envoyée. Nous vous répondrons très rapidement.",
+    "booking.error": "⚠️ Une erreur s'est produite lors de l'envoi du formulaire. Veuillez nous contacter directement via WhatsApp ou réessayer.",
     "channels.title": "Retrouvez-nous aussi sur",
     "channels.subtitle": "Consultez nos profils, avis et publications sur d'autres plateformes et réseaux sociaux.",
     "channels.portalsTitle": "Réservations et avis",
@@ -330,6 +342,9 @@ const translations = {
     "btn.whatsapp": "Kontakt via WhatsApp",
     "booking.or": "eller fyll ut vårt henvendelsesskjema",
     "booking.send": "Send Forespørsel",
+    "booking.sending": "Sender...",
+    "booking.success": "✓ Takk! Forespørselen din er sendt. Vi svarer deg så snart som mulig.",
+    "booking.error": "⚠️ Det oppsto en feil under sendingen. Vennligst kontakt oss direkte via WhatsApp eller prøv igjen.",
     "channels.title": "Finn oss også på",
     "channels.subtitle": "Se våre profiler, vurderinger og omtaler på andre plattformer og sosiale medier.",
     "channels.portalsTitle": "Bestilling og anmeldelser",
@@ -536,26 +551,36 @@ function updatePlaceholders(lang) {
 // Registro de tiempo de carga para verificación humana (anti-bot)
 const globalFormInitTime = Date.now();
 
+function getAppLang() {
+  const activeBtn = document.querySelector('.lang-btn.active');
+  if (activeBtn) {
+    const text = activeBtn.innerText.trim().toLowerCase();
+    if (text && translations[text]) return text;
+  }
+  return currentLang || localStorage.getItem('mucahome_lang') || 'es';
+}
+
 // Manejador del Formulario de Reserva/Consulta (FormSubmit Seguro AJAX con Honeypot)
 async function handleBooking(event) {
   event.preventDefault();
   const form = event.target;
   const statusBox = document.getElementById("bookingFormStatus");
   const submitBtn = document.getElementById("bookingSubmitBtn") || form.querySelector('button[type="submit"]');
-  const userLang = currentLang || 'es';
+  const lang = getAppLang();
+  const dict = translations[lang] || translations['es'];
 
   // 1. Detección de Bots por Honeypot
   const honeyField = form.querySelector('[name="_honey"]');
   if (honeyField && honeyField.value.trim() !== "") {
     form.reset();
-    showBookingStatus("success", getBookingStatusText("success", userLang));
+    showBookingStatus("success", "booking.success");
     return;
   }
 
   // 2. Detección de Bots por tiempo (mínimo 1.8 segundos)
   if (Date.now() - globalFormInitTime < 1800) {
     form.reset();
-    showBookingStatus("success", getBookingStatusText("success", userLang));
+    showBookingStatus("success", "booking.success");
     return;
   }
 
@@ -567,7 +592,7 @@ async function handleBooking(event) {
   if (submitBtn) {
     submitBtn.disabled = true;
     submitBtn.dataset.originalText = submitBtn.innerText;
-    submitBtn.innerText = getBookingStatusText("sending", userLang);
+    submitBtn.innerText = dict["booking.sending"] || "Enviando...";
   }
   if (statusBox) {
     statusBox.className = "form-status-msg";
@@ -597,13 +622,13 @@ async function handleBooking(event) {
 
     if (response.ok && (data.success === "true" || data.success === true || (data.message && data.message.includes("Activation")))) {
       form.reset();
-      showBookingStatus("success", getBookingStatusText("success", userLang));
+      showBookingStatus("success", "booking.success");
     } else {
-      showBookingStatus("error", getBookingStatusText("error", userLang));
+      showBookingStatus("error", "booking.error");
     }
   } catch (err) {
     console.error("Error al enviar formulario:", err);
-    showBookingStatus("error", getBookingStatusText("error", userLang));
+    showBookingStatus("error", "booking.error");
   } finally {
     if (submitBtn) {
       submitBtn.disabled = false;
@@ -614,39 +639,15 @@ async function handleBooking(event) {
   }
 }
 
-function showBookingStatus(type, msg) {
+function showBookingStatus(type, key) {
   const box = document.getElementById("bookingFormStatus");
   if (!box) return;
+  const lang = getAppLang();
+  const dict = translations[lang] || translations['es'];
   box.className = `form-status-msg ${type}`;
-  box.innerHTML = msg;
+  box.setAttribute('data-i18n', key);
+  box.innerHTML = dict[key] || translations['es'][key];
   box.style.display = "block";
-}
-
-function getBookingStatusText(key, lang) {
-  const texts = {
-    sending: {
-      es: "Enviando...",
-      en: "Sending...",
-      de: "Wird gesendet...",
-      fr: "Envoi en cours...",
-      no: "Sender..."
-    },
-    success: {
-      es: "✓ ¡Gracias! Tu consulta ha sido enviada con éxito. Te responderemos muy pronto.",
-      en: "✓ Thank you! Your inquiry has been sent successfully. We will get back to you shortly.",
-      de: "✓ Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.",
-      fr: "✓ Merci ! Votre demande a bien été envoyée. Nous vous répondrons très rapidement.",
-      no: "✓ Takk! Forespørselen din er sendt. Vi svarer deg så snart som mulig."
-    },
-    error: {
-      es: "⚠️ Ha ocurrido un problema al enviar el formulario. Por favor, contáctanos directamente por WhatsApp o inténtalo de nuevo.",
-      en: "⚠️ An error occurred while sending the form. Please contact us directly via WhatsApp or try again.",
-      de: "⚠️ Beim Senden des Formulars ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns direkt per WhatsApp.",
-      fr: "⚠️ Une erreur s'est produite lors de l'envoi du formulaire. Veuillez nous contacter directement via WhatsApp.",
-      no: "⚠️ Det oppsto en feil under sendingen. Vennligst kontakt oss direkte via WhatsApp."
-    }
-  };
-  return (texts[key] && texts[key][lang]) || texts[key]["es"];
 }
 
 // Arranque inicial
