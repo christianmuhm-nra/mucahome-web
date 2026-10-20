@@ -157,13 +157,17 @@
         <span class="booking-or" data-i18n="booking.or">o rellena nuestro formulario de consulta</span>
       </div>
 
-      <form class="booking-form" onsubmit="handleBooking(event)">
+      <form class="booking-form" id="bookingForm" onsubmit="handleBooking(event)">
+        <!-- Campo Honeypot Oculto (Anti-Bot) -->
+        <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
+
         <div class="form-row">
           <input type="text" id="bookingName" required placeholder="Tu Nombre">
           <input type="email" id="bookingEmail" required placeholder="Correo Electrónico">
         </div>
         <textarea id="bookingMessage" rows="4" required placeholder="Indica fechas estimadas y número de huéspedes..."></textarea>
-        <button type="submit" class="btn-primary" data-i18n="booking.send">Enviar Solicitud</button>
+        <button type="submit" id="bookingSubmitBtn" class="btn-primary" data-i18n="booking.send">Enviar Solicitud</button>
+        <div id="bookingFormStatus" class="form-status-msg" role="alert"></div>
       </form>
 
     </div>

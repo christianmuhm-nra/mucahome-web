@@ -326,6 +326,9 @@
       </div>
 
       <form class="booking-form" id="robleBookingForm" onsubmit="handleRobleBooking(event)">
+        <!-- Campo Honeypot Oculto (Anti-Bot) -->
+        <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
+
         <div class="form-row">
           <input type="text" id="bookingName" required placeholder="Tu Nombre y Apellidos">
           <input type="email" id="bookingEmail" required placeholder="Correo Electrónico de Contacto">
@@ -335,7 +338,8 @@
           <input type="text" id="bookingDates" placeholder="Fechas estimadas (Entrada y Salida)">
         </div>
         <textarea id="bookingMessage" rows="4" required placeholder="Indica número de huéspedes y cualquier consulta adicional..."></textarea>
-        <button type="submit" class="btn-primary" data-i18n="booking.send">Enviar Solicitud</button>
+        <button type="submit" id="robleSubmitBtn" class="btn-primary" data-i18n="booking.send">Enviar Solicitud</button>
+        <div id="robleFormStatus" class="form-status-msg" role="alert"></div>
       </form>
 
     </div>
@@ -460,38 +464,115 @@
 
 
 
-    // Formulario de Reserva hacia lahermitadejulio@hotmail.com
-    function handleRobleBooking(event) {
+    // Registro de tiempo de carga para verificación humana (anti-bot)
+    const robleFormInitTime = Date.now();
+
+    // Manejador del Formulario de Reserva/Consulta (FormSubmit Seguro AJAX con Honeypot)
+    async function handleRobleBooking(event) {
       event.preventDefault();
-      const name = document.getElementById("bookingName").value;
-      const email = document.getElementById("bookingEmail").value;
-      const phone = document.getElementById("bookingPhone").value || "No indicado";
-      const dates = document.getElementById("bookingDates").value || "Fechas por consultar";
-      const message = document.getElementById("bookingMessage").value;
-
-      const subject = encodeURIComponent(`Solicitud de Reserva: Casa Roble Carchuna - ${name}`);
-      const body = encodeURIComponent(
-        `Hola,\n\nHe recibido una solicitud de información / reserva para Casa Roble Carchuna:\n\n` +
-        `• Nombre: ${name}\n` +
-        `• Email: ${email}\n` +
-        `• Teléfono: ${phone}\n` +
-        `• Fechas: ${dates}\n\n` +
-        `• Mensaje / Consultas:\n${message}\n\n` +
-        `---\nEnviado desde la web oficial de Casa Roble Carchuna`
-      );
-
-      // Abrir cliente de correo
-      window.location.href = `mailto:lahermitadejulio@hotmail.com?subject=${subject}&body=${body}`;
-
-      const alertMessages = {
-        es: "¡Gracias por tu solicitud! Se abrirá tu aplicación de correo para enviar el mensaje a lahermitadejulio@hotmail.com. También puedes contactarnos al instante por WhatsApp al +34 637 31 16 55.",
-        en: "Thank you for your request! Your email client will now open to send the message to lahermitadejulio@hotmail.com. You can also contact us instantly via WhatsApp at +34 637 31 16 55.",
-        de: "Vielen Dank für Ihre Anfrage! Ihr E-Mail-Programm wird nun geöffnet, um die Nachricht an lahermitadejulio@hotmail.com zu senden. Sie können uns auch sofort per WhatsApp unter +34 637 31 16 55 erreichen.",
-        fr: "Merci pour votre demande ! Votre application de messagerie va s'ouvrir pour envoyer le message à lahermitadejulio@hotmail.com. Vous pouvez également nous contacter directement par WhatsApp au +34 637 31 16 55.",
-        no: "Takk for din henvendelse! E-postprogrammet ditt åpnes nå for å sende meldingen til lahermitadejulio@hotmail.com. Du kan også kontakte oss direkte på WhatsApp på +34 637 31 16 55."
-      };
+      const form = event.target;
+      const statusBox = document.getElementById("robleFormStatus");
+      const submitBtn = document.getElementById("robleSubmitBtn");
       const curLang = localStorage.getItem('casaroble_lang') || 'es';
-      alert(alertMessages[curLang] || alertMessages.es);
+
+      // 1. Detección de Bots por Honeypot
+      const honeyField = form.querySelector('[name="_honey"]');
+      if (honeyField && honeyField.value.trim() !== "") {
+        form.reset();
+        showRobleStatus("success", getRobleStatusText("success", curLang));
+        return;
+      }
+
+      // 2. Detección de Bots por tiempo (mínimo 1.8 segundos)
+      if (Date.now() - robleFormInitTime < 1800) {
+        form.reset();
+        showRobleStatus("success", getRobleStatusText("success", curLang));
+        return;
+      }
+
+      const name = document.getElementById("bookingName").value.trim();
+      const email = document.getElementById("bookingEmail").value.trim();
+      const phone = document.getElementById("bookingPhone").value.trim() || "No indicado";
+      const dates = document.getElementById("bookingDates").value.trim() || "Fechas por consultar";
+      const message = document.getElementById("bookingMessage").value.trim();
+
+      // UI: Estado enviando
+      submitBtn.disabled = true;
+      const originalBtnText = submitBtn.innerText;
+      submitBtn.innerText = getRobleStatusText("sending", curLang);
+      statusBox.className = "form-status-msg";
+      statusBox.style.display = "none";
+
+      const payload = {
+        _subject: `Solicitud de reserva / consulta: Casa Roble Carchuna - ${name}`,
+        "Apartamento": "Casa Roble Carchuna",
+        "Nombre": name,
+        "Email": email,
+        "Teléfono": phone,
+        "Fechas": dates,
+        "Mensaje": message
+      };
+
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/3faa7217c673df09203273d14b51d0c2", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+
+        if (response.ok && (data.success === "true" || data.success === true || (data.message && data.message.includes("Activation")))) {
+          form.reset();
+          showRobleStatus("success", getRobleStatusText("success", curLang));
+        } else {
+          showRobleStatus("error", getRobleStatusText("error", curLang));
+        }
+      } catch (err) {
+        console.error("Error al enviar formulario:", err);
+        showRobleStatus("error", getRobleStatusText("error", curLang));
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = originalBtnText;
+      }
+    }
+
+    function showRobleStatus(type, msg) {
+      const box = document.getElementById("robleFormStatus");
+      if (!box) return;
+      box.className = `form-status-msg ${type}`;
+      box.innerHTML = msg;
+      box.style.display = "block";
+    }
+
+    function getRobleStatusText(key, lang) {
+      const texts = {
+        sending: {
+          es: "Enviando...",
+          en: "Sending...",
+          de: "Wird gesendet...",
+          fr: "Envoi en cours...",
+          no: "Sender..."
+        },
+        success: {
+          es: "✓ ¡Gracias! Tu consulta ha sido enviada con éxito. Te responderemos muy pronto.",
+          en: "✓ Thank you! Your inquiry has been sent successfully. We will get back to you shortly.",
+          de: "✓ Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.",
+          fr: "✓ Merci ! Votre demande a bien été envoyée. Nous vous répondrons très rapidement.",
+          no: "✓ Takk! Forespørselen din er sendt. Vi svarer deg så snart som mulig."
+        },
+        error: {
+          es: "⚠️ Ha ocurrido un problema al enviar el formulario. Por favor, contáctanos directamente por WhatsApp o inténtalo de nuevo.",
+          en: "⚠️ An error occurred while sending the form. Please contact us directly via WhatsApp or try again.",
+          de: "⚠️ Beim Senden des Formulars ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns direkt per WhatsApp.",
+          fr: "⚠️ Une erreur s'est produite lors de l'envoi du formulaire. Veuillez nous contacter directamente via WhatsApp.",
+          no: "⚠️ Det oppsto en feil under sendingen. Vennligst kontakt oss direkte via WhatsApp."
+        }
+      };
+      return (texts[key] && texts[key][lang]) || texts[key]["es"];
     }
 
 

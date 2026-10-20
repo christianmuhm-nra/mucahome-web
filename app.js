@@ -533,40 +533,120 @@ function updatePlaceholders(lang) {
   }
 }
 
-// Envío del Formulario (Protección Anti-Spam por Ofuscación)
-function handleBooking(event) {
+// Registro de tiempo de carga para verificación humana (anti-bot)
+const globalFormInitTime = Date.now();
+
+// Manejador del Formulario de Reserva/Consulta (FormSubmit Seguro AJAX con Honeypot)
+async function handleBooking(event) {
   event.preventDefault();
-  const name = document.getElementById('bookingName').value;
-  const email = document.getElementById('bookingEmail').value;
-  const message = document.getElementById('bookingMessage').value;
+  const form = event.target;
+  const statusBox = document.getElementById("bookingFormStatus");
+  const submitBtn = document.getElementById("bookingSubmitBtn") || form.querySelector('button[type="submit"]');
+  const userLang = currentLang || 'es';
 
-  // Desofuscar correo electrónico solo en el momento del envío
-  // bXVfaW5mb0BnbXgubmV0 decodifica a: mu_info@gmx.net
-  const targetEmail = atob("bXVfaW5mb0BnbXgubmV0");
-  
-  const subject = encodeURIComponent(`Solicitud de Reserva Mucahome - ${currentApId || 'General'}`);
-  const body = encodeURIComponent(
-    `Nombre: ${name}\n` +
-    `Email de contacto: ${email}\n\n` +
-    `Mensaje / Fechas / Huéspedes:\n${message}`
-  );
+  // 1. Detección de Bots por Honeypot
+  const honeyField = form.querySelector('[name="_honey"]');
+  if (honeyField && honeyField.value.trim() !== "") {
+    form.reset();
+    showBookingStatus("success", getBookingStatusText("success", userLang));
+    return;
+  }
 
-  const mailtoUrl = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+  // 2. Detección de Bots por tiempo (mínimo 1.8 segundos)
+  if (Date.now() - globalFormInitTime < 1800) {
+    form.reset();
+    showBookingStatus("success", getBookingStatusText("success", userLang));
+    return;
+  }
 
-  // Mensajes de alerta multiidioma informando de la apertura del cliente de correo
-  const alertMessages = {
-    es: "Se abrirá tu aplicación de correo para enviar la solicitud de reserva a nuestro buzón.",
-    en: "Your email application will now open to send the booking request to us.",
-    de: "Ihre E-Mail-App wird nun geöffnet, um die Buchungsanfrage an uns zu senden.",
-    fr: "Votre application de messagerie va s'ouvrir pour nous envoyer la demande de réservation.",
-    no: "E-postprogrammet ditt åpnes nå for å sende bestillingsforespørselen til oss."
+  const name = document.getElementById('bookingName').value.trim();
+  const email = document.getElementById('bookingEmail').value.trim();
+  const message = document.getElementById('bookingMessage').value.trim();
+
+  // UI: Estado enviando
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.dataset.originalText = submitBtn.innerText;
+    submitBtn.innerText = getBookingStatusText("sending", userLang);
+  }
+  if (statusBox) {
+    statusBox.className = "form-status-msg";
+    statusBox.style.display = "none";
+  }
+
+  const apName = currentApId === 'ap1' ? 'Mucahome 1 (Peñón de Ifach)' : (currentApId === 'ap2' ? 'Mucahome 2 (Calpe Centro)' : 'Apartamento Mucahome');
+  const payload = {
+    _subject: `Solicitud de reserva / consulta: ${apName} - ${name}`,
+    "Apartamento": apName,
+    "Nombre": name,
+    "Email": email,
+    "Mensaje": message
   };
 
-  const userLang = currentLang || 'es';
-  alert(alertMessages[userLang] || alertMessages['es']);
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/3faa7217c673df09203273d14b51d0c2", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
 
-  window.location.href = mailtoUrl;
-  event.target.reset();
+    const data = await response.json();
+
+    if (response.ok && (data.success === "true" || data.success === true || (data.message && data.message.includes("Activation")))) {
+      form.reset();
+      showBookingStatus("success", getBookingStatusText("success", userLang));
+    } else {
+      showBookingStatus("error", getBookingStatusText("error", userLang));
+    }
+  } catch (err) {
+    console.error("Error al enviar formulario:", err);
+    showBookingStatus("error", getBookingStatusText("error", userLang));
+  } finally {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      if (submitBtn.dataset.originalText) {
+        submitBtn.innerText = submitBtn.dataset.originalText;
+      }
+    }
+  }
+}
+
+function showBookingStatus(type, msg) {
+  const box = document.getElementById("bookingFormStatus");
+  if (!box) return;
+  box.className = `form-status-msg ${type}`;
+  box.innerHTML = msg;
+  box.style.display = "block";
+}
+
+function getBookingStatusText(key, lang) {
+  const texts = {
+    sending: {
+      es: "Enviando...",
+      en: "Sending...",
+      de: "Wird gesendet...",
+      fr: "Envoi en cours...",
+      no: "Sender..."
+    },
+    success: {
+      es: "✓ ¡Gracias! Tu consulta ha sido enviada con éxito. Te responderemos muy pronto.",
+      en: "✓ Thank you! Your inquiry has been sent successfully. We will get back to you shortly.",
+      de: "✓ Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.",
+      fr: "✓ Merci ! Votre demande a bien été envoyée. Nous vous répondrons très rapidement.",
+      no: "✓ Takk! Forespørselen din er sendt. Vi svarer deg så snart som mulig."
+    },
+    error: {
+      es: "⚠️ Ha ocurrido un problema al enviar el formulario. Por favor, contáctanos directamente por WhatsApp o inténtalo de nuevo.",
+      en: "⚠️ An error occurred while sending the form. Please contact us directly via WhatsApp or try again.",
+      de: "⚠️ Beim Senden des Formulars ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns direkt per WhatsApp.",
+      fr: "⚠️ Une erreur s'est produite lors de l'envoi du formulaire. Veuillez nous contacter directement via WhatsApp.",
+      no: "⚠️ Det oppsto en feil under sendingen. Vennligst kontakt oss direkte via WhatsApp."
+    }
+  };
+  return (texts[key] && texts[key][lang]) || texts[key]["es"];
 }
 
 // Arranque inicial
