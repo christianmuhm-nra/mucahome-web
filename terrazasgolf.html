@@ -314,6 +314,34 @@
     </div>
   </section>
 
+  <!-- Sección: Encuéntranos también en (Spotahome) -->
+  <section id="canales" class="ap-section channels-section">
+    <div class="container">
+      <div class="section-title-wrapper channels-header text-center">
+        <h2 data-i18n="channels.title">Encuéntranos también en</h2>
+        <p class="subtitle-p" data-i18n="channels.subtitle">Consulta nuestra ficha oficial y opciones de reserva verificada en otras plataformas.</p>
+      </div>
+
+      <div class="channels-grid" style="max-width: 550px; margin: 0 auto;">
+        <div class="channel-group" style="width: 100%;">
+          <h3 data-i18n="channels.portalsTitle">Portales de reservas</h3>
+          <div class="channel-buttons">
+            <a href="https://www.spotahome.com/es/murcia/for-rent:apartments/1741142" target="_blank" rel="noopener noreferrer" class="channel-card-link" id="channelSpotahome">
+              <div class="channel-icon spotahome">
+                <span class="spotahome-mark">S.</span>
+              </div>
+              <div class="channel-info">
+                <span class="channel-name">Spotahome</span>
+                <span class="channel-sub" data-i18n="channels.portalSubSpotahome">Ficha oficial y reserva online</span>
+              </div>
+              <span class="channel-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Sección: Pre-Check-in -->
   <section id="precheckin" class="ap-section alt-bg">
     <div class="container text-center" style="max-width: 700px; margin: 0 auto; padding: 20px;">
@@ -678,6 +706,10 @@
         "booking.sending": "Enviando...",
         "booking.success": "✓ ¡Gracias! Tu consulta ha sido enviada con éxito. Te responderemos muy pronto.",
         "booking.error": "⚠️ Ha ocurrido un problema al enviar el formulario. Por favor, contáctanos directamente por WhatsApp o inténtalo de nuevo.",
+        "channels.title": "Encuéntranos también en",
+        "channels.subtitle": "Consulta nuestra ficha oficial y opciones de reserva verificada en otras plataformas.",
+        "channels.portalsTitle": "Portales de reservas",
+        "channels.portalSubSpotahome": "Ficha oficial y reserva online",
         "precheckin.title": "Prepara tu llegada — Pre-Check-in",
         "precheckin.desc": "Para cumplir con la normativa turística y hacer que tu entrada sea inmediata y sin esperas el día de llegada, te invitamos a completar el registro obligatorio online antes de tu viaje.",
         "precheckin.btn": "📝 Iniciar Pre-Check-in Online",
@@ -762,6 +794,10 @@
         "booking.sending": "Sending...",
         "booking.success": "✓ Thank you! Your inquiry has been sent successfully. We will get back to you shortly.",
         "booking.error": "⚠️ An error occurred while sending the form. Please contact us directly via WhatsApp or try again.",
+        "channels.title": "Find us also on",
+        "channels.subtitle": "Check our official listing and verified booking options on other platforms.",
+        "channels.portalsTitle": "Booking portals",
+        "channels.portalSubSpotahome": "Official listing & online booking",
         "precheckin.title": "Prepare your arrival — Pre-Check-in",
         "precheckin.desc": "To comply with local tourism regulations and enable a smooth, instant check-in upon arrival, please complete the mandatory online pre-check-in before travelling.",
         "precheckin.btn": "📝 Start Online Pre-Check-in",
@@ -846,6 +882,10 @@
         "booking.sending": "Wird gesendet...",
         "booking.success": "✓ Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.",
         "booking.error": "⚠️ Beim Senden des Formulars ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns direkt per WhatsApp oder versuchen Sie es erneut.",
+        "channels.title": "Finden Sie uns auch auf",
+        "channels.subtitle": "Sehen Sie sich unseren offiziellen Eintrag und verifizierte Buchungsoptionen auf anderen Plattformen an.",
+        "channels.portalsTitle": "Buchungsportale",
+        "channels.portalSubSpotahome": "Offizieller Eintrag & Online-Buchung",
         "precheckin.title": "Anreise vorbereiten — Pre-Check-in",
         "precheckin.desc": "Um den behördlichen Vorschriften zu entsprechen und Ihnen einen reibungslosen Check-in am Anreisetag zu ermöglichen, füllen Sie bitte vorab den Online-Pre-Check-in aus.",
         "precheckin.btn": "📝 Online Pre-Check-in starten",
@@ -930,6 +970,10 @@
         "booking.sending": "Envoi en cours...",
         "booking.success": "✓ Merci ! Votre demande a bien été envoyée. Nous vous répondrons très rapidement.",
         "booking.error": "⚠️ Une erreur s'est produite lors de l'envoi du formulaire. Veuillez nous contacter directement via WhatsApp ou réessayer.",
+        "channels.title": "Retrouvez-nous également sur",
+        "channels.subtitle": "Consultez notre annonce officielle et les options de réservation vérifiées sur d'autres plateformes.",
+        "channels.portalsTitle": "Portails de réservation",
+        "channels.portalSubSpotahome": "Annonce officielle & réservation en ligne",
         "precheckin.title": "Préparez votre arrivée — Pre-Check-in",
         "precheckin.desc": "Pour respecter les normes touristiques et faciliter votre entrée dès votre arrivée, nous vous invitons à remplir le pre-check-in en ligne obligatoire avant votre départ.",
         "precheckin.btn": "📝 Démarrer le Pre-Check-in en ligne",
@@ -972,6 +1016,19 @@
       }
     }
 
+    function updateTerrazasChannels(lang) {
+      const spotahomeLinks = {
+        es: "https://www.spotahome.com/es/murcia/for-rent:apartments/1741142",
+        en: "https://www.spotahome.com/murcia/for-rent:apartments/1741142",
+        de: "https://www.spotahome.com/de/murcia/for-rent:apartments/1741142",
+        fr: "https://www.spotahome.com/fr/murcia/for-rent:apartments/1741142"
+      };
+      const spotahomeBtn = document.getElementById('channelSpotahome');
+      if (spotahomeBtn) {
+        spotahomeBtn.href = spotahomeLinks[lang] || spotahomeLinks.es;
+      }
+    }
+
     function changeLanguage(lang) {
       currentLang = lang;
       localStorage.setItem('terrazas_lang', lang);
@@ -988,6 +1045,7 @@
       });
 
       updateTerrazasPlaceholders(lang);
+      updateTerrazasChannels(lang);
       updateSlide();
     }
 

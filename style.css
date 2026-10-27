@@ -1141,6 +1141,18 @@ body {
   background: linear-gradient(135deg, #1877F2, #0d65d9);
 }
 
+.channel-icon.spotahome {
+  background: linear-gradient(135deg, #FB6E44, #EA4C2A);
+}
+
+.spotahome-mark {
+  font-family: 'Outfit', Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 1.45rem;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
 .channel-info {
   display: flex;
   flex-direction: column;
