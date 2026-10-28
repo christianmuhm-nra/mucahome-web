@@ -1153,6 +1153,16 @@ body {
   line-height: 1;
 }
 
+.channel-icon.housinganywhere {
+  background: linear-gradient(135deg, #002630, #001820);
+}
+
+.channel-icon.housinganywhere svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
 .channel-info {
   display: flex;
   flex-direction: column;

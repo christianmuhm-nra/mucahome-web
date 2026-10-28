@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3.8">
+  <link rel="stylesheet" href="style.css?v=3.9">
 </head>
 <body class="ap-page terrazas-page">
 
@@ -333,6 +333,19 @@
               <div class="channel-info">
                 <span class="channel-name">Spotahome</span>
                 <span class="channel-sub" data-i18n="channels.portalSubSpotahome">Ficha oficial y reserva online</span>
+              </div>
+              <span class="channel-arrow">→</span>
+            </a>
+
+            <a href="https://housinganywhere.com/room/ut1749009/es/Murcia/calle-steffi-graf" target="_blank" rel="noopener noreferrer" class="channel-card-link" id="channelHousingAnywhere">
+              <div class="channel-icon housinganywhere">
+                <svg viewBox="0 0 45 45" width="26" height="26" fill="none" aria-hidden="true">
+                  <path d="M9.94 38.307l1.744-6.472c1.482-5.5 5.533-9.367 11.316-9.367s9.834 3.868 11.316 9.367l1.745 6.472c.169.618.595.862 1.214.694l5.975-1.62c.619-.169.864-.594.7-1.212L35.536 4.746c-.169-.623-.6-.862-1.22-.693l-5.999 1.654c-.618.17-.857.6-.694 1.218l2.276 8.464H16.102l2.276-8.464c.163-.618-.076-1.049-.695-1.218l-5.999-1.654c-.618-.17-1.05.07-1.22.693L2.05 36.169c-.163.618.082 1.043.7 1.212l5.977 1.62c.618.169 1.044-.076 1.213-.694z" fill="#FF4B27"/>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <span class="channel-name">HousingAnywhere</span>
+                <span class="channel-sub" data-i18n="channels.portalSubHousing">Ficha verificada y reserva directa</span>
               </div>
               <span class="channel-arrow">→</span>
             </a>
@@ -710,6 +723,7 @@
         "channels.subtitle": "Consulta nuestra ficha oficial y opciones de reserva verificada en otras plataformas.",
         "channels.portalsTitle": "Portales de reservas",
         "channels.portalSubSpotahome": "Ficha oficial y reserva online",
+        "channels.portalSubHousing": "Ficha verificada y reserva directa",
         "precheckin.title": "Prepara tu llegada — Pre-Check-in",
         "precheckin.desc": "Para cumplir con la normativa turística y hacer que tu entrada sea inmediata y sin esperas el día de llegada, te invitamos a completar el registro obligatorio online antes de tu viaje.",
         "precheckin.btn": "📝 Iniciar Pre-Check-in Online",
@@ -798,6 +812,7 @@
         "channels.subtitle": "Check our official listing and verified booking options on other platforms.",
         "channels.portalsTitle": "Booking portals",
         "channels.portalSubSpotahome": "Official listing & online booking",
+        "channels.portalSubHousing": "Verified listing & direct booking",
         "precheckin.title": "Prepare your arrival — Pre-Check-in",
         "precheckin.desc": "To comply with local tourism regulations and enable a smooth, instant check-in upon arrival, please complete the mandatory online pre-check-in before travelling.",
         "precheckin.btn": "📝 Start Online Pre-Check-in",
@@ -886,6 +901,7 @@
         "channels.subtitle": "Sehen Sie sich unseren offiziellen Eintrag und verifizierte Buchungsoptionen auf anderen Plattformen an.",
         "channels.portalsTitle": "Buchungsportale",
         "channels.portalSubSpotahome": "Offizieller Eintrag & Online-Buchung",
+        "channels.portalSubHousing": "Verifizierter Eintrag & Direktbuchung",
         "precheckin.title": "Anreise vorbereiten — Pre-Check-in",
         "precheckin.desc": "Um den behördlichen Vorschriften zu entsprechen und Ihnen einen reibungslosen Check-in am Anreisetag zu ermöglichen, füllen Sie bitte vorab den Online-Pre-Check-in aus.",
         "precheckin.btn": "📝 Online Pre-Check-in starten",
@@ -974,6 +990,7 @@
         "channels.subtitle": "Consultez notre annonce officielle et les options de réservation vérifiées sur d'autres plateformes.",
         "channels.portalsTitle": "Portails de réservation",
         "channels.portalSubSpotahome": "Annonce officielle & réservation en ligne",
+        "channels.portalSubHousing": "Annonce vérifiée & réservation directe",
         "precheckin.title": "Préparez votre arrivée — Pre-Check-in",
         "precheckin.desc": "Pour respecter les normes touristiques et faciliter votre entrée dès votre arrivée, nous vous invitons à remplir le pre-check-in en ligne obligatoire avant votre départ.",
         "precheckin.btn": "📝 Démarrer le Pre-Check-in en ligne",
@@ -1026,6 +1043,17 @@
       const spotahomeBtn = document.getElementById('channelSpotahome');
       if (spotahomeBtn) {
         spotahomeBtn.href = spotahomeLinks[lang] || spotahomeLinks.es;
+      }
+
+      const housingLinks = {
+        es: "https://housinganywhere.com/room/ut1749009/es/Murcia/calle-steffi-graf",
+        en: "https://housinganywhere.com/room/ut1749009/en/Murcia/calle-steffi-graf",
+        de: "https://housinganywhere.com/room/ut1749009/de/Murcia/calle-steffi-graf",
+        fr: "https://housinganywhere.com/room/ut1749009/fr/Murcia/calle-steffi-graf"
+      };
+      const housingBtn = document.getElementById('channelHousingAnywhere');
+      if (housingBtn) {
+        housingBtn.href = housingLinks[lang] || housingLinks.es;
       }
     }
 
