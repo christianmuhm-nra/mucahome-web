@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3.9">
+  <link rel="stylesheet" href="style.css?v=4.0">
 </head>
 <body class="ap-page terrazas-page">
 
@@ -346,6 +346,17 @@
               <div class="channel-info">
                 <span class="channel-name">HousingAnywhere</span>
                 <span class="channel-sub" data-i18n="channels.portalSubHousing">Ficha verificada y reserva directa</span>
+              </div>
+              <span class="channel-arrow">→</span>
+            </a>
+
+            <a href="https://www.flatio.es/alquiler/piso/134699-roldan" target="_blank" rel="noopener noreferrer" class="channel-card-link" id="channelFlatio">
+              <div class="channel-icon flatio">
+                <span class="flatio-mark">f.</span>
+              </div>
+              <div class="channel-info">
+                <span class="channel-name">Flatio</span>
+                <span class="channel-sub" data-i18n="channels.portalSubFlatio">Alquiler mensual flexible y verificado</span>
               </div>
               <span class="channel-arrow">→</span>
             </a>
@@ -724,6 +735,7 @@
         "channels.portalsTitle": "Portales de reservas",
         "channels.portalSubSpotahome": "Ficha oficial y reserva online",
         "channels.portalSubHousing": "Ficha verificada y reserva directa",
+        "channels.portalSubFlatio": "Alquiler mensual flexible y verificado",
         "precheckin.title": "Prepara tu llegada — Pre-Check-in",
         "precheckin.desc": "Para cumplir con la normativa turística y hacer que tu entrada sea inmediata y sin esperas el día de llegada, te invitamos a completar el registro obligatorio online antes de tu viaje.",
         "precheckin.btn": "📝 Iniciar Pre-Check-in Online",
@@ -813,6 +825,7 @@
         "channels.portalsTitle": "Booking portals",
         "channels.portalSubSpotahome": "Official listing & online booking",
         "channels.portalSubHousing": "Verified listing & direct booking",
+        "channels.portalSubFlatio": "Flexible & verified monthly rentals",
         "precheckin.title": "Prepare your arrival — Pre-Check-in",
         "precheckin.desc": "To comply with local tourism regulations and enable a smooth, instant check-in upon arrival, please complete the mandatory online pre-check-in before travelling.",
         "precheckin.btn": "📝 Start Online Pre-Check-in",
@@ -902,6 +915,7 @@
         "channels.portalsTitle": "Buchungsportale",
         "channels.portalSubSpotahome": "Offizieller Eintrag & Online-Buchung",
         "channels.portalSubHousing": "Verifizierter Eintrag & Direktbuchung",
+        "channels.portalSubFlatio": "Flexible & verifizierte Monatsmiete",
         "precheckin.title": "Anreise vorbereiten — Pre-Check-in",
         "precheckin.desc": "Um den behördlichen Vorschriften zu entsprechen und Ihnen einen reibungslosen Check-in am Anreisetag zu ermöglichen, füllen Sie bitte vorab den Online-Pre-Check-in aus.",
         "precheckin.btn": "📝 Online Pre-Check-in starten",
@@ -991,6 +1005,7 @@
         "channels.portalsTitle": "Portails de réservation",
         "channels.portalSubSpotahome": "Annonce officielle & réservation en ligne",
         "channels.portalSubHousing": "Annonce vérifiée & réservation directe",
+        "channels.portalSubFlatio": "Location mensuelle flexible et vérifiée",
         "precheckin.title": "Préparez votre arrivée — Pre-Check-in",
         "precheckin.desc": "Pour respecter les normes touristiques et faciliter votre entrée dès votre arrivée, nous vous invitons à remplir le pre-check-in en ligne obligatoire avant votre départ.",
         "precheckin.btn": "📝 Démarrer le Pre-Check-in en ligne",
@@ -1054,6 +1069,17 @@
       const housingBtn = document.getElementById('channelHousingAnywhere');
       if (housingBtn) {
         housingBtn.href = housingLinks[lang] || housingLinks.es;
+      }
+
+      const flatioLinks = {
+        es: "https://www.flatio.es/alquiler/piso/134699-roldan",
+        en: "https://www.flatio.com/rent/apartment/134699-roldan",
+        de: "https://www.flatio.de/mieten/wohnungen/134699-roldan",
+        fr: "https://www.flatio.com/rent/apartment/134699-roldan"
+      };
+      const flatioBtn = document.getElementById('channelFlatio');
+      if (flatioBtn) {
+        flatioBtn.href = flatioLinks[lang] || flatioLinks.es;
       }
     }
 
